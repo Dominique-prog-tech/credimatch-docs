@@ -54,10 +54,12 @@ kredietdossier aanvaard wordt, tegen welk tarief, en waarom.
 
     Welke banken en producten uw kantoor gebruikt, en de percentages die u met hen afsprak.
 
--   :material-office-building-outline: **Kantoren en gebruikers**{ .cm-binnenkort }
+-   :material-office-building-outline: **Kantoren en gebruikers**
 
     ---
 
     De kantoren van uw groep, wie welke dossiers ziet, en de gebruikers van de backoffice.
+
+    [Kantoren](kantoren.md) · [Rollen & rechten](rollen.md) · [Prullenbak](prullenbak.md)
 
 </div>

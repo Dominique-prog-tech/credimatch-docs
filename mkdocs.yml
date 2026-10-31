@@ -133,11 +133,19 @@ plugins:
             # Eén regel per nav-item. Neem de Franse term over uit de APP, verzin hem niet: handleiding en scherm
             # horen hetzelfde te zeggen.
             Home: Accueil
+            Organisatie: Organisation
+            Kantoren: Bureaux
+            Rollen & rechten: Rôles & droits
+            Prullenbak: Corbeille
 
 extra:
   generator: false
 
-# Alleen KLARE pagina's staan hier: de handleiding groeit mee per vrijgegeven scherm. Op 31/10/2026 is er nog geen
-# enkel scherm vrijgegeven, dus staat hier enkel het onthaal.
+# Alleen KLARE pagina's staan hier: de handleiding groeit mee per vrijgegeven scherm. De koppen volgen het menu van de
+# app (Organisatie > Kantoren), zodat de handleiding leest als het scherm.
 nav:
   - Home: index.md
+  - Organisatie:
+      - Kantoren: kantoren.md
+      - Rollen & rechten: rollen.md
+      - Prullenbak: prullenbak.md

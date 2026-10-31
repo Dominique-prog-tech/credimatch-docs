@@ -55,10 +55,12 @@ dossier de crédit est accepté, à quel taux, et pourquoi.
 
     Les banques et produits qu'utilise votre bureau, et les pourcentages convenus avec elles.
 
--   :material-office-building-outline: **Bureaux et utilisateurs**{ .cm-binnenkort }
+-   :material-office-building-outline: **Bureaux et utilisateurs**
 
     ---
 
     Les bureaux de votre groupe, qui voit quels dossiers, et les utilisateurs du back-office.
+
+    [Bureaux](kantoren.md) · [Rôles & droits](rollen.md) · [Corbeille](prullenbak.md)
 
 </div>
