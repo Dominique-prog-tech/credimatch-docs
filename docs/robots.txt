@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /
+
+# Dicht zolang de handleiding in opbouw is (31/10/2026). Zo deden ook creditsoft-docs (tot 16/08/2026) en de andere
+# twee. Openzetten = `Allow: /` + `Sitemap: https://docs.credimatch.be/sitemap.xml`, op Dominiques woord, wanneer de
+# eerste schermen hun pagina hebben (vlootafspraak "Vindbaar", adm-appkit/docs/docs-site-vormgeving.md).

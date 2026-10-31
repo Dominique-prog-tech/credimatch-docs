@@ -1,0 +1,53 @@
+name: Deploy MkDocs
+
+# ⚠️ OPGEZET ZONDER UITROL (31/10/2026). Bij elke push BOUWT dit de site strikt (een dode link of een dood anker
+# laat de bouw falen), maar het zet ze NIET online: de uitrol draait enkel op een handmatige start
+# (workflow_dispatch). Reden: de repo is privé en er is nog geen scherm vrijgegeven, dus er is niets te tonen.
+#
+# Live zetten, op Dominiques woord (zie CLAUDE.md, "Live zetten"):
+#   1. repo publiek, Pages aan (Settings > Pages > Source: GitHub Actions), DNS docs.credimatch.be bij Cloudflare;
+#   2. hieronder de `if:` bij `deploy` weghalen, zodat een push naar main weer uitrolt zoals bij de andere drie.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # Vaste versies — zie requirements.txt.
+      - run: pip install -r requirements.txt
+      - run: mkdocs build --strict
+      # Nog niet aan, en waarom (zie CLAUDE.md): de beeldcontrole (tools/check-beelden.py) vanaf de eerste
+      # schermafdruk; de gedeelde filmhook en de filmcontrole uit adm-appkit (met het repo-geheim ADM_APPKIT_LEZEN)
+      # vanaf de eerste film. Zoals cleanops-docs.
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

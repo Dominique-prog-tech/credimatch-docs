@@ -1,0 +1,219 @@
+/* Compact font sizing — Inter heeft een grotere x-hoogte dan Roboto default.
+   Lichte reductie van body-grootte zodat de docs visueel compacter ogen,
+   met behoud van brand-consistentie met de marketing-website.
+
+   Headings gebruiken in Material em-eenheden (proportioneel aan body),
+   dus die schalen automatisch mee — NIET expliciet overschrijven. */
+
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.72;
+}
+
+/* Sidebar en nav iets compacter */
+.md-nav {
+  font-size: 0.72rem;
+}
+
+
+/* === Header verfijning (mei 2026) === */
+/* Subtiele border-bottom in plaats van Material's harde schaduw.
+   Pill-vormige zoekbalk met zachte achtergrond.
+   Subtielere header-buttons. Werkt in zowel licht als donker schema. */
+
+.md-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+}
+[data-md-color-scheme="slate"] .md-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Tabs-rij (navigation.tabs) sluit visueel aan op de header */
+.md-tabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+[data-md-color-scheme="slate"] .md-tabs {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Zachte pill-vormige zoekbalk */
+.md-search__form {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 9999px;
+  height: 2.2rem;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.md-search__form:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form,
+[data-md-toggle="search"]:checked ~ .md-container .md-search__form {
+  background-color: var(--md-default-bg-color);
+  box-shadow: 0 0 0 2px var(--cm-rand);
+}
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+[data-md-color-scheme="slate"] .md-search__form:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Subtielere header-buttons (theme toggle, taal-switch) */
+.md-header__button {
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+.md-header__button:hover,
+.md-header__button:focus-visible {
+  opacity: 1;
+}
+
+/* === Globaal font-scale (mei 2026) ============================================
+   mkdocs-material gebruikt standaard html { font-size: 137.5% }.
+   Lager getal = compactere site overal (header, tabs, sidebar, body, footer).
+   Eén knop om alles proportioneel mee te schalen. */
+html {
+  font-size: 130%;
+}
+
+
+/* === Merkkleur (31/10/2026) ===================================================
+   Overgenomen van cleanops-docs, met de kleuren van CrediMatch: het verloop in docs/images/logo.svg
+   (#34d399 → #047857) en de tinten van credimatch.be (src/styles/global.css, brand-400 tot brand-800).
+
+   Bewuste keuze, zelfde als de drie andere handleidingen: de header blijft WIT. Het merk komt terug in links,
+   actieve navigatie en accenten (adm-appkit/docs/docs-site-vormgeving.md).
+
+   Kleine TEKST staat op een tint die de contrastnorm haalt (WCAG: 4,5 op 1 voor kleine tekst; beslist voor de
+   vloot op 11/10/2026). Uitgerekend op 31/10, nog niet op een gebouwde pagina gemeten:
+   #059669 (brand-600) op wit = 3,77 — te zwak voor tekst, dus enkel voor de rand van een kaart en het verloop;
+   #047857 (brand-700) = 5,48 voor links; #065f46 (brand-800) = 7,68 bij aanwijzen. */
+:root {
+  --cm-groen: #059669;
+  --cm-groen-licht: #6ee7b7;
+  --cm-groen-tekst: #047857;
+  --cm-groen-aanwijzen: #065f46;
+}
+
+/* ⚠️ Ook op [data-md-color-primary], niet enkel op :root. Material zet dat attribuut op de BODY en declareert
+   daar `--md-typeset-a-color: #4051b5` (indigo). Een regel op :root staat op <html> en wordt binnen de body dus
+   overschreven — gemeten bij CreditSoft en CleanOps. Zelfde specificiteit (0,1,0), maar extra.css laadt ná het
+   palet, dus deze wint. */
+:root,
+[data-md-color-primary] {
+  --md-accent-fg-color: var(--cm-groen-aanwijzen);
+  --md-typeset-a-color: var(--cm-groen-tekst);
+  --cm-rand: var(--cm-groen);
+}
+/* ⚠️ Twee attributen, niet één: Material declareert dit als `[data-md-color-scheme=slate][data-md-color-primary=white]`
+   (0,2,0); met één attribuut verliest deze regel (gemeten bij CleanOps). #34d399 (brand-400) op de donkere achtergrond
+   van Material (#1e2129) = 8,37. */
+[data-md-color-scheme="slate"][data-md-color-primary] {
+  --md-accent-fg-color: #34d399;
+  --md-typeset-a-color: #34d399;
+  --cm-rand: #34d399;
+}
+
+/* Actieve pagina in de zijbalk krijgt het merkgroen i.p.v. Material's standaard */
+.md-nav__link--active,
+.md-nav__link--active:focus,
+.md-nav__link--active:hover {
+  color: var(--md-typeset-a-color);
+  font-weight: 600;
+}
+
+/* === Leeskolom =================================================================
+   Material's .md-grid staat standaard op 61rem, wat op een breed scherm een smalle
+   tekstkolom geeft tussen twee schaarse zijkolommen. 70rem geeft de tekst zijn
+   plaats terug zonder de regels onleesbaar lang te maken (~90 tekens blijft de
+   bovengrens voor comfortabel lezen). */
+.md-grid {
+  max-width: 70rem;
+}
+
+/* === Koppen ====================================================================
+   h2 en h3 leken te veel op elkaar: zelfde kleur, nauwelijks verschil in gewicht.
+   h2 krijgt een fijne scheidingslijn zodat een lange pagina leesbaar opdeelt. */
+.md-typeset h2 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin-top: 2.2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset h3 {
+  font-weight: 600;
+  margin-top: 1.8em;
+}
+
+/* === Onthaalpagina =============================================================
+   Kop-blok plus kaartraster (Material's ingebouwde .grid.cards, mogelijk dankzij
+   attr_list + md_in_html). */
+.cm-hero {
+  padding: 2.2rem 0 1.6rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  margin-bottom: 2rem;
+}
+.cm-hero h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+  background: linear-gradient(95deg, var(--cm-groen), var(--cm-groen-licht));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.cm-hero p {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+  max-width: 34rem;
+  margin: 0;
+}
+
+/* Drie kolommen op een breed scherm. Met Material's standaard (auto-fit vanaf
+   16rem) worden het er vier en breekt een halve rij af.
+   Let op: het raster staat op de .grid-div zelf — de <ul> erbinnen is
+   display:contents, dus daar heeft grid-template-columns geen effect. */
+@media screen and (min-width: 60em) {
+  .md-typeset .grid.cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Kaartraster: rustige rand, merkgroen bij hover */
+.md-typeset .grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--cm-rand);
+  box-shadow: 0 2px 12px rgba(13, 148, 136, 0.09);
+  transform: translateY(-2px);
+}
+.md-typeset .grid.cards > ul > li > hr {
+  margin: 0.6em 0;
+  border-color: var(--md-default-fg-color--lightest);
+}
+.md-typeset .grid.cards > ul > li p:last-child {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.74rem;
+  margin-bottom: 0;
+}
+
+/* Wat er nog niet is, mag zichtbaar zijn zonder klikbaar te lijken.
+
+   ⚠️ Opacity 0.8, niet 0.55. Bij CreditSoft is deze klasse ongebruikt — daar zijn alle zes de kaarten een
+   echte link. Bij CleanOps waren er vijf van de zes nog in aanbouw (bij CrediMatch op 31/10/2026 alle zes), en op 0.55 kleurde dat de hele onthaalpagina
+   grijs: Dominique las het als "de tekst is lichter dan bij Nimble en CreditSoft". Gemeten was de lopende
+   tekst identiek (rgba(0,0,0,0.87), 16,64 px, Inter) — het waren deze vijf titels.
+
+   0.8 houdt ze duidelijk minder present dan de actieve kaart zonder ze te laten vervagen. Wat het onderscheid
+   draagt is niet de vaalheid maar de kleur: de vrijgegeven kaart is groen en klikbaar, deze zijn dat niet. */
+.cm-binnenkort {
+  opacity: 0.8;
+  pointer-events: none;
+}
+

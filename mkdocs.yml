@@ -1,0 +1,143 @@
+# Opgezet op 31/10/2026 vanuit de ADM One-sessie, op vraag van Dominique ("kunnen we dit niet doen zoals de andere 3
+# basisplatformen", ADR-56 vierde uitwerking, punt 10). Voorbeeld: cleanops-docs, zoals de vlootafspraak zegt
+# (adm-appkit/docs/docs-site-vormgeving.md). Wat er bewust nog NIET aan staat, en wanneer het aangaat: CLAUDE.md.
+site_name: CrediMatch Documentatie
+site_description: Officiële handleiding voor CrediMatch
+site_author: Dominique
+site_url: https://docs.credimatch.be/
+copyright: >
+  CrediMatch &copy; 2026 — eigendom van
+  <a href="https://www.adm-concept.be" target="_blank" rel="noopener">ADM-Concept</a>.
+  Alle rechten voorbehouden. · <a href="https://www.credimatch.be/">credimatch.be</a>
+
+theme:
+  name: material
+  # Eigen sjabloonstukken: de deelkoppen (Open Graph) in overrides/main.html.
+  custom_dir: overrides
+  language: nl
+  logo: images/logo.svg
+  favicon: images/logo.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - scheme: default
+      primary: white
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Schakel naar donkere modus
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Schakel naar lichte modus
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  # Iconen (:material-…:) voor het kaartraster op de onthaalpagina.
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Een dode link of een dood anker laat de bouw FALEN in plaats van online te komen: de uitrol bouwt met --strict.
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: warn
+    unrecognized_links: warn
+
+plugins:
+  - search:
+      lang:
+        - nl
+        - fr
+  # Klik op een schermafbeelding = schermvullend openen. Staat vóór `i18n`: die plugin bouwt per taal een aparte
+  # pagina, en glightbox moet op elke gebouwde pagina passeren.
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - twemoji
+        - emojione
+  - i18n:
+      docs_structure: suffix
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: nl
+          default: true
+          name: Nederlands
+          build: true
+          site_name: CrediMatch Documentatie
+          site_description: Officiële handleiding voor CrediMatch
+        - locale: fr
+          name: Français
+          build: true
+          site_name: CrediMatch Documentation
+          site_description: Manuel officiel de CrediMatch
+          copyright: >
+            CrediMatch &copy; 2026 — propriété d'<a href="https://www.adm-concept.be" target="_blank" rel="noopener">ADM-Concept</a>.
+            Tous droits réservés. · <a href="https://www.credimatch.be/fr/">credimatch.be</a>
+          theme:
+            language: fr
+            palette:
+              - scheme: default
+                primary: white
+                accent: green
+                toggle:
+                  icon: material/brightness-7
+                  name: Passer en mode sombre
+              - scheme: slate
+                primary: black
+                accent: green
+                toggle:
+                  icon: material/brightness-4
+                  name: Passer en mode clair
+          nav_translations:
+            # Eén regel per nav-item. Neem de Franse term over uit de APP, verzin hem niet: handleiding en scherm
+            # horen hetzelfde te zeggen.
+            Home: Accueil
+
+extra:
+  generator: false
+
+# Alleen KLARE pagina's staan hier: de handleiding groeit mee per vrijgegeven scherm. Op 31/10/2026 is er nog geen
+# enkel scherm vrijgegeven, dus staat hier enkel het onthaal.
+nav:
+  - Home: index.md
