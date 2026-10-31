@@ -138,6 +138,8 @@ plugins:
             Banken: Banques
             Rollen & rechten: Rôles & droits
             Prullenbak: Corbeille
+            Voor ontwikkelaars: Pour les développeurs
+            API voor andere software: API pour d'autres logiciels
 
 extra:
   generator: false
@@ -151,3 +153,5 @@ nav:
       - Banken: banken.md
       - Rollen & rechten: rollen.md
       - Prullenbak: prullenbak.md
+  - Voor ontwikkelaars:
+      - API voor andere software: api.md
