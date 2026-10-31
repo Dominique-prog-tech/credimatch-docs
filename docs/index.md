@@ -48,11 +48,13 @@ kredietdossier aanvaard wordt, tegen welk tarief, en waarom.
 
     Het dossier doorsturen naar de gekozen bank, en de status en de documenten die zij terugstuurt.
 
--   :material-bank-outline: **Banken en percentages**{ .cm-binnenkort }
+-   :material-bank-outline: **Banken en percentages**
 
     ---
 
     Welke banken en producten uw kantoor gebruikt, en de percentages die u met hen afsprak.
+
+    [Banken](banken.md)
 
 -   :material-office-building-outline: **Kantoren en gebruikers**
 

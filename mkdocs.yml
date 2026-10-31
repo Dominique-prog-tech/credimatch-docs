@@ -135,6 +135,7 @@ plugins:
             Home: Accueil
             Organisatie: Organisation
             Kantoren: Bureaux
+            Banken: Banques
             Rollen & rechten: Rôles & droits
             Prullenbak: Corbeille
 
@@ -147,5 +148,6 @@ nav:
   - Home: index.md
   - Organisatie:
       - Kantoren: kantoren.md
+      - Banken: banken.md
       - Rollen & rechten: rollen.md
       - Prullenbak: prullenbak.md

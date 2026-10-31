@@ -49,11 +49,13 @@ dossier de crédit est accepté, à quel taux, et pourquoi.
 
     Transmettre le dossier à la banque choisie, et suivre le statut et les documents qu'elle renvoie.
 
--   :material-bank-outline: **Banques et pourcentages**{ .cm-binnenkort }
+-   :material-bank-outline: **Banques et pourcentages**
 
     ---
 
     Les banques et produits qu'utilise votre bureau, et les pourcentages convenus avec elles.
+
+    [Banques](banken.md)
 
 -   :material-office-building-outline: **Bureaux et utilisateurs**
 
