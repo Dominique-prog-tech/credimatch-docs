@@ -32,6 +32,8 @@ voor een dossier. U krijgt per bank het oordeel, met per regel de reden als code
 | `POST /api/v1/prescoring` | Toetst één dossier van een aangemeld kantoor bij één of meer banken. |
 | `GET /api/v1/banken` | De banken met hun geldende regels, de datum tot wanneer die nagekeken zijn, en hun varianten. |
 | `GET /api/v1/woordenlijst` | Alle gegevens van een dossier: code, type, niveau en de benaming in het NL en het FR. |
+| `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Bewaart een dossier in CrediMatch, of werkt het bij. **Staat nog dicht** (zie hieronder). |
+| `GET` op hetzelfde adres | Het bewaarde dossier, met de simulaties die er in CrediMatch op gemaakt werden. **Staat nog dicht.** |
 
 ### Een kantoor aanmelden
 
@@ -90,6 +92,34 @@ Daarbij de **versies** (de motor en de instellingen van uw klant), de banken die
 **invoer** zoals CrediMatch ze las, zodat u een uitkomst later kunt nalezen. Beslis altijd op de codes; de zinnen zijn er
 om te tonen.
 
+### Een dossier bewaren
+
+!!! warning "Staat nog dicht"
+    CrediMatch neemt pas dossiers aan wanneer de afspraken over persoonsgegevens rond zijn. Tot dan geven deze twee
+    oproepen `403 dossier_api_dicht`. Rekenen met `POST /api/v1/prescoring` kan wel: dat bewaart niets.
+
+Met een bewaard dossier kan de makelaar in CrediMatch simulaties maken, en leest u die terug.
+
+```http
+PUT /api/v1/klanten/hw-001/kantoren/kantoor-7/dossiers/dossier-1234
+X-Api-Key: uw-sleutel
+Content-Type: application/json
+
+{
+  "omschrijving": "Aankoop woning",
+  "dossier": { "dossier": {}, "kredietnemers": [], "panden": [], "schijven": [], "lasten": [] }
+}
+```
+
+- `dossierRef` is uw eigen referentie. Dezelfde oproep twee keer geeft hetzelfde dossier: `201` de eerste keer, daarna
+  `200`. Het dossier staat in het formaat van de woordenlijst, zoals bij de prescoring.
+- Zet **geen persoonsgegevens** in de omschrijving. Zonder omschrijving heet het dossier "Dossier" gevolgd door uw
+  referentie.
+- U bent de enige die het dossier wijzigt: in CrediMatch is het enkel leesbaar. Een dossier verhuist niet naar een ander
+  kantoor.
+- `GET` op hetzelfde adres geeft het dossier met zijn `simulaties`: per simulatie de bank, het bedrag, de looptijd, het
+  oordeel en de volledige `uitkomst`, in hetzelfde formaat als een uitkomst van de prescoring.
+
 ## Fouten
 
 Elke fout heeft een vaste `code` en een `melding`; bij een `400` ook de lijst van alle problemen tegelijk.
@@ -99,5 +129,9 @@ Elke fout heeft een vaste `code` en een `melding`; bij een `400` ook de lijst va
 | 400 | `vraag_ongeldig` | een onbekende code, een verkeerd type, een onbekende bank of variant |
 | 401 | `sleutel_ongeldig` | geen sleutel, een onbekende of een ingetrokken sleutel |
 | 403 | `kantoor_niet_aangemeld` | het kantoor is niet door u aangemeld |
+| 403 | `dossier_api_dicht` | dossiers bewaren staat nog dicht |
 | 404 | `klant_niet_gekoppeld` | uw `klantRef` is bij CrediMatch nog niet aan een klant gekoppeld |
+| 404 | `dossier_onbekend` | er is geen dossier met die `dossierRef` onder dit kantoor |
+| 409 | `dossier_ander_kantoor` | het dossier staat onder een ander kantoor; het verhuist niet |
+| 409 | `dossier_gearchiveerd` | het dossier staat in de prullenbak van CrediMatch |
 | 429 | `te_veel_oproepen` | meer dan 60 oproepen in een minuut met deze sleutel |
