@@ -80,13 +80,13 @@ html {
 
 /* === Merkkleur (31/10/2026) ===================================================
    Overgenomen van cleanops-docs, met de kleuren van CrediMatch: het verloop in docs/images/logo.svg
-   (#059669 → #047857; tot 1/11/2026 vanaf #34d399) en de tinten van credimatch.be (src/styles/global.css, brand-400 tot
+   (#047857 → #065f46, de twee linktinten; tot 1/11/2026 #34d399 → #047857) en de tinten van credimatch.be (src/styles/global.css, brand-400 tot
    brand-800).
 
    ⚠️ De titel op het onthaal en het logo zijn op 1/11/2026 donkerder gezet, op Dominiques opmerking ("het groen is
    redelijk licht, zowel het logo als de hoofdtitel"). Gemeten op wit: het verloop eindigde in #6ee7b7 (1,52) en het logo
    begon bij #34d399 (1,92), ver onder 3,0 voor grote tekst en grafische elementen. Nu in het licht #047857 → #059669
-   (5,48 → 3,77); in het donker blijft het lichte verloop, daar is het juist goed leesbaar (4,27 → 10,56 op #1e2129).
+   (5,48 → 3,77) en het logo #047857 → #065f46 (wit erop 5,48 → 7,68; een eerste stap naar #059669 vond Dominique nog te licht); in het donker blijft het lichte verloop van de titel, daar is het juist goed leesbaar (4,27 → 10,56 op #1e2129).
 
    Bewuste keuze, zelfde als de drie andere handleidingen: de header blijft WIT. Het merk komt terug in links,
    actieve navigatie en accenten (adm-appkit/docs/docs-site-vormgeving.md).
@@ -227,3 +227,11 @@ html {
   pointer-events: none;
 }
 
+
+/* Het logo VOLLEDIG dekkend. Material zet elke knop in de kop op opacity: 0.7 (`.md-header__button`), ook de logoknop;
+   daardoor oogde het logo op wit altijd een derde vervaagd, welke kleur het ook had. Gevonden op 1/11/2026 bij Dominiques
+   opmerking "het logo is nog redelijk licht": gemeten opacity 0.7 op a.md-header__button.md-logo, terwijl de pixels van het
+   beeld zelf #047555 en #056147 waren. Geldt ook voor de drie andere handleidingen (gemeld). */
+.md-header__button.md-logo {
+  opacity: 1;
+}
