@@ -133,6 +133,7 @@ plugins:
             # Eén regel per nav-item. Neem de Franse term over uit de APP, verzin hem niet: handleiding en scherm
             # horen hetzelfde te zeggen.
             Home: Accueil
+            Dossiers: Dossiers
             Organisatie: Organisation
             Kantoren: Bureaux
             Banken: Banques
@@ -148,6 +149,7 @@ extra:
 # app (Organisatie > Kantoren), zodat de handleiding leest als het scherm.
 nav:
   - Home: index.md
+  - Dossiers: dossiers.md
   - Organisatie:
       - Kantoren: kantoren.md
       - Banken: banken.md
