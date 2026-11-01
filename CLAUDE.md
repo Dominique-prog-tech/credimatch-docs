@@ -25,6 +25,11 @@ van die app). De ADM One-sessie zette enkel het skelet op.
 - **NL én FR**, elke pagina in beide talen (`pagina.md` + `pagina.fr.md`). De Franse term komt uit de app.
 - Een prescoring is een **indicatie**: de bank beslist. Schrijf nooit dat CrediMatch een krediet "toekent".
 
+## Banknamen mogen in de handleiding staan
+Beslist door Dominique op 1/11/2026 ("Mogen blijven"): de handleiding noemt banken bij naam waar het scherm dat ook doet
+(Banken, het API-voorbeeld). Dat wijkt bewust af van de website (www.credimatch.be, Content Hub: "geen namen van banken
+momenteel"). Haal ze dus niet weg omdat de site ze niet noemt.
+
 ## Wat er groeit
 Enkel **klare** pagina's staan in de `nav:` van `mkdocs.yml`, per vrijgegeven scherm. Op het onthaal wordt de kaart van
 dat onderwerp dan klikbaar (de klasse `cm-binnenkort` gaat weg en er komt een link bij).
