@@ -42,7 +42,7 @@ Het dossier heeft zeven tabbladen, in de volgorde van een gesprek met de klant:
 
 | Stap | Wat u er invult |
 |---|---|
-| 1. Doel | wat de klant wil doen, zijn gezin, en de datum van indiening |
+| 1. Doel | wat de klant wil doen, zijn gezin, en de datum van indiening (bij een nieuw dossier staat die op vandaag) |
 | 2. Aanvragers | per aanvrager zijn naam en contactgegevens, zijn werk en zijn inkomen |
 | 3. Verleden en lasten | een vermelding bij de Nationale Bank, en de kredieten die al lopen |
 | 4. Waarborgen | de panden: het gefinancierde pand en wat er verder in waarborg gaat |
@@ -61,7 +61,7 @@ Een leeg veld betekent **niet gekend**. De prescoring zegt dan welk gegeven ontb
 
 - Bij een vraag **ja/nee** kiest u **ja** of **nee**. Leeg betekent *niet gekend*, niet *nee*.
 - Een bedrag dat nul is, vult u in als **0**. Zijn er geen werken, vul dan **0** in bij de werken: leeg betekent dat de
-  werken niet gekend zijn.
+  werken niet gekend zijn. Dat staat ook onder het veld.
 
 ### Het overzicht in het financieel plan
 
@@ -83,7 +83,8 @@ wijzigingen die nog niet bewaard zijn, dan vraagt het scherm eerst of u toch wil
 4. Klik op **Prescoring**.
 
 Per bank ziet u het oordeel, de versie van de regels en tot wanneer ze nagekeken zijn, en de regels die op het oordeel
-wegen, met de reden.
+wegen, met de reden. Ontbreken er gegevens, dan staat bovenaan **Deze gegevens ontbreken**, met elk gegeven één keer en
+een knop **naar stap …** die de juiste stap opent.
 
 | Oordeel | Wat het betekent |
 |---|---|
@@ -109,8 +110,8 @@ Een bank die uw organisatie heeft uitgezet (zie [Banken](banken.md)), wordt niet
 ## Veelgemaakte fouten
 
 !!! warning "Bijna elke regel geeft niet volledig getoetst"
-    Er ontbreekt een gegeven dat de bank nodig heeft, vaak de **datum van indiening** (stap 1) of de geboortedatum van
-    een aanvrager. De reden bij elke regel zegt welk gegeven ontbreekt. Vul het in, klik op **Bewaren** en toets opnieuw.
+    Er ontbreekt een gegeven dat de bank nodig heeft, bijvoorbeeld de geboortedatum van een aanvrager. De lijst **Deze
+    gegevens ontbreken** bovenaan zegt welke. Klik op **naar stap …**, vul ze in, klik op **Bewaren** en toets opnieuw.
 
 !!! warning "Het dossier van een collega staat niet in de lijst"
     U ziet enkel de dossiers van de kantoren die u mag zien. Vraag de beheerder van uw organisatie om u op dat kantoor te

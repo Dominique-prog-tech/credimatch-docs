@@ -134,6 +134,7 @@ plugins:
             # horen hetzelfde te zeggen.
             Home: Accueil
             Dossiers: Dossiers
+            Proefscherm: Écran d'essai
             Organisatie: Organisation
             Kantoren: Bureaux
             Banken: Banques
@@ -150,6 +151,7 @@ extra:
 nav:
   - Home: index.md
   - Dossiers: dossiers.md
+  - Proefscherm: proefscherm.md
   - Organisatie:
       - Kantoren: kantoren.md
       - Banken: banken.md

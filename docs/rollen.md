@@ -34,6 +34,8 @@ rechten niet wijzigen. Wie deze rol heeft, beheert uw organisatie in CrediMatch.
 | **Alle kantoren zien** | alle kantoren van uw organisatie, ook die waarop de gebruiker niet staat |
 | **Prullenbak bekijken** | de [prullenbak](prullenbak.md) openen |
 | **Verwijderde records herstellen** | iets uit de prullenbak terugzetten |
+| **Banken en instellingen beheren** | kiezen met welke [banken](banken.md) uw organisatie werkt |
+| **Proefscherm gebruiken** | het [proefscherm](proefscherm.md) openen: een fictief geval bij de banken toetsen |
 
 ## Gebruikers een rol geven
 

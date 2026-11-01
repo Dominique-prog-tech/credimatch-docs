@@ -35,6 +35,8 @@ supprimer ni modifier ses droits. Qui a ce rôle gère votre organisation dans C
 | **Voir tous les bureaux** | tous les bureaux de votre organisation, y compris ceux auxquels l'utilisateur n'est pas rattaché |
 | **Voir la corbeille** | ouvrir la [corbeille](prullenbak.md) |
 | **Restaurer des enregistrements** | remettre un élément de la corbeille |
+| **Gérer les banques et paramètres** | choisir avec quelles [banques](banken.md) votre organisation travaille |
+| **Utiliser l'écran d'essai** | ouvrir l'[écran d'essai](proefscherm.md) : vérifier un cas fictif auprès des banques |
 
 ## Attribuer un rôle à des utilisateurs
 

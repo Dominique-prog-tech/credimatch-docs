@@ -44,7 +44,7 @@ Le dossier compte sept onglets, dans l'ordre d'un entretien avec le client :
 
 | Étape | Ce que vous y remplissez |
 |---|---|
-| 1. Objet | ce que le client veut faire, son ménage, et la date d'introduction |
+| 1. Objet | ce que le client veut faire, son ménage, et la date d'introduction (aujourd'hui pour un nouveau dossier) |
 | 2. Demandeurs | pour chaque demandeur, son nom et ses coordonnées, son emploi et ses revenus |
 | 3. Antécédents et charges | un enregistrement à la Banque nationale, et les crédits en cours |
 | 4. Garanties | les biens : le bien financé et ce qui est donné en garantie |
@@ -63,7 +63,7 @@ Un champ vide signifie **non connu**. Le pré-scoring indique alors la donnée m
 
 - Pour une question **oui/non**, choisissez **oui** ou **non**. Vide signifie *non connu*, pas *non*.
 - Un montant nul se saisit **0**. S'il n'y a pas de travaux, saisissez **0** aux travaux : vide signifie que les
-  travaux ne sont pas connus.
+  travaux ne sont pas connus. C'est aussi indiqué sous le champ.
 
 ### L'aperçu du plan financier
 
@@ -86,7 +86,8 @@ voulez vraiment partir.
 4. Cliquez sur **Pré-scoring**.
 
 Pour chaque banque, vous voyez le résultat, la version des règles et la date jusqu'à laquelle elles sont vérifiées, ainsi
-que les règles qui pèsent sur le résultat, avec la raison.
+que les règles qui pèsent sur le résultat, avec la raison. S'il manque des données, **Ces données manquent** figure en
+haut, chaque donnée une seule fois, avec un bouton **vers l'étape …** qui ouvre la bonne étape.
 
 | Résultat | Ce que cela signifie |
 |---|---|
@@ -113,8 +114,8 @@ Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'e
 ## Erreurs fréquentes
 
 !!! warning "Presque chaque règle donne pas entièrement vérifié"
-    Il manque une donnée dont la banque a besoin, souvent la **date d'introduction** (étape 1) ou la date de naissance
-    d'un demandeur. La raison de chaque règle indique la donnée manquante. Complétez-la, cliquez sur **Enregistrer** et
+    Il manque une donnée dont la banque a besoin, par exemple la date de naissance d'un demandeur. La liste **Ces données
+    manquent** en haut indique lesquelles. Cliquez sur **vers l'étape …**, complétez-les, cliquez sur **Enregistrer** et
     vérifiez à nouveau.
 
 !!! warning "Le dossier d'un collègue n'apparaît pas dans la liste"
