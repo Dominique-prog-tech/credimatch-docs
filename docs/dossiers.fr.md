@@ -40,7 +40,9 @@ Cliquez sur une ligne pour ouvrir le dossier.
 
 ## Le dossier par étapes
 
-Le dossier compte sept onglets, dans l'ordre d'un entretien avec le client :
+En haut figure la **barre des étapes**, avec sept étapes dans l'ordre d'un entretien avec le client. Avec **Suivant** et
+**Précédent** en bas, vous avancez étape par étape. Vous pouvez aussi sauter : cliquez sur une étape dans la barre, par
+exemple pour revenir aux demandeurs si le client avait oublié quelque chose.
 
 | Étape | Ce que vous y remplissez |
 |---|---|
@@ -50,44 +52,83 @@ Le dossier compte sept onglets, dans l'ordre d'un entretien avec le client :
 | 4. Garanties | les biens : le bien financé et ce qui est donné en garantie |
 | 5. Plan financier | les travaux, les frais, les fonds propres, la durée, le taux et le crédit demandé en tranches |
 | 6. Particularités | ce qu'une banque ne demande que dans un cas particulier : un refinancement ou une expertise |
-| 7. Pré-scoring et simulations | vérifier par banque, et enregistrer des simulations |
+| 7. Pré-scoring | vérifier par banque, et enregistrer des simulations |
+
+### Ce que la barre des étapes vous indique
+
+Chaque étape de la barre montre s'il manque encore quelque chose aux banques :
+
+| Vous voyez | Ce que cela signifie |
+|---|---|
+| une coche verte | aucune banque ne demande encore une donnée de cette étape |
+| un nombre orange | le nombre de données de cette étape qu'une banque demande encore |
+| seulement le numéro | rien n'a encore été vérifié, par exemple parce qu'aucune banque n'est active pour votre organisation |
+
+Pour cela, CrediMatch vérifie le dossier tel qu'il est à ce moment, avec le crédit demandé et la durée du dossier : à
+l'ouverture et chaque fois que le dossier est enregistré. Cette vérification n'enregistre rien. Une coche indique
+seulement qu'aucune banque ne demande encore rien. Elle ne signifie pas que chaque champ de l'étape est rempli.
+
+### À droite : le dossier en chiffres
+
+À côté de chaque étape, vous voyez le dossier en chiffres : le crédit demandé (la somme des tranches) avec la durée et le
+taux, le total du projet, l'apport propre, le nombre de demandeurs avec leur revenu net ensemble, et le bien. En
+dessous figurent le résultat par banque, et la liste **Encore … données nécessaires** avec un bouton vers l'étape où vous
+saisissez chaque donnée. Si un montant n'est pas encore saisi, un tiret apparaît et l'écran indique quel montant manque.
 
 Vous ajoutez un demandeur, un crédit en cours, un bien ou une tranche avec le bouton sous l'étape (par exemple **Ajouter
 un demandeur** ou **Ajouter une tranche**). Vous en retirez un avec **Supprimer** en haut de sa carte.
 
-<!-- AFBEELDING: l'étape Plan financier avec une tranche et l'aperçu en dessous -->
+<!-- AFBEELDING: la barre des étapes avec des coches et des nombres orange, l'étape Objet avec les cartes, et à droite le dossier en chiffres -->
 
 ### Ce que vous ne savez pas, laissez-le vide
 
 Un champ vide signifie **non connu**. Le pré-scoring indique alors la donnée manquante, au lieu de deviner.
 
-- Pour une question **oui/non**, choisissez **oui** ou **non**. Vide signifie *non connu*, pas *non*.
+- Pour une question **oui/non**, trois boutons figurent côte à côte : **Oui**, **Non** et **Non connu**. *Non connu*
+  est autre chose que *Non* : le pré-scoring le signale comme manquant.
+- Une liste courte, comme la situation familiale ou le groupe cible, se choisit aussi avec des boutons, avec **Non
+  connu** en plus.
+- L'**objet** se choisit avec une carte, par exemple **Achat avec travaux**. Si vous cliquez encore sur la carte choisie,
+  l'objet redevient *non connu*.
 - Un montant nul se saisit **0**. S'il n'y a pas de travaux, saisissez **0** aux travaux : vide signifie que les
   travaux ne sont pas connus. C'est aussi indiqué sous le champ.
 
 ### L'aperçu du plan financier
 
 Sous l'étape **Plan financier** figure un aperçu : le prix d'achat des biens, les travaux, les frais d'acquisition, le
-total du projet, le crédit demandé (la somme des tranches) et l'apport propre (la différence). C'est un contrôle. La
-quotité et le taux d'endettement sont calculés par chaque banque à sa façon : vous les voyez au pré-scoring.
+total du projet, le crédit demandé (la somme des tranches) et l'apport propre (la différence). C'est un contrôle. Un
+montant qui n'est pas encore saisi apparaît comme un tiret : sans tous les montants, il n'y a pas de total, et l'écran
+indique quel montant manque. La quotité et le taux d'endettement sont calculés par chaque banque à sa façon : vous les
+voyez au pré-scoring.
 
 ### Enregistrer
 
-Cliquez en bas sur **Enregistrer**. Ce que vous saisissez n'est enregistré qu'au moment où vous cliquez sur
-**Enregistrer**. Si vous quittez le dossier avec des modifications non enregistrées, l'écran vous demande d'abord si vous
-voulez vraiment partir.
+Le dossier est enregistré chaque fois que vous passez à une autre étape : avec **Suivant**, avec **Précédent** ou en
+cliquant sur la barre des étapes. En bas, vous voyez l'heure du dernier enregistrement. Si vous voulez rester sur une
+étape, cliquez sur **Enregistrer**.
+
+Si l'enregistrement échoue, par exemple parce que la description est vide, vous passez quand même à l'étape choisie. Ce
+que vous avez saisi reste, et le message reste en haut jusqu'à ce que l'enregistrement réussisse. Si vous quittez le
+dossier avec des modifications non enregistrées, l'écran vous demande d'abord si vous voulez vraiment partir.
 
 ## Pré-scoring et simulations
 
-1. Ouvrez l'étape **7. Pré-scoring et simulations**.
+1. Ouvrez l'étape **7. Pré-scoring**.
 2. Vérifiez le **Montant** et la **Durée (années)**. Ils reprennent le crédit demandé et la durée du dossier ; vous
    pouvez vérifier un autre montant ou une autre durée.
 3. Choisissez éventuellement une autre **Date de test**, ou une autre variante pour une banque.
 4. Cliquez sur **Pré-scoring**.
 
-Pour chaque banque, vous voyez le résultat, la version des règles et la date jusqu'à laquelle elles sont vérifiées, ainsi
-que les règles qui pèsent sur le résultat, avec la raison. S'il manque des données, **Ces données manquent** figure en
-haut, chaque donnée une seule fois, avec un bouton **vers l'étape …** qui ouvre la bonne étape.
+Chaque banque reçoit une carte ; les banques figurent côte à côte, pour que vous puissiez les comparer. Sur chaque carte :
+
+- le **résultat**, en grand en haut, avec la version des règles et la date jusqu'à laquelle elles sont vérifiées ;
+- trois chiffres clés, tels que cette banque les calcule : la **quotité**, le **taux d'endettement** et le **solde après
+  toutes les charges**, avec le minimum vital en dessous. Si la banque ne peut pas encore calculer un chiffre, un tiret
+  apparaît avec la raison ;
+- s'il manque des données, la liste **Ces données manquent**, chaque donnée une seule fois, avec un bouton **vers
+  l'étape …** qui ouvre la bonne étape. S'il y en a beaucoup, vous voyez les six premières ; les autres s'ouvrent avec
+  **Afficher les … autres** ;
+- **Ce qui pèse sur le résultat** : cliquez dessus pour voir les règles qui pèsent sur le résultat, avec la raison.
 
 | Résultat | Ce que cela signifie |
 |---|---|
@@ -109,14 +150,15 @@ dossier lui-même.
 Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'est pas vérifiée. Elle figure en bas sous
 **Désactivées par votre organisation**.
 
-<!-- AFBEELDING: l'étape Pré-scoring et simulations avec le résultat d'une banque et deux simulations enregistrées -->
+<!-- AFBEELDING: l'étape Pré-scoring avec deux banques côte à côte et deux simulations enregistrées -->
 
 ## Erreurs fréquentes
 
 !!! warning "Presque chaque règle donne pas entièrement vérifié"
     Il manque une donnée dont la banque a besoin, par exemple la date de naissance d'un demandeur. La liste **Ces données
-    manquent** en haut indique lesquelles. Cliquez sur **vers l'étape …**, complétez-les, cliquez sur **Enregistrer** et
-    vérifiez à nouveau.
+    manquent** indique lesquelles. Cliquez sur **vers l'étape …** et complétez-les. Revenez ensuite à l'étape
+    **Pré-scoring** et cliquez à nouveau sur **Pré-scoring** : la barre des étapes montre déjà quelles étapes manquent
+    encore de quelque chose.
 
 !!! warning "Le dossier d'un collègue n'apparaît pas dans la liste"
     Vous ne voyez que les dossiers des bureaux que vous pouvez voir. Demandez à l'administrateur de votre organisation de
