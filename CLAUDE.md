@@ -32,7 +32,7 @@ dat onderwerp dan klikbaar (de klasse `cm-binnenkort` gaat weg en er komt een li
 ## Wat er bewust nog NIET aan staat (31/10/2026), en wanneer het aangaat
 | Wat | Wanneer | Hoe (zie `cleanops-docs`) |
 |---|---|---|
-| De uitrol bij een push | bij het live zetten | `if:` bij `deploy` in `.github/workflows/deploy.yml` weghalen |
+| ~~De uitrol bij een push~~ | ✅ gedaan 1/11/2026 | repo publiek, Pages aan (GitHub Actions, `docs.credimatch.be`), `if:` weg |
 | `robots.txt` open + sitemap | bij het live zetten | `Allow: /` en de `Sitemap:`-regel |
 | Plausible (bezoekcijfers) | bij het live zetten | eigen site in Plausible voor `docs.credimatch.be`; NIET het script van een andere site overnemen, anders tellen de bezoeken daar |
 | De beeldcontrole | bij de eerste schermafdruk | `tools/check-beelden.py site` in `deploy.yml`; `MIN_PAGINAS` verhogen bij elke beeldronde |

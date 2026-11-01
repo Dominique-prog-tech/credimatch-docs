@@ -1,12 +1,9 @@
 name: Deploy MkDocs
 
-# ⚠️ OPGEZET ZONDER UITROL (31/10/2026). Bij elke push BOUWT dit de site strikt (een dode link of een dood anker
-# laat de bouw falen), maar het zet ze NIET online: de uitrol draait enkel op een handmatige start
-# (workflow_dispatch). Reden: de repo is privé en er is nog geen scherm vrijgegeven, dus er is niets te tonen.
-#
-# Live zetten, op Dominiques woord (zie CLAUDE.md, "Live zetten"):
-#   1. repo publiek, Pages aan (Settings > Pages > Source: GitHub Actions), DNS docs.credimatch.be bij Cloudflare;
-#   2. hieronder de `if:` bij `deploy` weghalen, zodat een push naar main weer uitrolt zoals bij de andere drie.
+# ✅ LIVE sinds 1/11/2026, op Dominiques woord: repo publiek, Pages aan (bron: GitHub Actions, domein docs.credimatch.be),
+# en de uitrol bij elke push naar main, zoals bij de andere drie. Bij elke push BOUWT dit de site strikt (een dode link
+# of een dood anker laat de bouw falen). Tot dan liep de uitrol enkel op een handmatige start (workflow_dispatch).
+# robots.txt blijft DICHT tot de lancering (plak 1, keuze D).
 
 on:
   push:
@@ -43,7 +40,6 @@ jobs:
 
   deploy:
     needs: build
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
