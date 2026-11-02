@@ -65,6 +65,20 @@ exemple pour revenir aux demandeurs si le client avait oublié quelque chose.
 | 6. Particularités | ce qu'une banque ne demande que dans un cas particulier : un refinancement ou une expertise |
 | 7. Pré-scoring | vérifier par banque, et enregistrer des simulations |
 
+### Quels champs vous voyez
+
+Vous ne voyez que les champs liés à vos choix :
+
+| Votre choix | Ce qui change |
+|---|---|
+| **Statut** (étape 2, par demandeur) | un employé, un ouvrier ou un fonctionnaire ne voit pas *indépendant depuis*. Un indépendant ou un dirigeant d'entreprise ne voit pas les questions sur son contrat, son entrée en service, le temps plein, les chèques-repas et une voiture de société. Un pensionné ne voit ni l'un ni l'autre |
+| **Type de charge** (étape 3) | pour une ligne de crédit, vous saisissez le montant de la ligne ; pour une autre charge, la mensualité, la date de fin et le solde |
+| **A connu un règlement collectif de dettes** (étape 3) | avec *Non*, la question sur sa fin disparaît |
+| **Type de taux** (étape 5) | avec un taux fixe, le taux maximal disparaît |
+| **Objet** (étape 1) | les questions sur un refinancement à l'étape 6 n'apparaissent que pour l'objet *Refinancement* |
+
+Tant que vous n'avez rien choisi, tous les champs sont affichés. Un champ déjà rempli reste affiché, même si vous modifiez votre choix. Si une banque demande tout de même une donnée masquée, le champ apparaît chez le demandeur ou pour le crédit concerné.
+
 ### Ce que la barre des étapes vous indique
 
 Chaque étape de la barre montre s'il manque encore quelque chose aux banques :

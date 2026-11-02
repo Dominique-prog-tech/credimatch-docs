@@ -63,6 +63,20 @@ de aanvragers als de klant iets vergeten was.
 | 6. Bijzonderheden | wat een bank enkel in een bijzonder geval vraagt: een herfinanciering of een schatting |
 | 7. Prescoring | per bank toetsen, en simulaties bewaren |
 
+### Welke velden u ziet
+
+U ziet enkel de velden die bij uw keuzes horen:
+
+| Uw keuze | Wat er verandert |
+|---|---|
+| **Statuut** (stap 2, per aanvrager) | een bediende, arbeider of ambtenaar ziet *zelfstandig sinds* niet. Een zelfstandige of bedrijfsleider ziet de vragen over zijn contract, zijn indiensttreding, voltijds werken, maaltijdcheques en een bedrijfswagen niet. Een gepensioneerde ziet geen van beide |
+| **Soort last** (stap 3) | bij een kredietlijn vult u het bedrag van de lijn in; bij een andere last de maandlast, de einddatum en het saldo |
+| **Collectieve schuldenregeling gehad** (stap 3) | bij *Nee* vervalt de vraag naar het einde ervan |
+| **Rentetype** (stap 5) | bij een vaste rente vervalt de maximale rentevoet |
+| **Doel** (stap 1) | de vragen over een herfinanciering in stap 6 staan er enkel bij het doel *Herfinanciering* |
+
+Hebt u nog niets gekozen, dan staan alle velden er. Een veld dat u al invulde, blijft staan, ook als u uw keuze wijzigt. Vraagt een bank toch een gegeven dat verborgen is, dan verschijnt het veld bij de aanvrager of het krediet waar het ontbreekt.
+
 ### Wat de stappenbalk u vertelt
 
 Elke stap in de balk toont of er bij de banken nog iets ontbreekt:
