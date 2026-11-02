@@ -46,9 +46,10 @@ if (NIET_PUBLIEK_WOORDEN.length === 0) { console.error('⛔ De lijst tools/niet-
 const NIET_PUBLIEK = new RegExp([...NIET_PUBLIEK_WOORDEN, '\\btarief \\d', '\\btarif \\d'].join('|'), 'i');
 
 // Wat NIET op een beeld hoort: het versienummer, schuifbalken.
-// De zin en de rij die zo'n woord dragen: zie NIET_PUBLIEK. Staat er toch iets van op het scherm, dan weigert het script het beeld.
+// De zinnen en de rij die zo'n woord dragen: zie NIET_PUBLIEK. Staat er toch iets van op het scherm, dan weigert het script het beeld.
 const VERBERG = 'tr[data-testid="korting-Record Credits"] { display: none !important; }'
   + '.nav-version, .adm-klok-vast, .dxbl-scroll-viewer-vert-scroll-bar, .dxbl-scroll-viewer-hor-scroll-bar, [data-testid="tarief-korting"] { visibility: hidden !important; }'
+  + '[data-testid="tarief-notities"] { display: none !important; }'
   + '::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb { background: transparent !important; }';
 
 const tekstTaal = (nl, fr) => new RegExp(`${nl}|${fr}`);
@@ -75,7 +76,9 @@ const SCHOTEN = [
   { naam: 'kantoren-lijst', route: '/kantoren', verwacht: tekstTaal('Nieuw kantoor', 'Nouveau bureau') },
   { naam: 'kantoor-gebruikers', route: '/kantoren', verwacht: tekstTaal('Gebruikers van Kantoor Gent', 'Utilisateurs de Kantoor Gent'),
     na: async p => { await p.getByRole('row').filter({ hasText: /Kantoor Gent(?! \()/ }).first().getByRole('button', { name: /^(Gebruikers|Utilisateurs)$/ }).click(); } },
-  { naam: 'banken', route: '/instellingen/banken', hoogte: 1040, verwacht: tekstTaal('Commerciële korting', 'Réduction commerciale'), magKortZijn: 'twee banken, een korting en een uitleg' },
+  // De geschiedenis noemt een trede bij haar naam, en dat is de echte hoogte van de korting: ze staat niet op het beeld.
+  { naam: 'banken', route: '/instellingen/banken', hoogte: 1040, verwacht: tekstTaal('Commerciële korting', 'Réduction commerciale'), magKortZijn: 'twee banken, een korting en een uitleg',
+    na: async p => { await p.getByRole('heading', { name: /^(Geschiedenis|Historique)$/ }).evaluate(k => { k.nextElementSibling?.remove(); k.remove(); }); } },
   // ⚠️ Vandaag als toetsdatum: een toetsgeval brengt zijn eigen datum mee, en op die datum geldt een echt rooster. Het fictieve geldt vanaf vandaag.
   { naam: 'proefscherm', route: '/proef', hoogte: 1500, verwacht: /tarie?f Fictief/i,
     na: async p => {
