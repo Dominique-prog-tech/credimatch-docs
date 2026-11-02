@@ -35,8 +35,8 @@ de periode *Deze maand*, en **Alle … tonen** op de kaart *Laatste simulaties* 
 | Bank | de bank waarbij getoetst werd |
 | Bedrag | het bedrag van deze simulatie. Dat kan verschillen van het gevraagde krediet in het dossier |
 | Oordeel | het oordeel op het moment van bewaren (zie [Prescoring en simulaties](dossiers.md#prescoring-en-simulaties)) |
-| Rente | de rente waarmee getoetst werd |
-| Formule | de formule van de bank. Staat er **eigen rentevoet**, dan kwam de rente uit het dossier; **geen rentevoet** betekent dat de toets zonder rente liep. Leeg bij een oudere simulatie zonder rente |
+| Rente | de rente waarmee getoetst werd. Leeg als de schijven elk een andere rente hebben |
+| Formule | de formule van de bank; bij meerdere schijven staan de formules naast elkaar. Staat er **eigen rentevoet**, dan kwam de rente uit het dossier; **geen rentevoet** betekent dat de toets zonder rente liep. Leeg bij een oudere simulatie zonder rente |
 | Maandlast | de eerste maandlast |
 | Rente volgens | **tarief** met de versie van de bank, of **eigen rentevoet**. Deze kolom toont u met de kolomkeuze |
 | Bewaard op | de dag en het uur van bewaren |

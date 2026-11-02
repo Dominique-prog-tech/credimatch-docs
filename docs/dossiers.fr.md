@@ -128,7 +128,7 @@ seulement qu'aucune banque ne demande encore rien. Elle ne signifie pas que chaq
 À côté de chaque étape, vous voyez le dossier en chiffres : le crédit demandé (la somme des tranches) avec la durée et le
 taux, le total du projet, l'apport propre, le nombre de demandeurs avec leur revenu net ensemble, et le bien. En
 dessous figurent le résultat par banque, et la liste **Encore … données nécessaires** avec un bouton vers l'étape où vous
-saisissez chaque donnée. Si un montant n'est pas encore saisi, un tiret apparaît et l'écran indique quel montant manque.
+saisissez chaque donnée. Si un montant n'est pas encore saisi, un tiret apparaît et l'écran indique quel montant manque. Avec plusieurs tranches, vous voyez par exemple *2 tranches · jusqu'à 25 ans*.
 
 Vous ajoutez un demandeur, un crédit en cours, un bien ou une tranche avec le bouton sous l'étape (par exemple **Ajouter
 un demandeur** ou **Ajouter une tranche**). Vous en retirez un avec **Supprimer** en haut de sa carte.
@@ -179,7 +179,7 @@ dossier avec des modifications non enregistrées, l'écran vous demande d'abord 
 
 1. Ouvrez l'étape **7. Pré-scoring**.
 2. Vérifiez le **Montant** et la **Durée (années)**. Ils reprennent le crédit demandé et la durée du dossier ; vous
-   pouvez vérifier un autre montant ou une autre durée.
+   pouvez vérifier un autre montant ou une autre durée. Si le dossier compte plusieurs tranches, il y a une ligne par tranche.
 3. Choisissez éventuellement une autre **Date de test**, ou une autre variante pour une banque.
 4. Cliquez sur **Pré-scoring**.
 
@@ -205,6 +205,34 @@ Chaque banque reçoit une carte ; les banques figurent côte à côte, pour que 
 | refus | une règle de la banque exclut le dossier |
 
 Le calcul n'enregistre rien et ne modifie pas le dossier. Un pré-scoring est une indication : la banque décide.
+
+### Un crédit en plusieurs tranches
+
+Un crédit peut comporter plusieurs tranches, chacune avec sa durée, sa formule et son remboursement. Vous l'utilisez surtout lorsqu'un
+demandeur aura plus de 67 ans à l'échéance du crédit. Après la pension, son revenu compte moins, et les banques conseillent alors deux
+tranches : l'une remboursée avant la pension. Cette mensualité disparaît ensuite.
+
+À l'étape **Pré-scoring** :
+
+1. Si un demandeur aura plus de 67 ans à l'échéance, le bouton **Scinder jusqu'à 67 ans** apparaît. Cliquez dessus. Vous obtenez deux
+   tranches : la courte sur le plus grand nombre d'années entières remboursé au 67e anniversaire, et la moitié du montant chacune. CrediMatch
+   calcule aussitôt.
+2. Cette moitié est un début, pas un conseil. Adaptez les montants et cliquez sur **Pré-scoring**. La tranche courte augmente la mensualité
+   avant la pension, et celle-ci doit aussi passer la vérification.
+3. Avec **Ajouter une tranche** et **Supprimer**, vous choisissez vous-même le nombre de tranches à vérifier. Le dossier n'est pas modifié.
+
+Si les tranches font partie du dossier, ajoutez-les à l'étape 5, avec **Ajouter une tranche**. À partir de deux tranches, la durée, le type de
+taux, le taux et le remboursement apparaissent par tranche. Ce que vous laissez vide pour une tranche suit ce qui figure en haut : ce choix
+s'appelle donc **Comme ci-dessus**.
+
+Sur la carte d'une banque figurent par tranche le taux, la première mensualité, la composition et la **Formule**, que vous choisissez par
+tranche. En dessous figure la **Première mensualité, au total**. La quotité, les conditions et la réduction valent pour tout le crédit.
+
+!!! note "Là où la banque ne dit rien"
+    Les documents des banques ne disent pas toujours comment une règle s'applique à plusieurs tranches. CrediMatch choisit alors la lecture
+    la plus stricte : si une banque demande par exemple un taux fixe, CrediMatch le demande pour chaque tranche. La banque décide.
+
+![L'étape Pré-scoring avec Tranche 1 et Tranche 2, et sur la carte d'Elantis le Taux par tranche](images/dossier-schijven-fr.png "Un crédit en deux tranches"){ .volle-breedte }
 
 ### Le taux par banque
 
@@ -236,6 +264,7 @@ Ce qui peut figurer sur la carte à la place du tarif :
 | un trait et *Aucun tarif* | la banque n'a pas de tarif à la date de test. Saisissez un taux à l'étape 5, ou choisissez une autre date |
 | un trait et *La quotité n'est pas connue* | le taux dépend de la quotité. Complétez d'abord les données qui manquent en dessous |
 | un trait pour une formule choisie auparavant | le tarif en vigueur ne connaît plus cette formule. Choisissez-en une autre |
+| *Saisissez le taux pour chaque tranche, ou pour aucune* | un taux propre figure pour une partie des tranches. Saisissez-le partout, ou videz-le partout |
 
 ### Enregistrer une simulation
 
@@ -249,6 +278,9 @@ Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'e
 
 ![L'étape Pré-scoring avec les banques Elantis et Record Credits côte à côte, chacune avec son résultat et ses chiffres clés, et en dessous Simulations enregistrées](images/dossier-prescoring-fr.png "Le pré-scoring par banque"){ .volle-breedte }
 
+Avec plusieurs tranches, une simulation enregistre le montant total et la durée la plus longue. Les formules figurent côte à côte, et le taux reste
+vide s'il diffère.
+
 Toutes les simulations enregistrées de vos bureaux figurent ensemble sur l'écran [Simulations](simulaties.md).
 
 ## Erreurs fréquentes
@@ -261,6 +293,10 @@ Toutes les simulations enregistrées de vos bureaux figurent ensemble sur l'écr
 
 !!! warning "Toutes les banques affichent le même taux"
     Un taux figure à l'étape 5 : il l'emporte pour chaque banque. Videz-le pour calculer avec le tarif de chaque banque.
+
+!!! warning "Après la scission, la mensualité est plus élevée"
+    C'est normal : une tranche plus courte a une mensualité plus élevée. Le client paie donc plus avant la pension, et moins après. Si la
+    banque refuse encore, adaptez les montants : moins dans la tranche courte réduit la mensualité avant la pension.
 
 !!! warning "Le dossier d'un collègue n'apparaît pas dans la liste"
     Vous ne voyez que les dossiers des bureaux que vous pouvez voir. Demandez à l'administrateur de votre organisation de

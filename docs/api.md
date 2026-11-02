@@ -79,6 +79,7 @@ Content-Type: application/json
   toetsdatum geldt.
 - Per bank kiest u eventueel met `tarief` een `formule`, de `voorwaardenUit` die u uitzet, en een trede `commercieel`. De codes staan in het
   antwoord, onder `formules`, `voorwaarden` en `commercieel`.
+- **Een schijf kan alles wat het dossier kan:** `schijf_looptijd_jaren`, `schijf_rentetype`, `schijf_aflossing`, `schijf_rentevoet` en `schijf_maximale_rentevoet`. Leeg betekent: zoals op het dossier. Per schijf kiest u de formule met `tarief.formulesPerSchijf`, in de volgorde van de schijven; `null` op een plaats is wat `formule` zegt, of wat bij het rentetype hoort.
 
 ### Het antwoord
 
@@ -127,6 +128,7 @@ De getallen in dit voorbeeld zijn verzonnen. Een rente is een fractie: 0,0352 is
 - Wat niet bestaat, is geen fout van de vraag: een onbekende formule geeft de bron `geen` met de reden in `probleem`, en een onbekende voorwaarde
   of korting staat in `meldingen`. Een bank of variant die niet bestaat, blijft een `400`.
 - `commercieel` blijft binnen het plafond dat uw klant instelde. Erboven rekent CrediMatch het plafond, en `meldingen` zegt dat.
+- **Vanaf twee schijven** staat de rente per schijf in `schijven`, met per schijf `schijf`, `bedrag`, `looptijdJaren`, `rentevoet`, `maximaleRentevoet`, `rentetype`, `eersteMaandlast`, `volgensTarief`, `formule` en `formules`. `rentevoet`, `maximaleRentevoet`, `rentetype` en `formule` bovenaan zijn dan leeg zodra de schijven verschillen, `volgensTarief` bovenaan is altijd leeg, en `eersteMaandlast` en `maximaleMaandlast` zijn het totaal. Bij één schijf is `schijven` leeg.
 - Er staat nooit een commissie in. Elke rente is indicatief: de bank beslist.
 
 ### Een dossier bewaren

@@ -73,6 +73,14 @@ const SCHOTEN = [
       await p.locator('.cm-stap > button').nth(6).click();
       await p.getByRole('button', { name: /^(Prescoring|Pré-scoring)$/ }).first().click();
     } },
+  { naam: 'dossier-schijven', route: '/dossiers', hoogte: 1500, verwacht: tekstTaal('Rentevoet per schijf', 'Taux par tranche'),
+    na: async p => {
+      await openRij(p, 'Willems');
+      await p.locator('.cm-stap > button').nth(6).click();
+      await p.locator('.cm-splitsen').click();
+      await p.getByText(/Rentevoet per schijf|Taux par tranche/).first().waitFor();
+      await p.evaluate(() => document.activeElement?.blur());   // anders toont het eerste veld het bedrag zonder opmaak, zoals tijdens het typen
+    } },
   { naam: 'kantoren-lijst', route: '/kantoren', verwacht: tekstTaal('Nieuw kantoor', 'Nouveau bureau') },
   { naam: 'kantoor-gebruikers', route: '/kantoren', verwacht: tekstTaal('Gebruikers van Kantoor Gent', 'Utilisateurs de Kantoor Gent'),
     na: async p => { await p.getByRole('row').filter({ hasText: /Kantoor Gent(?! \()/ }).first().getByRole('button', { name: /^(Gebruikers|Utilisateurs)$/ }).click(); } },

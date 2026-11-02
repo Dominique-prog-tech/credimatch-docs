@@ -126,7 +126,8 @@ dat geen bank er nog iets vraagt. Het zegt niet dat elk veld van de stap ingevul
 Naast elke stap ziet u het dossier in cijfers: het gevraagde krediet (de som van de schijven) met de looptijd en de
 rente, het totaal van het project, de eigen inbreng, het aantal aanvragers met hun netto inkomen samen, en het pand.
 Daaronder staat het oordeel per bank, en de lijst **Nog … gegevens nodig** met een knop naar de stap waar u elk gegeven
-invult. Is een bedrag nog niet ingevuld, dan staat er een streep en zegt het scherm welk bedrag ontbreekt.
+invult. Is een bedrag nog niet ingevuld, dan staat er een streep en zegt het scherm welk bedrag ontbreekt. Bij meerdere schijven staat er
+bijvoorbeeld *2 schijven · tot 25 jaar*.
 
 Een aanvrager, een lopend krediet, een pand of een schijf voegt u toe met de knop onder de stap (bijvoorbeeld **Aanvrager
 toevoegen** of **Schijf toevoegen**). U haalt er een weg met **Verwijderen** bovenaan zijn kaart.
@@ -175,7 +176,7 @@ het terug, met zijn simulaties. Een dossier dat uit een ander pakket komt, is hi
 
 1. Open de stap **7. Prescoring**.
 2. Kijk het **Bedrag** en de **Looptijd (jaren)** na. Ze staan op het gevraagde krediet en de looptijd van het dossier; u kunt
-   een ander bedrag of een andere looptijd toetsen.
+   een ander bedrag of een andere looptijd toetsen. Heeft het dossier meerdere schijven, dan staat er een rij per schijf.
 3. Kies eventueel een andere **Toetsdatum**, of bij een bank een andere variant.
 4. Klik op **Prescoring**.
 
@@ -199,6 +200,33 @@ Per bank krijgt u een kaart; de banken staan naast elkaar, zodat u ze kunt verge
 | weigering | een regel van de bank sluit het dossier uit |
 
 Rekenen bewaart niets en wijzigt het dossier niet. Een prescoring is een indicatie: de bank beslist.
+
+### Een krediet in meerdere schijven
+
+Een krediet kan uit meerdere schijven bestaan, elk met een eigen looptijd, formule en aflossing. U gebruikt dat vooral wanneer een
+aanvrager op het einde van het krediet ouder is dan 67. Na het pensioen telt zijn inkomen minder, en de banken raden dan twee schijven
+aan: één die afgelost is vóór het pensioen. Die maandlast valt daarna weg.
+
+In de stap **Prescoring**:
+
+1. Is een aanvrager op het einde ouder dan 67, dan staat er de knop **Splitsen tot 67 jaar**. Klik erop. U krijgt twee schijven: de korte
+   op het hoogste aantal hele jaren dat afgelost is op de 67ste verjaardag, en elk de helft van het bedrag. CrediMatch rekent meteen.
+2. Die helft is een begin, geen advies. Pas de bedragen aan en klik op **Prescoring**. De korte schijf verhoogt de maandlast vóór het
+   pensioen, en ook die moet door de toets.
+3. Met **Schijf toevoegen** en **Verwijderen** kiest u zelf hoeveel schijven u toetst. Het dossier wijzigt daardoor niet.
+
+Horen de schijven bij het dossier, voeg ze dan toe in stap 5, met **Schijf toevoegen**. Vanaf twee schijven verschijnen per schijf de
+looptijd, het rentetype, de rentevoet en de aflossing. Wat u bij een schijf leeg laat, volgt wat bovenaan staat: daarom heet die keuze
+daar **Zoals bovenaan**.
+
+Op de kaart van een bank staan per schijf de rente, de eerste maandlast, de opbouw en de **Formule**, die u per schijf kiest. Daaronder staat
+de **Eerste maandlast, samen**. De quotiteit, de voorwaarden en de korting gelden voor het hele krediet.
+
+!!! note "Waar de bank niets zegt"
+    De documenten van de banken zeggen niet altijd hoe een regel werkt bij meerdere schijven. CrediMatch kiest dan de strengste lezing:
+    vraagt een bank bijvoorbeeld een vaste rente, dan vraagt CrediMatch die voor elke schijf. De bank beslist.
+
+![De stap Prescoring met Schijf 1 en Schijf 2, en op de kaart van Elantis de Rentevoet per schijf](images/dossier-schijven.png "Een krediet in twee schijven"){ .volle-breedte }
 
 ### De rente per bank
 
@@ -230,6 +258,7 @@ Wat op de kaart kan staan in plaats van het tarief:
 | een streep en *geen tarief* | de bank heeft op de toetsdatum geen tarief. Vul in stap 5 een rente in, of kies een andere datum |
 | een streep en *De quotiteit is niet gekend* | de rente hangt van de quotiteit af. Vul eerst de gegevens in die eronder ontbreken |
 | een streep bij een formule die u eerder koos | het tarief dat nu geldt, kent die formule niet meer. Kies een andere |
+| *Vul de rentevoet in bij elke schijf, of bij geen enkele* | bij een deel van de schijven staat een eigen rente. Vul ze overal in, of maak ze overal leeg |
 
 ### Een simulatie bewaren
 
@@ -242,6 +271,9 @@ Een bank die uw organisatie heeft uitgezet (zie [Banken](banken.md)), wordt niet
 
 ![De stap Prescoring met de banken Elantis en Record Credits naast elkaar, elk met haar oordeel en kerncijfers, en daaronder Bewaarde simulaties](images/dossier-prescoring.png "De prescoring per bank"){ .volle-breedte }
 
+Bij meerdere schijven bewaart een simulatie het totale bedrag en de langste looptijd. De formules staan naast elkaar, en de rente blijft
+leeg als ze verschilt.
+
 Alle bewaarde simulaties van uw kantoren samen staan op het scherm [Simulaties](simulaties.md).
 
 ## Veelgemaakte fouten
@@ -253,6 +285,10 @@ Alle bewaarde simulaties van uw kantoren samen staan op het scherm [Simulaties](
 
 !!! warning "Alle banken tonen dezelfde rente"
     In stap 5 staat een rente: die wint bij elke bank. Maak ze leeg om met het tarief van elke bank te rekenen.
+
+!!! warning "Na het splitsen is de maandlast hoger"
+    Dat klopt: een schijf met een kortere looptijd heeft een hogere maandlast. Vóór het pensioen betaalt de klant dus meer, en na het
+    pensioen minder. Blijft de bank weigeren, pas dan de bedragen aan: minder in de korte schijf verlaagt de maandlast vóór het pensioen.
 
 !!! warning "Het dossier van een collega staat niet in de lijst"
     U ziet enkel de dossiers van de kantoren die u mag zien. Vraag de beheerder van uw organisatie om u op dat kantoor te

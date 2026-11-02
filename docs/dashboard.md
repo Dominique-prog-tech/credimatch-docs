@@ -47,7 +47,7 @@ oudere positieve simulatie die later een weigering kreeg, telt niet. Is het doss
 dat hier niet. Een prescoring is een indicatie: de bank beslist.
 
 **Laagste rente deze maand** komt ook uit de bewaarde simulaties: per dossier en bank de laatste, bewaard in deze maand, met het oordeel
-*positief* of *positief onder voorwaarden*. Enkel een rente uit het tarief van de bank telt, een eigen rentevoet niet. De tegel vergelijkt
+*positief* of *positief onder voorwaarden*. Enkel een rente uit het tarief van de bank telt, een eigen rentevoet niet, en ook geen simulatie met schijven aan verschillende rentes. De tegel vergelijkt
 verschillende dossiers, en een korte looptijd of een variabele formule geeft vaak de laagste rente. Daarom staat erbij waar de rente
 vandaan komt. De rente is indicatief: de bank beslist.
 

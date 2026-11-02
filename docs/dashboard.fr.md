@@ -50,7 +50,7 @@ dernière simulation : une simulation positive plus ancienne, suivie d'un refus,
 depuis la simulation, vous ne le voyez pas ici. Un pré-scoring est une indication : la banque décide.
 
 **Taux le plus bas ce mois-ci** provient aussi des simulations enregistrées : par dossier et par banque, la dernière, enregistrée ce mois-ci, avec le
-résultat *positif* ou *positif sous conditions*. Seul un taux issu du tarif de la banque compte, pas un taux propre. La tuile compare des dossiers
+résultat *positif* ou *positif sous conditions*. Seul un taux issu du tarif de la banque compte, ni un taux propre, ni une simulation avec des tranches à des taux différents. La tuile compare des dossiers
 différents, et une durée courte ou une formule variable donne souvent le taux le plus bas. C'est pourquoi elle indique d'où vient le taux.
 Ce taux est indicatif : la banque décide.
 

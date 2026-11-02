@@ -81,6 +81,7 @@ Content-Type: application/json
   en vigueur à la date de test.
 - Par banque, vous pouvez choisir avec `tarief` une `formule`, les `voorwaardenUit` que vous désactivez, et un palier `commercieel`. Les codes
   figurent dans la réponse, sous `formules`, `voorwaarden` et `commercieel`.
+- **Une tranche peut tout ce que le dossier peut :** `schijf_looptijd_jaren`, `schijf_rentetype`, `schijf_aflossing`, `schijf_rentevoet` et `schijf_maximale_rentevoet`. Vide signifie : comme dans le dossier. Par tranche, vous choisissez la formule avec `tarief.formulesPerSchijf`, dans l'ordre des tranches ; `null` à une place équivaut à ce que dit `formule`, ou à ce qui correspond au type de taux.
 
 ### La réponse
 
@@ -129,6 +130,7 @@ Les chiffres de cet exemple sont inventés. Un taux est une fraction : 0,0352 co
 - Ce qui n'existe pas n'est pas une erreur de la demande : une formule inconnue donne la source `geen` avec la raison dans `probleem`, et une condition ou
   une réduction inconnue figure dans `meldingen`. Une banque ou une variante inexistante reste un `400`.
 - `commercieel` reste dans la limite du plafond défini par votre client. Au-delà, CrediMatch calcule le plafond, et `meldingen` le signale.
+- **À partir de deux tranches**, le taux par tranche figure dans `schijven`, avec par tranche `schijf`, `bedrag`, `looptijdJaren`, `rentevoet`, `maximaleRentevoet`, `rentetype`, `eersteMaandlast`, `volgensTarief`, `formule` et `formules`. `rentevoet`, `maximaleRentevoet`, `rentetype` et `formule` en haut sont alors vides dès que les tranches diffèrent, `volgensTarief` en haut est toujours vide, et `eersteMaandlast` et `maximaleMaandlast` sont le total. Avec une seule tranche, `schijven` est vide.
 - Aucune commission n'y figure jamais. Chaque taux est indicatif : la banque décide.
 
 ### Enregistrer un dossier

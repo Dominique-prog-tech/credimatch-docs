@@ -35,8 +35,8 @@ cette liste sur la période *Ce mois-ci*, et **Afficher les …** sur la carte *
 | Banque | la banque auprès de laquelle la vérification a été faite |
 | Montant | le montant de cette simulation. Il peut différer du crédit demandé dans le dossier |
 | Résultat | le résultat au moment de l'enregistrement (voir [Pré-scoring et simulations](dossiers.md#pre-scoring-et-simulations)) |
-| Taux | le taux avec lequel la vérification a été faite |
-| Formule | la formule de la banque. Si **taux propre** y figure, le taux provenait du dossier ; **pas de taux** signifie que la vérification s'est faite sans taux. Vide pour une simulation plus ancienne sans taux |
+| Taux | le taux avec lequel la vérification a été faite. Vide si les tranches ont chacune un taux différent |
+| Formule | la formule de la banque ; avec plusieurs tranches, les formules figurent côte à côte. Si **taux propre** y figure, le taux provenait du dossier ; **pas de taux** signifie que la vérification s'est faite sans taux. Vide pour une simulation plus ancienne sans taux |
 | Mensualité | la première mensualité |
 | Taux selon | **tarif** avec la version de la banque, ou **taux propre**. Cette colonne s'affiche avec le choix des colonnes |
 | Enregistrée le | le jour et l'heure de l'enregistrement |

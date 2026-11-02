@@ -90,6 +90,8 @@ for maanden, kantoor, naam, doel, volledig, simulaties in RIJEN:
         g = json.loads(json.dumps(vol))
         if doel:
             g['dossier']['doel'] = doel
+        if naam == 'Willems':   # voor het beeld van de schijven: de eerste aanvrager is op het einde ouder dan 67
+            g['kredietnemers'][0]['geboortedatum'] = '1978-02-01'
         g['dossier']['ander_belgisch_pand_in_waarborg'] = False
         g['dossier'].pop('rentevoet', None)   # zonder eigen rentevoet rekent de kaart met het tarief van de bank
         for pand in g['panden']:
@@ -111,6 +113,8 @@ for maanden, kantoor, naam, doel, volledig, simulaties in RIJEN:
 # Een kantoor in de prullenbak, voor het beeld van de prullenbak.
 sql.append(f"insert into kantoren.kantoren(id,naam,actief,bron,created_at,archived_on_utc) values('{OOSTENDE}','Kantoor Oostende (fictief, gesloten)',false,'credimatch',now(),now()) on conflict (id) do nothing;")
 q('\n'.join(sql))
+# Record kent geen vaste rente: voor het beeld van de schijven staat er een formule gekozen, anders toont die kaart enkel de vraag om er een te kiezen.
+q("""update dossiers.dossiers set tarief_keuzes='{"Record Credits": {"formule": "5/5/5-cap5"}}' where omschrijving like 'Fictief dossier Willems%';""")
 print(q('select count(*) from dossiers.dossiers where archived_on_utc is null'), 'dossiers,', q('select count(*) from dossiers.simulaties'), 'simulaties')
 
 account = q(f"""select id from control."AspNetUsers" where user_name='{ACCOUNT}'""", 'credimatch_control')
