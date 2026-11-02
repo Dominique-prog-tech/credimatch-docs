@@ -12,6 +12,10 @@ enregistrée comme simulation, avec un montant et une durée propres.
     Travaillez uniquement avec des données fictives. Les vrais dossiers ne seront possibles qu'une fois les accords sur
     les données personnelles finalisés.
 
+!!! note "Dossiers d'exemple"
+    Un dossier dont la description commence par **Fictief voorbeeld** a été préparé par ADM pour que vous puissiez essayer, avec une
+    simulation par banque. Vous pouvez y travailler comme avec n'importe quel autre dossier.
+
 ![La liste Dossiers avec les filtres Afficher et Bureau, et les colonnes Description, Bureau, Simulations et Mis à jour](images/dossiers-lijst-fr.png "La liste Dossiers")
 
 ## Ouvrir l'écran

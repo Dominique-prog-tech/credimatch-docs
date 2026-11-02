@@ -44,7 +44,7 @@ cette liste sur la période *Ce mois-ci*, et **Afficher les …** sur la carte *
 
 Cliquez sur une ligne pour ouvrir le dossier. Avec **Exporter**, vous emportez la liste, par exemple vers Excel.
 
-Un dossier à la corbeille et ses simulations ne figurent pas dans cette liste. Un pré-scoring est une indication : la banque décide.
+Un pré-scoring est une indication : la banque décide.
 
 ## Erreurs fréquentes
 

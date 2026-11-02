@@ -11,6 +11,10 @@ bewaren als simulatie.
 !!! note "Proefomgeving"
     Werk enkel met fictieve gegevens. Echte dossiers kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
 
+!!! note "Voorbeelddossiers"
+    Een dossier waarvan de omschrijving begint met **Fictief voorbeeld**, zette ADM klaar om mee te proberen, met een simulatie per
+    bank. U kunt ermee werken zoals met elk ander dossier.
+
 ![De lijst Dossiers met de filters Toon en Kantoor, en de kolommen Omschrijving, Kantoor, Simulaties en Bijgewerkt](images/dossiers-lijst.png "De lijst Dossiers")
 
 ## Het scherm openen

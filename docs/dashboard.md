@@ -33,7 +33,7 @@ opent het dossier waar die rente bij hoort.
 
 | Tegel | Wat ze telt | Waar de klik naartoe gaat |
 |---|---|---|
-| **open dossiers** | de dossiers die niet in de prullenbak staan, met hoeveel er deze maand aangemaakt zijn | [Dossiers](dossiers.md) |
+| **open dossiers** | de dossiers van uw kantoren, met hoeveel er deze maand aangemaakt zijn | [Dossiers](dossiers.md) |
 | **simulaties deze maand** | de simulaties die deze maand bewaard zijn | [Simulaties](simulaties.md), op de periode *Deze maand* |
 | **met ontbrekende gegevens** | de dossiers waarvoor minstens één bank nog een gegeven vraagt | [Dossiers](dossiers.md), met *Met ontbrekende gegevens* |
 | **positief bij minstens één bank** | de dossiers waarvan de laatste bewaarde simulatie bij minstens één bank *positief* of *positief onder voorwaarden* is | [Dossiers](dossiers.md), met *Positief bij minstens één bank* |

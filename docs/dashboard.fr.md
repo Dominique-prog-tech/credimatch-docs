@@ -35,7 +35,7 @@ ouvre le dossier auquel ce taux appartient.
 
 | Tuile | Ce qu'elle compte | Où mène le clic |
 |---|---|---|
-| **dossiers ouverts** | les dossiers qui ne sont pas à la corbeille, avec le nombre de dossiers créés ce mois-ci | [Dossiers](dossiers.md) |
+| **dossiers ouverts** | les dossiers de vos bureaux, avec le nombre de dossiers créés ce mois-ci | [Dossiers](dossiers.md) |
 | **simulations ce mois-ci** | les simulations enregistrées ce mois-ci | [Simulations](simulaties.md), sur la période *Ce mois-ci* |
 | **avec des données manquantes** | les dossiers pour lesquels au moins une banque demande encore une donnée | [Dossiers](dossiers.md), avec *Avec des données manquantes* |
 | **positifs auprès d'au moins une banque** | les dossiers dont la dernière simulation enregistrée auprès d'au moins une banque est *positif* ou *positif sous conditions* | [Dossiers](dossiers.md), avec *Positif auprès d'au moins une banque* |
