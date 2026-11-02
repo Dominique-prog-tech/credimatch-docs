@@ -14,6 +14,10 @@ reageert.
 
 ![Het Proefscherm met een geladen toetsgeval en de uitkomst bij Elantis](images/proefscherm.png "Het proefscherm")
 
+!!! note "Fictieve rentes"
+    De rentes, kortingen en namen op de beelden van deze handleiding zijn verzonnen. De tarieven van de banken ziet u enkel in
+    CrediMatch zelf, na het aanmelden.
+
 ## Het scherm openen
 
 Klik in het menu op **Proefscherm**.
@@ -36,6 +40,7 @@ Per bank ziet u:
 
 - het **oordeel**: positief, positief onder voorwaarden, menselijk oordeel, niet volledig getoetst of weigering;
 - de versie van de regels en tot wanneer ze nagekeken zijn;
+- de **rente** met de maandlast en de keuzes, zoals bij [De rente per bank](dossiers.md#de-rente-per-bank). Een toetsgeval brengt meestal een eigen rentevoet mee, en die wint. Haal `rentevoet` uit het tekstvak om met het tarief te rekenen dat op de toetsdatum geldt;
 - de regels die op het oordeel wegen, met hun reden;
 - onder **Alle regels en kerncijfers**: elke regel met haar stand, en de cijfers die de bank berekent.
 

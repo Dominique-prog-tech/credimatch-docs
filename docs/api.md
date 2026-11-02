@@ -75,6 +75,10 @@ Content-Type: application/json
 - **Een gegeven dat u niet kent, laat u weg.** Dat is geen fout: de bank krijgt dan het oordeel *niet volledig getoetst*,
   met de reden.
 - Zonder `toetsdatum` toetst CrediMatch op vandaag. Zonder `banken` toetst het bij alle banken die uw klant aan heeft staan.
+- **Een `rentevoet` in het dossier wint, bij elke bank.** Laat u ze weg, dan rekent elke bank met de rente uit haar eigen tarief dat op de
+  toetsdatum geldt.
+- Per bank kiest u eventueel met `tarief` een `formule`, de `voorwaardenUit` die u uitzet, en een trede `commercieel`. De codes staan in het
+  antwoord, onder `formules`, `voorwaarden` en `commercieel`.
 
 ### Het antwoord
 
@@ -87,10 +91,43 @@ Per bank:
 | `regels` | elke regel, met haar `stand` (bv. `voldaan`, `overtreden`, `onbekend`), haar `niveau`, de `redenen` als code, en de zin in `spoorNl` en `spoorFr` |
 | `kerncijfers` | de cijfers die de bank berekent, zoals de schuldratio en de quotiteit |
 | `regelversie` en `nagekekenTot` | welke versie van de regels gebruikt werd, en tot wanneer ze nagekeken zijn |
+| `tarief` | de rente van die bank, met haar opbouw en de maandlast (zie hieronder) |
 
 Daarbij de **versies** (de motor en de instellingen van uw klant), de banken die uw klant **uitgezet** heeft, en de
 **invoer** zoals CrediMatch ze las, zodat u een uitkomst later kunt nalezen. Beslis altijd op de codes; de zinnen zijn er
 om te tonen.
+
+### Het blok tarief
+
+De getallen in dit voorbeeld zijn verzonnen. Een rente is een fractie: 0,0352 is 3,52 %.
+
+```json
+"tarief": {
+  "bron": "tarief",
+  "versie": "Fictief",
+  "rentevoet": 0.0352,
+  "maximaleRentevoet": null,
+  "rentetype": "vast",
+  "eersteMaandlast": { "waarde": 1496.16, "redenen": [] },
+  "maximaleMaandlast": null,
+  "volgensTarief": { "formule": "vast", "looptijdJaren": 25, "basisrente": 0.0360, "rentevoet": 0.0352, "zonderVoorwaarden": 0.0357, "opbouw": [] },
+  "formule": "vast",
+  "formules": [],
+  "voorwaarden": [],
+  "commercieel": null,
+  "dossierkosten": null,
+  "meldingen": [],
+  "probleem": null
+}
+```
+
+- **`bron` is de code om op te beslissen:** `tarief`, `eigen_rentevoet` (die stond in het dossier en wint; `volgensTarief` staat er dan ter
+  informatie bij) of `geen` (de toets mist de rente, en `probleem` zegt waarom).
+- `rentevoet`, `maximaleRentevoet` en `rentetype` zijn wat de toets kreeg. Samen met de `invoer` is een uitkomst zo na te rekenen.
+- Wat niet bestaat, is geen fout van de vraag: een onbekende formule geeft de bron `geen` met de reden in `probleem`, en een onbekende voorwaarde
+  of korting staat in `meldingen`. Een bank of variant die niet bestaat, blijft een `400`.
+- `commercieel` blijft binnen het plafond dat uw klant instelde. Erboven rekent CrediMatch het plafond, en `meldingen` zegt dat.
+- Er staat nooit een commissie in. Elke rente is indicatief: de bank beslist.
 
 ### Een dossier bewaren
 

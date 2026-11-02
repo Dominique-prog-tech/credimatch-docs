@@ -7,8 +7,13 @@ er hoort geen enkele echte klant op een beeld (vlootregel, handleiding-schrijfre
 
 Voor de beelden meldt een beheerder van de proefklant zich aan, geen operator van ADM: zo toont het menu wat een klant ziet. Het script
 geeft die rol aan het bestaande fictieve account, als dat er is. Een wachtwoord staat hier bewust niet: zie tools/beelden.mjs.
+
+DE TARIEVEN: de tarieven van de banken horen niet op deze publieke site. Dit script zet daarom een FICTIEF rooster in de lokale regelbank, met verzonnen rentes en namen en het
+versielabel "Fictief". Het script daarvoor staat in de private repo van de app (tools/fictief-rooster.py), want het kent de vorm van de echte roosters. ⚠️ De regelbank is gedeeld over alle
+klanten: lokaal rekent elke klant met dit rooster tot je het weghaalt, met python3 tools/proefklant-vullen.py --tarief-weg. Het staat op de datum van vandaag: draai dit script dus op de dag
+van de beelden. tools/beelden.mjs weigert anders.
 """
-import datetime as dt, json, subprocess, uuid
+import datetime as dt, json, os, pathlib, subprocess, sys, uuid
 
 GENT = '868ebc6d-e35b-4c53-a499-c4fbd9cb2003'
 BRUGGE = '20acf652-9918-4e93-a114-547e32826e27'
@@ -16,7 +21,10 @@ OOSTENDE = '5d0c9c52-0f6e-4f43-9a54-3f1d6a4e7b10'
 KLANT = 'tenant_credimatch_proef_hypo'
 ACCOUNT = 'dashboard-proef@proef-hypo.local'
 MAKER = 'proefklant-vullen'
-NU = dt.datetime(2026, 11, 2, 5, 0, tzinfo=dt.timezone.utc)
+NU = dt.datetime.now(dt.timezone.utc).replace(hour=5, minute=0, second=0, microsecond=0)
+ROOSTER = pathlib.Path(os.environ.get('CREDIMATCH_REPO', pathlib.Path.home() / 'projects' / 'adm-credimatch')) / 'tools' / 'fictief-rooster.py'
+FICTIEF = 'Fictief'
+FORMULE = {'Elantis': 'Vast', 'Record Credits': '5/5/5 (cap 5 %)'}
 
 def q(sql, db=KLANT):
     r = subprocess.run(['docker', 'exec', '-i', 'credimatch-db', 'psql', '-U', 'postgres', '-d', db, '-At', '-v', 'ON_ERROR_STOP=1'], input=sql, capture_output=True, text=True)
@@ -46,6 +54,25 @@ RIJEN = [
     (0, BRUGGE, 'Smets', 'werken', True, [('Record Credits', 'positief onder voorwaarden', 95000, 0)]),
 ]
 
+if '--tarief-weg' in sys.argv:
+    subprocess.run([sys.executable, str(ROOSTER), '--weg'], check=True)
+    raise SystemExit
+
+subprocess.run([sys.executable, str(ROOSTER)], check=True)
+
+# ⚠️ Een simulatie met een echte rente hoort nooit op een beeld, ook niet een proefsimulatie die iemand lokaal bewaarde.
+q(f"delete from dossiers.simulaties where tariefversie is not null and tariefversie <> '{FICTIEF}';")
+
+# De korting van de klant: een fictieve instelling voor het beeld van Banken. Een momentopname wijzigt nooit, dus enkel een nieuwe als ze verschilt.
+KORTINGEN = [{'Bank': 'Elantis', 'Standaard': 'commercieel_05', 'Plafond': 'commercieel_15'}]
+# Een lokale proef met een andere korting zou in de geschiedenis op het beeld van Banken staan (zie NIET_PUBLIEK in tools/beelden.mjs).
+q("""alter table instellingen.momentopnames disable trigger momentopnames_onveranderlijk;
+delete from instellingen.momentopnames where kortingen::text like '%Record Credits%';
+alter table instellingen.momentopnames enable trigger momentopnames_onveranderlijk;""")
+if json.loads(q('select kortingen from instellingen.momentopnames order by nummer desc limit 1') or '[]') != KORTINGEN:
+    j = json.dumps(KORTINGEN)
+    q(f"insert into instellingen.momentopnames(id,nummer,uitgezet,kortingen,aangemaakt_op,door) select '{uuid.uuid4()}', coalesce(max(nummer),0)+1, '{{}}', '{j}', now(), '{ACCOUNT}' from instellingen.momentopnames;")
+
 vol = q('select gegevens from dossiers.dossiers where nummer=4')
 if not vol:
     raise SystemExit('Dossier 4 (het volledige fictieve dossier, toetsgeval T01) ontbreekt: daar vertrekt dit script van.')
@@ -64,6 +91,7 @@ for maanden, kantoor, naam, doel, volledig, simulaties in RIJEN:
         if doel:
             g['dossier']['doel'] = doel
         g['dossier']['ander_belgisch_pand_in_waarborg'] = False
+        g['dossier'].pop('rentevoet', None)   # zonder eigen rentevoet rekent de kaart met het tarief van de bank
         for pand in g['panden']:
             pand['kenmerken_pand'] = []
             pand['schattingswaarde'] = pand.get('aankoopprijs', 360000)
@@ -75,7 +103,11 @@ for maanden, kantoor, naam, doel, volledig, simulaties in RIJEN:
     sql.append(f"insert into dossiers.dossiers(id,kantoor_id,nummer,omschrijving,bron,gegevens,aangemaakt_op,aangemaakt_door,bijgewerkt_op) values('{id}','{kantoor}',{nummer},'{omschrijving}','credimatch','{gegevens}','{op.isoformat()}','{MAKER}','{bijgewerkt.isoformat()}');")
     for bank, oordeel, bedrag, dagen in simulaties:
         o = NU - dt.timedelta(days=dagen)
-        sql.append(f"insert into dossiers.simulaties(id,dossier_id,kantoor_id,soort,bank,variant,bedrag,looptijd_jaren,toetsdatum,oordeel,regels_van_het_oordeel,regelversie,instellingen,motor,invoer,uitkomst,aangemaakt_op,door) values('{uuid.uuid4()}','{id}','{kantoor}','krediet','{bank}','standaard',{bedrag},25,'{o.date()}','{oordeel}','{{}}','proef','standaard','fictief','{{}}','{{}}','{o.isoformat()}','makelaar@proef-hypo.local');")
+        # Verzonnen, zoals het rooster: de maandlast is enkel de annuïteit van die verzonnen rente.
+        rente = round(0.0335 + (nummer % 7) * 0.0006 + (0.0004 if bank == 'Elantis' else 0), 4)
+        m = (1 + rente) ** (1 / 12) - 1
+        maandlast = round(bedrag * m / (1 - (1 + m) ** -300), 2)
+        sql.append(f"insert into dossiers.simulaties(id,dossier_id,kantoor_id,soort,bank,variant,bedrag,looptijd_jaren,toetsdatum,oordeel,regels_van_het_oordeel,regelversie,instellingen,motor,invoer,uitkomst,rente_bron,rentevoet,tariefversie,formule,eerste_maandlast,aangemaakt_op,door) values('{uuid.uuid4()}','{id}','{kantoor}','krediet','{bank}','standaard',{bedrag},25,'{o.date()}','{oordeel}','{{}}','proef','standaard','fictief','{{}}','{{}}','tarief',{rente},'{FICTIEF}','{FORMULE[bank]}',{maandlast},'{o.isoformat()}','makelaar@proef-hypo.local');")
 # Een kantoor in de prullenbak, voor het beeld van de prullenbak.
 sql.append(f"insert into kantoren.kantoren(id,naam,actief,bron,created_at,archived_on_utc) values('{OOSTENDE}','Kantoor Oostende (fictief, gesloten)',false,'credimatch',now(),now()) on conflict (id) do nothing;")
 q('\n'.join(sql))

@@ -4,11 +4,15 @@ description: "Banques dans CrediMatch : choisir avec quelles compagnies votre or
 
 # Banques
 
-Sur cet écran, vous choisissez avec quelles compagnies votre organisation travaille. Une compagnie désactivée ne reçoit plus
-de pré-scoring ni de simulation. Les règles d'acceptation des compagnies sont gérées par ADM : vous choisissez seulement ce
-qui est actif.
+Sur cet écran, vous choisissez avec quelles compagnies votre organisation travaille, et quelle réduction commerciale vos courtiers
+peuvent accorder. Une compagnie désactivée ne reçoit plus de pré-scoring ni de simulation. Les règles d'acceptation et les tarifs des
+compagnies sont gérés par ADM.
 
-![L'écran Banques avec Elantis et Record Credits cochées, et la colonne Règles vérifiées jusqu'au](images/banken-fr.png "L'écran Banques")
+![L'écran Banques avec Elantis et Record Credits cochées, la colonne Règles vérifiées jusqu'au, et la Réduction commerciale avec Standard et Plafond](images/banken-fr.png "L'écran Banques")
+
+!!! note "Taux fictifs"
+    Les taux, les réductions et les noms sur les images de ce manuel sont inventés. Les tarifs des banques ne sont visibles que dans
+    CrediMatch, après la connexion.
 
 ## Ouvrir l'écran
 
@@ -33,10 +37,24 @@ paramètres** (voir [Rôles & droits](rollen.md)).
 1. Cochez les compagnies avec lesquelles votre organisation travaille, et décochez celles que vous n'utilisez pas.
 2. Cliquez sur **Enregistrer**.
 
+## La réduction commerciale
+
+Pour chaque banque dont un tarif est en vigueur aujourd'hui, une ligne propose deux choix :
+
+- **Standard** : la réduction qui s'applique si le courtier ne choisit rien ;
+- **Plafond** : jusqu'où le courtier peut choisir par simulation, sur la carte de la banque (voir [Le taux par banque](dossiers.md#le-taux-par-banque)).
+
+Vous choisissez un palier et non un pourcentage libre : les paliers et leur nom dépendent de la banque. Le montant provient du tarif en vigueur à ce moment.
+**Aucune** signifie pas de réduction. Le standard ne peut pas dépasser le plafond. Si rien n'est défini, il n'y a pas de réduction et le courtier n'a rien à choisir.
+
+La banque déduit cette réduction de votre commission. CrediMatch n'affiche ni n'enregistre de commission.
+
+L'administrateur de votre organisation peut modifier ceci, ainsi que toute personne disposant du droit **Gérer les banques et paramètres**. Cliquez ensuite sur **Enregistrer**.
+
 ## Historique
 
 Chaque modification reçoit un numéro, par exemple **Paramètres 3**. Sous **Historique**, vous voyez pour chaque numéro qui a
-fait la modification, quand, et ce qui était désactivé. Un pré-scoring retient avec quel numéro il a été calculé, pour que
+fait la modification, quand, ce qui était désactivé et quelle réduction s'appliquait. Un pré-scoring retient avec quel numéro il a été calculé, pour que
 vous puissiez vérifier plus tard quelles compagnies étaient actives.
 
 !!! note "Un pré-scoring est une indication"

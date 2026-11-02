@@ -5,7 +5,7 @@ description: "Le tableau de bord de CrediMatch : les chiffres clés de vos burea
 # Tableau de bord
 
 Le tableau de bord est le premier écran après la connexion. Vous voyez combien de dossiers sont ouverts, où les banques
-demandent encore des données et comment les banques jugent les simulations enregistrées. Chaque chiffre porte uniquement
+demandent encore des données, comment les banques jugent les simulations enregistrées et quel est le taux le plus bas de ce mois-ci. Chaque chiffre porte uniquement
 sur les bureaux que vous pouvez voir.
 
 !!! note "Environnement d'essai"
@@ -13,6 +13,10 @@ sur les bureaux que vous pouvez voir.
     les données personnelles finalisés.
 
 ![Le Tableau de bord avec les tuiles, les cartes Modifiés récemment, Demande votre attention et Dernières simulations, et les graphiques Dossiers par mois, Résultats par banque et Objet des dossiers](images/dashboard-fr.png "Le tableau de bord")
+
+!!! note "Taux fictifs"
+    Les taux, les réductions et les noms sur les images de ce manuel sont inventés. Les tarifs des banques ne sont visibles que dans
+    CrediMatch, après la connexion.
 
 ## Ouvrir l'écran
 
@@ -26,7 +30,8 @@ même bureau. Si vous ne voyez qu'un seul bureau, il n'y a rien à choisir et ce
 
 ## Les chiffres clés
 
-En haut figurent quatre tuiles. Cliquez sur une tuile pour ouvrir la liste qui affiche le même chiffre.
+En haut figurent cinq tuiles. Cliquez sur une tuile pour ouvrir la liste qui affiche le même chiffre. La tuile **taux le plus bas ce mois-ci**
+ouvre le dossier auquel ce taux appartient.
 
 | Tuile | Ce qu'elle compte | Où mène le clic |
 |---|---|---|
@@ -34,6 +39,7 @@ En haut figurent quatre tuiles. Cliquez sur une tuile pour ouvrir la liste qui a
 | **simulations ce mois-ci** | les simulations enregistrées ce mois-ci | [Simulations](simulaties.md), sur la période *Ce mois-ci* |
 | **avec des données manquantes** | les dossiers pour lesquels au moins une banque demande encore une donnée | [Dossiers](dossiers.md), avec *Avec des données manquantes* |
 | **positifs auprès d'au moins une banque** | les dossiers dont la dernière simulation enregistrée auprès d'au moins une banque est *positif* ou *positif sous conditions* | [Dossiers](dossiers.md), avec *Positif auprès d'au moins une banque* |
+| **taux le plus bas ce mois-ci** | le taux le plus bas des simulations de ce mois-ci, avec la banque, la formule, la durée et le dossier | le [dossier](dossiers.md#le-taux-par-banque) de cette simulation |
 
 **Avec des données manquantes** est calculé au moment où vous ouvrez le tableau de bord, de la même manière que la barre
 d'étapes dans un dossier : chaque dossier est vérifié tel qu'il est à ce moment, auprès des banques actives. Cette vérification
@@ -43,12 +49,18 @@ n'enregistre rien.
 dernière simulation : une simulation positive plus ancienne, suivie d'un refus, ne compte pas. Si le dossier a été modifié
 depuis la simulation, vous ne le voyez pas ici. Un pré-scoring est une indication : la banque décide.
 
+**Taux le plus bas ce mois-ci** provient aussi des simulations enregistrées : par dossier et par banque, la dernière, enregistrée ce mois-ci, avec le
+résultat *positif* ou *positif sous conditions*. Seul un taux issu du tarif de la banque compte, pas un taux propre. La tuile compare des dossiers
+différents, et une durée courte ou une formule variable donne souvent le taux le plus bas. C'est pourquoi elle indique d'où vient le taux.
+Ce taux est indicatif : la banque décide.
+
 Un chiffre impossible à donner n'est pas affiché comme 0 :
 
 | Vous voyez | Ce que cela signifie |
 |---|---|
 | **…** | le chiffre est encore en cours de chargement |
 | **—** avec *données nécessaires* | aucune banque n'est active pour votre organisation : il n'y a rien pour vérifier (voir [Banques](banken.md)) |
+| **—** avec *taux le plus bas ce mois-ci* | aucune simulation positive calculée avec le tarif de la banque n'a encore été enregistrée ce mois-ci |
 | *… non vérifiés* sur une tuile | ce nombre de dossiers n'a pas pu être vérifié. Ils ne comptent pas dans le chiffre de la tuile |
 
 ## Les cartes
@@ -89,6 +101,10 @@ S'il n'y a rien à afficher, la carte le dit en une phrase.
     La tuile provient des simulations enregistrées, le pré-scoring du dossier tel qu'il est maintenant. Si le dossier a été
     modifié ou si une autre version des règles s'applique, cela peut différer. Enregistrez une nouvelle simulation pour mettre
     la tuile à jour.
+
+!!! warning "La tuile affiche un autre taux que la carte du dossier"
+    La tuile provient de la simulation telle que vous l'avez enregistrée. La carte du dossier recalcule, avec le dossier tel qu'il est maintenant et le
+    tarif en vigueur aujourd'hui. Enregistrez une nouvelle simulation pour mettre la tuile à jour.
 
 !!! warning "Un dossier reste sur données manquantes"
     Ouvrez le dossier : la liste **Encore … données nécessaires** indique lesquelles et à quelle étape. Si vous savez qu'une chose

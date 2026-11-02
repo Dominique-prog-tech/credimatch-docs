@@ -57,7 +57,7 @@ exemple pour revenir aux demandeurs si le client avait oublié quelque chose.
 | 2. Demandeurs | pour chaque demandeur, son nom et ses coordonnées, son emploi et ses revenus |
 | 3. Antécédents et charges | un enregistrement à la Banque nationale, et les crédits en cours |
 | 4. Garanties | les biens : le bien financé et ce qui est donné en garantie |
-| 5. Plan financier | les travaux, les frais, les fonds propres, la durée, le taux et le crédit demandé en tranches |
+| 5. Plan financier | les travaux, les frais, les fonds propres, la durée, le taux et le crédit demandé en tranches. Si vous laissez le taux vide, chaque banque calcule avec son propre tarif |
 | 6. Particularités | ce qu'une banque ne demande que dans un cas particulier : un refinancement ou une expertise |
 | 7. Pré-scoring | vérifier par banque, et enregistrer des simulations |
 
@@ -136,6 +136,7 @@ Chaque banque reçoit une carte ; les banques figurent côte à côte, pour que 
   toutes les charges**, avec le minimum vital en dessous. Si la banque ne peut pas encore calculer un chiffre, un tiret
   apparaît avec une raison courte, et la partie déjà connue. L'explication complète figure sous **Ce qui pèse sur le
   résultat** ;
+- le **taux** de cette banque, avec la mensualité et vos choix (voir [Le taux par banque](#le-taux-par-banque)) ;
 - s'il manque des données, la liste **Ces données manquent**, chaque donnée une seule fois, avec un bouton **vers
   l'étape …** qui ouvre la bonne étape. S'il y en a beaucoup, vous voyez les six premières ; les autres s'ouvrent avec
   **Afficher les … autres** ;
@@ -151,11 +152,39 @@ Chaque banque reçoit une carte ; les banques figurent côte à côte, pour que 
 
 Le calcul n'enregistre rien et ne modifie pas le dossier. Un pré-scoring est une indication : la banque décide.
 
+### Le taux par banque
+
+Chaque banque vérifie avec son propre taux, issu de son tarif en vigueur à la **Date de test**. Les banques gèrent elles-mêmes leurs tarifs et les
+modifient souvent : la même vérification peut donner un autre taux la semaine prochaine.
+
+!!! note "Taux fictifs"
+    Les taux, les réductions et les noms sur les images de ce manuel sont inventés. Les tarifs des banques ne sont visibles que dans
+    CrediMatch, après la connexion.
+
+Sur la carte d'une banque :
+
+- **Taux selon le tarif …** : le taux, avec la formule et la durée en dessous. S'il y a des conditions, le taux sans ces conditions figure aussi ;
+- **Première mensualité**, pour un taux variable aussi **Mensualité au taux maximal**, et les **Frais de dossier** si la banque les mentionne ;
+- **Comment ce taux est composé** : cliquez dessus pour voir le taux de base, les réductions et les majorations ;
+- **Formule** : la formule qui correspond au type de taux du dossier. Vous pouvez en choisir une autre. Si aucune ne correspond, un trait figure à côté du taux et la carte demande d'en choisir une. Cela ne compte pas comme une donnée manquante ;
+- **Réduction commerciale** : la réduction définie par votre organisation (voir [Banques](banken.md)). Vous choisissez dans la limite du plafond ; si vous ne choisissez rien, le standard s'applique ;
+- les **conditions** de la banque, par exemple un compte à vue ou une assurance : elles sont cochées, et vous décochez ce que votre client ne prend pas. Le taux est recalculé aussitôt.
+
+Ce qui découle du dossier, comme la quotité et la performance énergétique, vous ne le choisissez pas : la carte en tient compte. CrediMatch n'affiche pas de TAEG : il figure dans l'ESIS de la banque.
+
+Ce qui peut figurer sur la carte à la place du tarif :
+
+| Vous voyez | Ce que cela signifie |
+|---|---|
+| **Taux propre du dossier** | un taux figure à l'étape 5. Il l'emporte, pour chaque banque. La carte indique aussi ce que le tarif donnerait. Laissez le taux vide pour calculer avec le tarif |
+| un trait et *Aucun tarif* | la banque n'a pas de tarif à la date de test. Saisissez un taux à l'étape 5, ou choisissez une autre date |
+| un trait et *La quotité n'est pas connue* | le taux dépend de la quotité. Complétez d'abord les données qui manquent en dessous |
+
 ### Enregistrer une simulation
 
 Pour une banque, cliquez sur **Enregistrer comme simulation**. La simulation apparaît dans le tableau **Simulations
-enregistrées**, avec son propre montant et sa propre durée, le résultat, la version des règles, et la date et l'auteur de
-l'enregistrement. Vous pouvez ainsi faire varier le montant ou la durée jusqu'à ce que cela passe, sans modifier le
+enregistrées**, avec son propre montant et sa propre durée, le résultat, le taux avec la formule et la mensualité, et la date de
+l'enregistrement. La variante, la version du tarif et des règles, et l'auteur s'affichent avec le choix des colonnes. Vous pouvez ainsi faire varier le montant ou la durée jusqu'à ce que cela passe, sans modifier le
 dossier lui-même.
 
 Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'est pas vérifiée. Elle figure en bas sous
@@ -172,6 +201,9 @@ Toutes les simulations enregistrées de vos bureaux figurent ensemble sur l'écr
     manquent** indique lesquelles. Cliquez sur **vers l'étape …** et complétez-les. Revenez ensuite à l'étape
     **Pré-scoring** et cliquez à nouveau sur **Pré-scoring** : la barre des étapes montre déjà quelles étapes manquent
     encore de quelque chose.
+
+!!! warning "Toutes les banques affichent le même taux"
+    Un taux figure à l'étape 5 : il l'emporte pour chaque banque. Videz-le pour calculer avec le tarif de chaque banque.
 
 !!! warning "Le dossier d'un collègue n'apparaît pas dans la liste"
     Vous ne voyez que les dossiers des bureaux que vous pouvez voir. Demandez à l'administrateur de votre organisation de

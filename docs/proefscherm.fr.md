@@ -14,6 +14,10 @@ banque réagit à un cas donné.
 
 ![L'Écran d'essai avec un cas de test chargé et le résultat chez Elantis](images/proefscherm-fr.png "L'écran d'essai")
 
+!!! note "Taux fictifs"
+    Les taux, les réductions et les noms sur les images de ce manuel sont inventés. Les tarifs des banques ne sont visibles que dans
+    CrediMatch, après la connexion.
+
 ## Ouvrir l'écran
 
 Dans le menu, cliquez sur **Écran d'essai**.
@@ -37,6 +41,7 @@ Pour chaque banque, vous voyez :
 
 - le **résultat** : positif, positif sous conditions, appréciation humaine, pas entièrement vérifié ou refus ;
 - la version des règles et la date jusqu'à laquelle elles sont vérifiées ;
+- le **taux** avec la mensualité et les choix, comme dans [Le taux par banque](dossiers.md#le-taux-par-banque). Un cas de test apporte généralement son propre taux, qui l'emporte. Retirez `rentevoet` de la zone de texte pour calculer avec le tarif en vigueur à la date de test ;
 - les règles qui pèsent sur le résultat, avec leur raison ;
 - sous **Les règles et chiffres clés** : chaque règle avec son état, et les chiffres calculés par la banque.
 

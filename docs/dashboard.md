@@ -5,12 +5,16 @@ description: "Het dashboard van CrediMatch: de kerncijfers van uw kantoren, de d
 # Dashboard
 
 Het dashboard is het eerste scherm na het aanmelden. U ziet hoeveel dossiers er open staan, waar de banken nog gegevens
-vragen en hoe de banken oordelen over de bewaarde simulaties. Elk cijfer gaat enkel over de kantoren die u mag zien.
+vragen, hoe de banken oordelen over de bewaarde simulaties en wat de laagste rente van deze maand is. Elk cijfer gaat enkel over de kantoren die u mag zien.
 
 !!! note "Proefomgeving"
     Werk enkel met fictieve gegevens. Echte dossiers kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
 
 ![Het Dashboard met de tegels, de kaarten Recent bewerkt, Vraagt aandacht en Laatste simulaties, en de grafieken Dossiers per maand, Oordelen per bank en Doel van de dossiers](images/dashboard.png "Het dashboard")
+
+!!! note "Fictieve rentes"
+    De rentes, kortingen en namen op de beelden van deze handleiding zijn verzonnen. De tarieven van de banken ziet u enkel in
+    CrediMatch zelf, na het aanmelden.
 
 ## Het scherm openen
 
@@ -24,7 +28,8 @@ hetzelfde kantoor. Ziet u één kantoor, dan is er niets te kiezen en staat deze
 
 ## De kerncijfers
 
-Bovenaan staan vier tegels. Klik op een tegel om de lijst te openen die hetzelfde getal toont.
+Bovenaan staan vijf tegels. Klik op een tegel om de lijst te openen die hetzelfde getal toont. De tegel **laagste rente deze maand**
+opent het dossier waar die rente bij hoort.
 
 | Tegel | Wat ze telt | Waar de klik naartoe gaat |
 |---|---|---|
@@ -32,6 +37,7 @@ Bovenaan staan vier tegels. Klik op een tegel om de lijst te openen die hetzelfd
 | **simulaties deze maand** | de simulaties die deze maand bewaard zijn | [Simulaties](simulaties.md), op de periode *Deze maand* |
 | **met ontbrekende gegevens** | de dossiers waarvoor minstens één bank nog een gegeven vraagt | [Dossiers](dossiers.md), met *Met ontbrekende gegevens* |
 | **positief bij minstens één bank** | de dossiers waarvan de laatste bewaarde simulatie bij minstens één bank *positief* of *positief onder voorwaarden* is | [Dossiers](dossiers.md), met *Positief bij minstens één bank* |
+| **laagste rente deze maand** | de laagste rente uit de simulaties van deze maand, met de bank, de formule, de looptijd en het dossier | het [dossier](dossiers.md#de-rente-per-bank) van die simulatie |
 
 **Met ontbrekende gegevens** wordt berekend op het moment dat u het dashboard opent, op dezelfde manier als de stappenbalk in
 een dossier: elk dossier wordt getoetst zoals het op dat moment is, bij de banken die aanstaan. Dat toetsen bewaart niets.
@@ -40,12 +46,18 @@ een dossier: elk dossier wordt getoetst zoals het op dat moment is, bij de banke
 oudere positieve simulatie die later een weigering kreeg, telt niet. Is het dossier sinds de simulatie gewijzigd, dan ziet u
 dat hier niet. Een prescoring is een indicatie: de bank beslist.
 
+**Laagste rente deze maand** komt ook uit de bewaarde simulaties: per dossier en bank de laatste, bewaard in deze maand, met het oordeel
+*positief* of *positief onder voorwaarden*. Enkel een rente uit het tarief van de bank telt, een eigen rentevoet niet. De tegel vergelijkt
+verschillende dossiers, en een korte looptijd of een variabele formule geeft vaak de laagste rente. Daarom staat erbij waar de rente
+vandaan komt. De rente is indicatief: de bank beslist.
+
 Een getal dat niet te geven is, staat niet op 0:
 
 | U ziet | Wat het betekent |
 |---|---|
 | **…** | het cijfer wordt nog geladen |
 | **—** bij *gegevens nodig* | er staat geen bank aan voor uw organisatie, dus er is niets om tegen te toetsen (zie [Banken](banken.md)) |
+| **—** bij *laagste rente deze maand* | deze maand is er nog geen positieve simulatie bewaard die met het tarief van de bank rekent |
 | *… niet getoetst* bij een tegel | zoveel dossiers konden niet getoetst worden. Ze tellen niet mee in het getal van de tegel |
 
 ## De kaarten
@@ -85,6 +97,10 @@ Is er niets te tonen, dan zegt de kaart dat in een zin.
 !!! warning "De tegel zegt positief, maar de prescoring van het dossier niet"
     De tegel komt uit de bewaarde simulaties, de prescoring uit het dossier zoals het nu is. Is het dossier gewijzigd of is er
     een andere regelversie, dan kan dat verschillen. Bewaar een nieuwe simulatie om de tegel bij te werken.
+
+!!! warning "De tegel toont een andere rente dan de kaart in het dossier"
+    De tegel komt uit de simulatie zoals u ze bewaarde. De kaart in het dossier rekent opnieuw, met het dossier zoals het nu is en het tarief
+    dat vandaag geldt. Bewaar een nieuwe simulatie om de tegel bij te werken.
 
 !!! warning "Een dossier blijft op ontbrekende gegevens staan"
     Open het dossier: de lijst **Nog … gegevens nodig** zegt welke en in welke stap. Weet u dat iets er niet is, zoals bijzondere

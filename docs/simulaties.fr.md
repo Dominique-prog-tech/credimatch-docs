@@ -5,10 +5,14 @@ description: "Simulations dans CrediMatch : toutes les simulations enregistrées
 # Simulations
 
 Sur cet écran, vous voyez toutes les simulations enregistrées de vos bureaux dans une seule liste, tous dossiers confondus. Vous y
-voyez par exemple combien ont été enregistrées ce mois-ci, et avec quel résultat. Une simulation s'enregistre dans le dossier
+voyez par exemple combien ont été enregistrées ce mois-ci, avec quel résultat et quel taux. Une simulation s'enregistre dans le dossier
 lui-même (voir [Pré-scoring et simulations](dossiers.md#pre-scoring-et-simulations)).
 
-![La liste Simulations sur la Période Ce mois-ci, avec les colonnes Dossier, Bureau, Banque, Montant, Résultat et Enregistrée le](images/simulaties-lijst-fr.png "La liste Simulations")
+![La liste Simulations sur la Période Ce mois-ci, avec les colonnes Dossier, Bureau, Banque, Montant, Résultat, Taux, Formule et Mensualité](images/simulaties-lijst-fr.png "La liste Simulations")
+
+!!! note "Taux fictifs"
+    Les taux, les réductions et les noms sur les images de ce manuel sont inventés. Les tarifs des banques ne sont visibles que dans
+    CrediMatch, après la connexion.
 
 ## Ouvrir l'écran
 
@@ -31,8 +35,12 @@ cette liste sur la période *Ce mois-ci*, et **Afficher les …** sur la carte *
 | Banque | la banque auprès de laquelle la vérification a été faite |
 | Montant | le montant de cette simulation. Il peut différer du crédit demandé dans le dossier |
 | Résultat | le résultat au moment de l'enregistrement (voir [Pré-scoring et simulations](dossiers.md#pre-scoring-et-simulations)) |
+| Taux | le taux avec lequel la vérification a été faite |
+| Formule | la formule de la banque. Si **taux propre** y figure, le taux provenait du dossier ; **pas de taux** signifie que la vérification s'est faite sans taux. Vide pour une simulation plus ancienne sans taux |
+| Mensualité | la première mensualité |
+| Taux selon | **tarif** avec la version de la banque, ou **taux propre**. Cette colonne s'affiche avec le choix des colonnes |
 | Enregistrée le | le jour et l'heure de l'enregistrement |
-| Par | la personne qui a enregistré la simulation |
+| Par | la personne qui a enregistré la simulation. Cette colonne s'affiche avec le choix des colonnes |
 
 Cliquez sur une ligne pour ouvrir le dossier. Avec **Exporter**, vous emportez la liste, par exemple vers Excel.
 

@@ -77,6 +77,10 @@ Content-Type: application/json
   *niet volledig getoetst* (pas entièrement vérifié), avec la raison.
 - Sans `toetsdatum`, CrediMatch vérifie à la date du jour. Sans `banken`, il vérifie auprès de toutes les banques que votre
   client a activées.
+- **Une `rentevoet` dans le dossier l'emporte, pour chaque banque.** Si vous l'omettez, chaque banque calcule avec le taux de son propre tarif
+  en vigueur à la date de test.
+- Par banque, vous pouvez choisir avec `tarief` une `formule`, les `voorwaardenUit` que vous désactivez, et un palier `commercieel`. Les codes
+  figurent dans la réponse, sous `formules`, `voorwaarden` et `commercieel`.
 
 ### La réponse
 
@@ -89,10 +93,43 @@ Par banque :
 | `regels` | chaque règle, avec son `stand` (p. ex. `voldaan`, `overtreden`, `onbekend`), son `niveau`, les `redenen` sous forme de code, et la phrase dans `spoorNl` et `spoorFr` |
 | `kerncijfers` | les chiffres calculés par la banque, comme le taux d'endettement et la quotité |
 | `regelversie` et `nagekekenTot` | la version des règles utilisée, et leur date de vérification |
+| `tarief` | le taux de cette banque, avec sa composition et la mensualité (voir ci-dessous) |
 
 S'y ajoutent les **versions** (le moteur et les paramètres de votre client), les banques que votre client a **désactivées**,
 et l'**entrée** telle que CrediMatch l'a lue, pour que vous puissiez relire un résultat plus tard. Décidez toujours sur les
 codes ; les phrases servent à l'affichage.
+
+### Le bloc tarief
+
+Les chiffres de cet exemple sont inventés. Un taux est une fraction : 0,0352 correspond à 3,52 %.
+
+```json
+"tarief": {
+  "bron": "tarief",
+  "versie": "Fictief",
+  "rentevoet": 0.0352,
+  "maximaleRentevoet": null,
+  "rentetype": "vast",
+  "eersteMaandlast": { "waarde": 1496.16, "redenen": [] },
+  "maximaleMaandlast": null,
+  "volgensTarief": { "formule": "vast", "looptijdJaren": 25, "basisrente": 0.0360, "rentevoet": 0.0352, "zonderVoorwaarden": 0.0357, "opbouw": [] },
+  "formule": "vast",
+  "formules": [],
+  "voorwaarden": [],
+  "commercieel": null,
+  "dossierkosten": null,
+  "meldingen": [],
+  "probleem": null
+}
+```
+
+- **`bron` est le code sur lequel décider :** `tarief`, `eigen_rentevoet` (il figurait dans le dossier et l'emporte ; `volgensTarief` figure alors à titre
+  d'information) ou `geen` (il manque le taux à la vérification, et `probleem` dit pourquoi).
+- `rentevoet`, `maximaleRentevoet` et `rentetype` sont ce que la vérification a reçu. Avec l'`invoer`, un résultat peut ainsi être recalculé.
+- Ce qui n'existe pas n'est pas une erreur de la demande : une formule inconnue donne la source `geen` avec la raison dans `probleem`, et une condition ou
+  une réduction inconnue figure dans `meldingen`. Une banque ou une variante inexistante reste un `400`.
+- `commercieel` reste dans la limite du plafond défini par votre client. Au-delà, CrediMatch calcule le plafond, et `meldingen` le signale.
+- Aucune commission n'y figure jamais. Chaque taux est indicatif : la banque décide.
 
 ### Enregistrer un dossier
 

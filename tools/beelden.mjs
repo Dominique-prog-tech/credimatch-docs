@@ -9,7 +9,9 @@
 //  - schermBesluit: een foutmelding, "geen toegang" of een te leeg scherm is nooit een beeld;
 //  - vormBesluit:   wijkt de afmeting af van het bestaande beeld, dan NIET overschrijven maar melden;
 //  - ontbrekendeTermen: staat wat de alt-tekst belooft ook op het scherm?
-//  - de grendel hieronder: enkel op de eigen machine, en enkel bij de proefklant.
+//  - de grendel hieronder: enkel op de eigen machine, en enkel bij de proefklant;
+//  - de tariefgrendel: de tarieven van de banken horen niet op deze publieke site, dus enkel met het fictieve rooster.
+import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { PAKKET, BASIS } from './app.mjs';
@@ -27,8 +29,26 @@ const WACHTWOORD = process.env.BEELDEN_WACHTWOORD;
 if (!WACHTWOORD) { console.error('⛔ Zet BEELDEN_WACHTWOORD: het wachtwoord van de fictieve beheerder van de proefklant. Het staat bewust in geen enkel bestand.'); process.exit(2); }
 if (!/^http:\/\/(127\.0\.0\.1|localhost)[:/]/.test(BASIS)) { console.error(`⛔ ${BASIS} is niet deze machine. Beelden komen nooit van een server.`); process.exit(2); }
 
+// ⛔ DE TARIEFGRENDEL. Niet vragen wat de app toont, maar wat er geldt: tools/proefklant-vullen.py zet het fictieve rooster op de datum van vandaag, en een echt
+// rooster dat later ingaat wint daar stil van. Geen enkele rij is ook een weigering: "niets gevonden" is geen "in orde".
+const FICTIEF = 'Fictief';
+const psql = (db, vraag) => execFileSync('docker', ['exec', '-i', 'credimatch-db', 'psql', '-U', 'postgres', '-d', db, '-At', '-c', vraag], { encoding: 'utf8' }).trim();
+const geldend = psql('credimatch', `select distinct on (m.code) m.code, t.versie_label from regelbank.maatschappijen m join regelbank.tarief_versies t on t.maatschappij_id = m.id
+  where t.status = 'gepubliceerd' and t.geldig_vanaf <= current_date order by m.code, t.geldig_vanaf desc, t.nummer desc`).split('\n').filter(Boolean);
+const echteRoosters = geldend.filter(r => !r.endsWith(`|${FICTIEF}`));
+if (geldend.length === 0 || echteRoosters.length) { console.error(`⛔ Er geldt een echt rooster of geen enkel (${echteRoosters.join(', ') || 'geen rij'}). Draai eerst python3 tools/proefklant-vullen.py. Gestopt; niets geschreven.`); process.exit(2); }
+const echteSimulaties = psql('tenant_credimatch_proef_hypo', `select count(*) from dossiers.simulaties where tariefversie is not null and tariefversie <> '${FICTIEF}'`);
+if (echteSimulaties !== '0') { console.error(`⛔ ${echteSimulaties || 'Onbekend aantal'} bewaarde simulaties dragen een echte rente. Draai eerst python3 tools/proefklant-vullen.py. Gestopt; niets geschreven.`); process.exit(2); }
+// Wat nooit op een beeld mag, ook niet met het fictieve rooster: de woorden uit de lijst in de private repo, en een tariefnummer dat iets anders is dan het fictieve. Ook in de waarde
+// van een invulveld: die staat niet in de tekst van de pagina. Ontbreekt de lijst, dan stopt dit script: een lege lijst zou alles doorlaten.
+const NIET_PUBLIEK_WOORDEN = readFileSync(join(PAKKET.repo, 'tools', 'niet-publiek.txt'), 'utf8').split('\n').map(r => r.trim()).filter(r => r && !r.startsWith('#'));
+if (NIET_PUBLIEK_WOORDEN.length === 0) { console.error('⛔ De lijst tools/niet-publiek.txt van de app is leeg. Gestopt; niets geschreven.'); process.exit(2); }
+const NIET_PUBLIEK = new RegExp([...NIET_PUBLIEK_WOORDEN, '\\btarief \\d', '\\btarif \\d'].join('|'), 'i');
+
 // Wat NIET op een beeld hoort: het versienummer, schuifbalken.
-const VERBERG = '.nav-version, .adm-klok-vast, .dxbl-scroll-viewer-vert-scroll-bar, .dxbl-scroll-viewer-hor-scroll-bar { visibility: hidden !important; }'
+// De zin en de rij die zo'n woord dragen: zie NIET_PUBLIEK. Staat er toch iets van op het scherm, dan weigert het script het beeld.
+const VERBERG = 'tr[data-testid="korting-Record Credits"] { display: none !important; }'
+  + '.nav-version, .adm-klok-vast, .dxbl-scroll-viewer-vert-scroll-bar, .dxbl-scroll-viewer-hor-scroll-bar, [data-testid="tarief-korting"] { visibility: hidden !important; }'
   + '::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb { background: transparent !important; }';
 
 const tekstTaal = (nl, fr) => new RegExp(`${nl}|${fr}`);
@@ -46,7 +66,7 @@ const SCHOTEN = [
   { naam: 'dossiers-lijst', route: '/dossiers', verwacht: tekstTaal('Alle open dossiers', 'Tous les dossiers ouverts') },
   { naam: 'dossier-stappen', route: '/dossiers', hoogte: 1040, verwacht: tekstTaal('Het dossier in cijfers', 'Le dossier en chiffres'),
     na: async p => { await openRij(p, 'Verstraete'); } },
-  { naam: 'dossier-prescoring', route: '/dossiers', hoogte: 1500, verwacht: tekstTaal('Bewaar als simulatie', 'Enregistrer comme simulation'),
+  { naam: 'dossier-prescoring', route: '/dossiers', hoogte: 1840, verwacht: /tarie?f Fictief/i,
     na: async p => {
       await openRij(p, 'Coppens');
       await p.locator('.cm-stap > button').nth(6).click();
@@ -55,13 +75,18 @@ const SCHOTEN = [
   { naam: 'kantoren-lijst', route: '/kantoren', verwacht: tekstTaal('Nieuw kantoor', 'Nouveau bureau') },
   { naam: 'kantoor-gebruikers', route: '/kantoren', verwacht: tekstTaal('Gebruikers van Kantoor Gent', 'Utilisateurs de Kantoor Gent'),
     na: async p => { await p.getByRole('row').filter({ hasText: /Kantoor Gent(?! \()/ }).first().getByRole('button', { name: /^(Gebruikers|Utilisateurs)$/ }).click(); } },
-  { naam: 'banken', route: '/instellingen/banken', verwacht: /Record Credits/, magKortZijn: 'twee banken en een uitleg' },
-  { naam: 'proefscherm', route: '/proef', hoogte: 1300, verwacht: /variante? /,
+  { naam: 'banken', route: '/instellingen/banken', hoogte: 1040, verwacht: tekstTaal('Commerciële korting', 'Réduction commerciale'), magKortZijn: 'twee banken, een korting en een uitleg' },
+  // ⚠️ Vandaag als toetsdatum: een toetsgeval brengt zijn eigen datum mee, en op die datum geldt een echt rooster. Het fictieve geldt vanaf vandaag.
+  { naam: 'proefscherm', route: '/proef', hoogte: 1500, verwacht: /tarie?f Fictief/i,
     na: async p => {
       await p.locator('dxbl-combo-box input, .dxbl-combo-box input').first().click();
       await p.locator('.dxbl-listbox-item, [role=option]').first().click();
       await p.getByRole('button', { name: /^(Laden|Charger)$/ }).click();
       await p.waitForTimeout(800);
+      const nu = new Date();
+      await p.locator('main input:visible, article input:visible').nth(1).fill(`${nu.getDate()}/${nu.getMonth() + 1}/${nu.getFullYear()}`);
+      await p.keyboard.press('Tab');
+      await p.waitForTimeout(500);
       await p.getByRole('button', { name: /^(Rekenen|Calculer)$/ }).click();
     } },
   { naam: 'prullenbak', route: '/prullenbak', verwacht: /Kantoor Oostende/, magKortZijn: 'een lijst met één verwijderd kantoor' },
@@ -117,6 +142,9 @@ for (const taal of ['nl-BE', 'fr-BE']) {
       await page.mouse.move(0, (s.hoogte ?? HOOG) - 1);
 
       const tekst = await page.locator('body').innerText();
+      const velden = await page.locator('input:visible').evaluateAll(v => v.map(e => e.value).join(' | '));
+      const nietPubliek = `${tekst} ${velden}`.match(NIET_PUBLIEK);
+      if (nietPubliek) { mislukt.push(`${bestand} — "${nietPubliek[0]}" staat op het scherm: dat hoort niet op een publiek beeld`); continue; }
       const besluit = schermBesluit({ tekst, isElementSchot: false, magKortZijn: Boolean(s.magKortZijn) });
       if (!besluit.ok) { mislukt.push(`${bestand} — ${besluit.reden}`); continue; }
 
