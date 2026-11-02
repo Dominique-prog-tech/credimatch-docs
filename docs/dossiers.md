@@ -119,8 +119,8 @@ Per bank krijgt u een kaart; de banken staan naast elkaar, zodat u ze kunt verge
 
 - het **oordeel**, groot bovenaan, met de versie van de regels en tot wanneer ze nagekeken zijn;
 - drie kerncijfers, zoals die bank ze rekent: de **quotiteit**, de **schuldratio** en het **saldo na alle lasten**,
-  met het bestaans- of levensminimum eronder. Kan de bank een cijfer nog niet berekenen, dan staat er een streep met de
-  reden;
+  met het bestaans- of levensminimum eronder. Kan de bank een cijfer nog niet berekenen, dan staat er een streep met een
+  korte reden, en het deel dat al gekend is. De volledige uitleg staat bij **Wat weegt op het oordeel**;
 - ontbreken er gegevens, dan de lijst **Deze gegevens ontbreken**, met elk gegeven één keer en een knop **naar stap …**
   die de juiste stap opent. Zijn het er veel, dan ziet u de eerste zes; de andere opent u met **Toon de … andere**;
 - **Wat weegt op het oordeel**: klik erop om de regels te zien die op het oordeel wegen, met de reden.

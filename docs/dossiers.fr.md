@@ -124,7 +124,8 @@ Chaque banque reçoit une carte ; les banques figurent côte à côte, pour que 
 - le **résultat**, en grand en haut, avec la version des règles et la date jusqu'à laquelle elles sont vérifiées ;
 - trois chiffres clés, tels que cette banque les calcule : la **quotité**, le **taux d'endettement** et le **solde après
   toutes les charges**, avec le minimum vital en dessous. Si la banque ne peut pas encore calculer un chiffre, un tiret
-  apparaît avec la raison ;
+  apparaît avec une raison courte, et la partie déjà connue. L'explication complète figure sous **Ce qui pèse sur le
+  résultat** ;
 - s'il manque des données, la liste **Ces données manquent**, chaque donnée une seule fois, avec un bouton **vers
   l'étape …** qui ouvre la bonne étape. S'il y en a beaucoup, vous voyez les six premières ; les autres s'ouvrent avec
   **Afficher les … autres** ;
