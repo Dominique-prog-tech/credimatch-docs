@@ -173,12 +173,14 @@ modifient souvent : la même vérification peut donner un autre taux la semaine 
 
 Sur la carte d'une banque :
 
-- **Taux selon le tarif …** : le taux, avec la formule et la durée en dessous. S'il y a des conditions, le taux sans ces conditions figure aussi ;
+- **Taux selon le tarif …** : le taux, avec la formule et la durée en dessous, et depuis quand ce tarif est en vigueur. S'il y a des conditions, le taux sans ces conditions figure aussi ;
 - **Première mensualité**, pour un taux variable aussi **Mensualité au taux maximal**, et les **Frais de dossier** si la banque les mentionne ;
 - **Comment ce taux est composé** : cliquez dessus pour voir le taux de base, les réductions et les majorations ;
 - **Formule** : la formule qui correspond au type de taux du dossier. Vous pouvez en choisir une autre. Si aucune ne correspond, un trait figure à côté du taux et la carte demande d'en choisir une. Cela ne compte pas comme une donnée manquante ;
 - **Réduction commerciale** : la réduction définie par votre organisation (voir [Banques](banken.md)). Vous choisissez dans la limite du plafond ; si vous ne choisissez rien, le standard s'applique ;
 - les **conditions** de la banque, par exemple un compte à vue ou une assurance : elles sont cochées, et vous décochez ce que votre client ne prend pas. Le taux est recalculé aussitôt.
+
+CrediMatch retient ce que vous choisissez. La formule, la réduction et les conditions restent par banque dans le dossier : si vous le rouvrez plus tard, la carte calcule immédiatement avec votre choix, et le tableau de bord en tient compte. Les données du dossier et sa date de mise à jour n'en sont pas modifiées.
 
 Ce qui découle du dossier, comme la quotité et la performance énergétique, vous ne le choisissez pas : la carte en tient compte. CrediMatch n'affiche pas de TAEG : il figure dans l'ESIS de la banque.
 
@@ -189,6 +191,7 @@ Ce qui peut figurer sur la carte à la place du tarif :
 | **Taux propre du dossier** | un taux figure à l'étape 5. Il l'emporte, pour chaque banque. La carte indique aussi ce que le tarif donnerait. Laissez le taux vide pour calculer avec le tarif |
 | un trait et *Aucun tarif* | la banque n'a pas de tarif à la date de test. Saisissez un taux à l'étape 5, ou choisissez une autre date |
 | un trait et *La quotité n'est pas connue* | le taux dépend de la quotité. Complétez d'abord les données qui manquent en dessous |
+| un trait pour une formule choisie auparavant | le tarif en vigueur ne connaît plus cette formule. Choisissez-en une autre |
 
 ### Enregistrer une simulation
 
