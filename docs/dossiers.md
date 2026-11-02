@@ -77,6 +77,19 @@ U ziet enkel de velden die bij uw keuzes horen:
 
 Hebt u nog niets gekozen, dan staan alle velden er. Een veld dat u al invulde, blijft staan, ook als u uw keuze wijzigt. Vraagt een bank toch een gegeven dat verborgen is, dan verschijnt het veld bij de aanvrager of het krediet waar het ontbreekt.
 
+### De raming van de aankoopkosten
+
+In stap 5 raamt CrediMatch de aankoopkosten volgens de tarieven van de notarissen. U ziet de registratierechten, het ereloon van de notaris, de kosten van het krediet, de administratie en de btw, met het totaal eronder.
+
+1. Vul het doel, het pand met zijn provincie en aankoopprijs, *eigen en enige woning* en het gevraagde krediet in. Ontbreekt er iets, dan vraagt de raming het.
+2. Klik op **Overnemen in het dossier**. Het totaal komt in het veld *aankoopkosten*, en u kan het daarna nog wijzigen.
+3. Wijkt het bedrag in het dossier af van de raming, dan zegt het scherm dat.
+
+Bij werken of een herfinanciering ziet u enkel de kosten van het krediet. Bij nieuwbouw, grond, meerdere gekochte panden, een hypothecair mandaat of een pand in het buitenland is er geen raming: het scherm zegt waarom, en u vult de kosten zelf in.
+
+!!! note "Een raming, geen afrekening"
+    De notaris maakt de afrekening. Verminderingen zoals de meeneembaarheid zitten er niet in. Het oordeel van de banken hangt bijna nooit van dit bedrag af.
+
 ### Wat de stappenbalk u vertelt
 
 Elke stap in de balk toont of er bij de banken nog iets ontbreekt:

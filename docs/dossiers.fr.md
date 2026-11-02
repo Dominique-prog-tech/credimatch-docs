@@ -79,6 +79,19 @@ Vous ne voyez que les champs liés à vos choix :
 
 Tant que vous n'avez rien choisi, tous les champs sont affichés. Un champ déjà rempli reste affiché, même si vous modifiez votre choix. Si une banque demande tout de même une donnée masquée, le champ apparaît chez le demandeur ou pour le crédit concerné.
 
+### L'estimation des frais d'acquisition
+
+À l'étape 5, CrediMatch estime les frais d'acquisition selon les tarifs des notaires. Vous voyez les droits d'enregistrement, les honoraires du notaire, les frais du crédit, les frais administratifs et la TVA, avec le total en dessous.
+
+1. Remplissez l'objet, le bien avec sa province et son prix d'achat, *logement propre et unique* et le crédit demandé. S'il manque quelque chose, l'estimation le demande.
+2. Cliquez sur **Reprendre dans le dossier**. Le total arrive dans le champ *frais d'acquisition*, et vous pouvez encore le modifier ensuite.
+3. Si le montant du dossier diffère de l'estimation, l'écran l'indique.
+
+Pour des travaux ou un refinancement, vous ne voyez que les frais du crédit. Pour une construction neuve, un terrain, plusieurs biens achetés, un mandat hypothécaire ou un bien à l'étranger, il n'y a pas d'estimation : l'écran explique pourquoi, et vous saisissez les frais vous-même.
+
+!!! note "Une estimation, pas un décompte"
+    Le notaire établit le décompte. Les réductions comme la reportabilité n'y sont pas comprises. Le résultat des banques ne dépend presque jamais de ce montant.
+
 ### Ce que la barre des étapes vous indique
 
 Chaque étape de la barre montre s'il manque encore quelque chose aux banques :
