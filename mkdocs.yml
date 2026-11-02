@@ -142,6 +142,7 @@ plugins:
             Banken: Banques
             Rollen & rechten: Rôles & droits
             Prullenbak: Corbeille
+            Tweestapsverificatie: Vérification en deux étapes
             Voor ontwikkelaars: Pour les développeurs
             API voor andere software: API pour d'autres logiciels
 
@@ -161,5 +162,6 @@ nav:
       - Banken: banken.md
       - Rollen & rechten: rollen.md
       - Prullenbak: prullenbak.md
+      - Tweestapsverificatie: tweestapsverificatie.md
   - Voor ontwikkelaars:
       - API voor andere software: api.md

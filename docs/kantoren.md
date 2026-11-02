@@ -7,7 +7,7 @@ description: "Kantoren in CrediMatch: de kantoren van uw organisatie, wie welk k
 Een organisatie in CrediMatch heeft één of meer kantoren. Elke gebruiker ziet de kantoren waarop hij staat; de backoffice
 kan ze allemaal zien. Op dit scherm ziet u uw kantoren, en beheert de beheerder van uw organisatie ze.
 
-<!-- AFBEELDING: de lijst Kantoren met twee kantoren, zoals de beheerder ze ziet, met de knoppen Bewerken, Gebruikers en Verwijderen -->
+![De lijst Kantoren zoals de beheerder ze ziet, met de knoppen Bewerken, Gebruikers en Verwijderen](images/kantoren-lijst.png "De lijst Kantoren")
 
 ## Het scherm openen
 
@@ -54,7 +54,7 @@ Dit kan enkel de beheerder van uw organisatie.
 De wijziging geldt meteen. Een gebruiker met het recht **Alle kantoren zien** hoeft u hier niet aan te vinken: hij ziet
 elk kantoor al.
 
-<!-- AFBEELDING: het venster Gebruikers van een kantoor, met één gebruiker aangevinkt -->
+![Het venster Gebruikers van Kantoor Gent, met één gebruiker aangevinkt](images/kantoor-gebruikers.png "De gebruikers van een kantoor")
 
 ## Een kantoor verwijderen
 

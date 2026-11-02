@@ -8,7 +8,7 @@ Une organisation dans CrediMatch compte un ou plusieurs bureaux. Chaque utilisat
 rattaché ; le back-office peut les voir tous. Sur cet écran, vous voyez vos bureaux, et l'administrateur de votre
 organisation les gère.
 
-<!-- AFBEELDING: la liste Bureaux avec deux bureaux, telle que l'administrateur la voit, avec les boutons Modifier, Utilisateurs et Supprimer -->
+![La liste Bureaux telle que l'administrateur la voit, avec les boutons Modifier, Utilisateurs et Supprimer](images/kantoren-lijst-fr.png "La liste Bureaux")
 
 ## Ouvrir l'écran
 
@@ -55,7 +55,7 @@ Seul l'administrateur de votre organisation peut le faire.
 La modification s'applique immédiatement. Inutile de cocher un utilisateur qui dispose du droit **Voir tous les
 bureaux** : il voit déjà chaque bureau.
 
-<!-- AFBEELDING: la fenêtre Utilisateurs d'un bureau, avec un utilisateur coché -->
+![La fenêtre Utilisateurs de Kantoor Gent, avec un utilisateur coché](images/kantoor-gebruikers-fr.png "Les utilisateurs d'un bureau")
 
 ## Supprimer un bureau
 

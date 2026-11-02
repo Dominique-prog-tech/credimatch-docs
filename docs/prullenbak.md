@@ -7,7 +7,7 @@ description: "De prullenbak in CrediMatch: wat verwijderd werd terugvinden en he
 Wat u in CrediMatch verwijdert, bijvoorbeeld een [kantoor](kantoren.md), is niet definitief weg. U vindt het hier terug
 en zet het terug.
 
-<!-- AFBEELDING: de prullenbak met één verwijderd kantoor en de knop Herstellen -->
+![De Prullenbak met één verwijderd kantoor en de knop Herstellen](images/prullenbak.png "De prullenbak")
 
 ## Het scherm openen
 

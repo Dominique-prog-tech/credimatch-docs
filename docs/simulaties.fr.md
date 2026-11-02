@@ -8,7 +8,7 @@ Sur cet écran, vous voyez toutes les simulations enregistrées de vos bureaux d
 voyez par exemple combien ont été enregistrées ce mois-ci, et avec quel résultat. Une simulation s'enregistre dans le dossier
 lui-même (voir [Pré-scoring et simulations](dossiers.md#pre-scoring-et-simulations)).
 
-<!-- AFBEELDING: la liste Simulations sur la période Ce mois-ci, avec les résultats en étiquettes colorées -->
+![La liste Simulations sur la Période Ce mois-ci, avec les colonnes Dossier, Bureau, Banque, Montant, Résultat et Enregistrée le](images/simulaties-lijst-fr.png "La liste Simulations")
 
 ## Ouvrir l'écran
 

@@ -11,7 +11,7 @@ bewaren als simulatie.
 !!! note "Proefomgeving"
     Werk enkel met fictieve gegevens. Echte dossiers kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
 
-<!-- AFBEELDING: de lijst Dossiers met één fictief dossier, met de kolommen #, Omschrijving, Kantoor, Simulaties en Bijgewerkt -->
+![De lijst Dossiers met de filters Toon en Kantoor, en de kolommen Omschrijving, Kantoor, Simulaties en Bijgewerkt](images/dossiers-lijst.png "De lijst Dossiers")
 
 ## Het scherm openen
 
@@ -83,7 +83,7 @@ invult. Is een bedrag nog niet ingevuld, dan staat er een streep en zegt het sch
 Een aanvrager, een lopend krediet, een pand of een schijf voegt u toe met de knop onder de stap (bijvoorbeeld **Aanvrager
 toevoegen** of **Schijf toevoegen**). U haalt er een weg met **Verwijderen** bovenaan zijn kaart.
 
-<!-- AFBEELDING: de stappenbalk met vinkjes en oranje getallen, de stap Doel met de keuzekaarten, en rechts het dossier in cijfers -->
+![Een dossier met de stappenbalk, de stap Doel met de keuzekaarten, en rechts Het dossier in cijfers](images/dossier-stappen.png "Het dossier in stappen"){ .volle-breedte }
 
 ### Wat u niet weet, laat u leeg
 
@@ -154,7 +154,7 @@ schuiven met het bedrag of de looptijd tot het past, zonder het dossier zelf te 
 Een bank die uw organisatie heeft uitgezet (zie [Banken](banken.md)), wordt niet getoetst. Ze staat onderaan bij
 **Uitgezet door uw organisatie**.
 
-<!-- AFBEELDING: de stap Prescoring met twee banken naast elkaar en twee bewaarde simulaties -->
+![De stap Prescoring met de banken Elantis en Record Credits naast elkaar, elk met haar oordeel en kerncijfers, en daaronder Bewaarde simulaties](images/dossier-prescoring.png "De prescoring per bank"){ .volle-breedte }
 
 Alle bewaarde simulaties van uw kantoren samen staan op het scherm [Simulaties](simulaties.md).
 

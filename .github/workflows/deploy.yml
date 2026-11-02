@@ -31,9 +31,13 @@ jobs:
       # Vaste versies — zie requirements.txt.
       - run: pip install -r requirements.txt
       - run: mkdocs build --strict
-      # Nog niet aan, en waarom (zie CLAUDE.md): de beeldcontrole (tools/check-beelden.py) vanaf de eerste
-      # schermafdruk; de gedeelde filmhook en de filmcontrole uit adm-appkit (met het repo-geheim ADM_APPKIT_LEZEN)
-      # vanaf de eerste film. Zoals cleanops-docs.
+      # Staat elk beeld uit de bron ook als <img> in de gebouwde site? Bij Nimble en CreditSoft verdwenen op 19/10/2026 alle
+      # schermafdrukken bij het bouwen (selectolax 1.0.1, zie requirements.txt) terwijl alle stappen groen bleven. Deze mag de
+      # uitrol TEGENHOUDEN.
+      - name: Beelden controleren (bron tegen gebouwde site)
+        run: python3 tools/check-beelden.py site
+      # Nog niet aan, en waarom (zie CLAUDE.md): de gedeelde filmhook en de filmcontrole uit adm-appkit (met het repo-geheim
+      # ADM_APPKIT_LEZEN) vanaf de eerste film. Zoals cleanops-docs.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

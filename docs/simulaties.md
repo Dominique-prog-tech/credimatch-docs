@@ -8,7 +8,7 @@ Op dit scherm ziet u alle bewaarde simulaties van uw kantoren in één lijst, ov
 hoeveel er deze maand bewaard zijn, en met welk oordeel. Een simulatie bewaren doet u in het dossier zelf (zie
 [Prescoring en simulaties](dossiers.md#prescoring-en-simulaties)).
 
-<!-- AFBEELDING: de lijst Simulaties op de periode Deze maand, met de oordelen als gekleurde labels -->
+![De lijst Simulaties op de Periode Deze maand, met de kolommen Dossier, Kantoor, Bank, Bedrag, Oordeel en Bewaard op](images/simulaties-lijst.png "De lijst Simulaties")
 
 ## Het scherm openen
 

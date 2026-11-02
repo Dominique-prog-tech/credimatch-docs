@@ -7,7 +7,7 @@ description: "Banken in CrediMatch: kiezen met welke maatschappijen uw organisat
 Op dit scherm kiest u met welke maatschappijen uw organisatie werkt. Een maatschappij die uit staat, krijgt geen prescoring
 of simulatie meer. De aanvaardingsregels van de maatschappijen beheert ADM: u kiest enkel wat aan staat.
 
-<!-- AFBEELDING: het scherm Banken met Elantis en Record Credits, beide aangevinkt, en de datum tot wanneer de regels nagekeken zijn -->
+![Het scherm Banken met Elantis en Record Credits aangevinkt, en de kolom Regels nagekeken tot](images/banken.png "Het scherm Banken")
 
 ## Het scherm openen
 

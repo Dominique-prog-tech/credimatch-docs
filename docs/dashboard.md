@@ -10,7 +10,7 @@ vragen en hoe de banken oordelen over de bewaarde simulaties. Elk cijfer gaat en
 !!! note "Proefomgeving"
     Werk enkel met fictieve gegevens. Echte dossiers kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
 
-<!-- AFBEELDING: het dashboard met de vier tegels, de drie kaarten en de drie grafieken, op een proefklant met fictieve dossiers -->
+![Het Dashboard met de tegels, de kaarten Recent bewerkt, Vraagt aandacht en Laatste simulaties, en de grafieken Dossiers per maand, Oordelen per bank en Doel van de dossiers](images/dashboard.png "Het dashboard")
 
 ## Het scherm openen
 

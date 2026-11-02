@@ -7,7 +7,7 @@ description: "Rollen en rechten in CrediMatch: een bundel rechten aan gebruikers
 Een rol is een bundel rechten. U maakt een rol aan, kiest welke rechten erbij horen en geeft ze aan gebruikers. Zo geeft
 u bijvoorbeeld de backoffice het recht om alle [kantoren](kantoren.md) te zien.
 
-<!-- AFBEELDING: het scherm Rollen & rechten met de rol Backoffice geselecteerd, het recht Alle kantoren zien aangevinkt en één gebruiker met deze rol -->
+![Het scherm Rollen & rechten met de rol Backoffice gekozen, het recht Alle kantoren zien aangevinkt en één gebruiker](images/rollen.png "Rollen & rechten")
 
 ## Het scherm openen
 

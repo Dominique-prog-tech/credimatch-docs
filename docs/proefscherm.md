@@ -12,7 +12,7 @@ reageert.
     U ziet het proefscherm enkel met het recht **Proefscherm gebruiken**. De beheerder van uw organisatie geeft dat via
     een rol (zie [Rollen & rechten](rollen.md)).
 
-<!-- AFBEELDING: het proefscherm met een geladen toetsgeval en de uitkomst van één bank -->
+![Het Proefscherm met een geladen toetsgeval en de uitkomst bij Elantis](images/proefscherm.png "Het proefscherm")
 
 ## Het scherm openen
 

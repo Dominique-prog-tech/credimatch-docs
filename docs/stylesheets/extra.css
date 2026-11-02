@@ -235,3 +235,24 @@ html {
 .md-header__button.md-logo {
   opacity: 1;
 }
+
+/* Schermafbeeldingen: een haarlijn (wit op wit zweeft anders in het niets) en een hoogtebegrenzing voor staande beelden. Zoals de vloot:
+   adm-appkit/docs/docs-site-vormgeving.md. Klikken opent ze schermvullend (glightbox). */
+.md-typeset img:not(.twemoji):not(.emojione) {
+  display: block;
+  margin: 1.3rem auto;
+  max-width: 100%;
+  max-height: 30rem;
+  width: auto;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+[data-md-color-scheme="slate"] .md-typeset img:not(.twemoji):not(.emojione) {
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: none;
+}
+.md-typeset img.volle-breedte:not(.twemoji):not(.emojione) {
+  max-height: none;
+  width: 100%;
+}

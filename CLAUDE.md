@@ -34,13 +34,29 @@ momenteel"). Haal ze dus niet weg omdat de site ze niet noemt.
 Enkel **klare** pagina's staan in de `nav:` van `mkdocs.yml`, per vrijgegeven scherm. Op het onthaal wordt de kaart van
 dat onderwerp dan klikbaar (de klasse `cm-binnenkort` gaat weg en er komt een link bij).
 
+## De beelden (sinds 2/11/2026)
+De beelden worden **gegenereerd**, in NL en FR, zoals bij CleanOps en CreditSoft: `tools/beelden.mjs` op de gedeelde kern
+(`adm-appkit/tools/beeldgenerator`). Een nieuw beeld = een recept in dat script (naam, route, merkteken) + een verwijzing in de pagina;
+ontbreekt het nog, dan markeer je de plek met `<!-- AFBEELDING: … -->`.
+1. De preview `credimatch-web` draait (`http://127.0.0.1:6345`).
+2. `python3 tools/proefklant-vullen.py` vult de **fictieve proefklant `proef-hypo`** (Dominique, 2/11/2026: geen aparte demo-klant). Nooit uit een
+   echte klant, nooit van een server: het script weigert beide. Elke naam begint met "Fictief": de site is publiek.
+3. `BEELDEN_WACHTWOORD=… node tools/beelden.mjs [filter]`. Een **beheerder van de proefklant** meldt zich aan (`dashboard-proef@proef-hypo.local`,
+   lokaal aangemaakt), geen operator: zo toont het menu wat een klant ziet. Het wachtwoord staat in geen enkel bestand. Bestaat het account niet
+   meer, maak dan lokaal een nieuwe beheerder aan en geef hem mee met `BEELDEN_GEBRUIKER`.
+- Het script weigert een foutscherm, een scherm zonder het merkteken van het recept en een afwijkende beeldvorm. De alt-tekst draagt de
+  schermwoorden met een hoofdletter: die worden nagekeken.
+- ⚠️ **Herneem ALLE beelden na een blok werk** (schrijfregels §4): de zijbalk staat op elk beeld.
+- ⚠️ **Kijk ernaar.** Op 2/11/2026 toonden de eerste beelden twee fouten die elke test groen liet: de tabel op Banken stond scheef sinds 0.2.0, en de
+  grid sprak Engels.
+
 ## Wat er bewust nog NIET aan staat (31/10/2026), en wanneer het aangaat
 | Wat | Wanneer | Hoe (zie `cleanops-docs`) |
 |---|---|---|
 | ~~De uitrol bij een push~~ | ✅ gedaan 1/11/2026 | repo publiek, Pages aan (GitHub Actions, `docs.credimatch.be`), `if:` weg |
 | `robots.txt` open + sitemap | bij het live zetten | `Allow: /` en de `Sitemap:`-regel |
 | Plausible (bezoekcijfers) | bij het live zetten | eigen site in Plausible voor `docs.credimatch.be`; NIET het script van een andere site overnemen, anders tellen de bezoeken daar |
-| De beeldcontrole | bij de eerste schermafdruk | `tools/check-beelden.py site` in `deploy.yml`; `MIN_PAGINAS` verhogen bij elke beeldronde |
+| ~~De beeldcontrole~~ | ✅ aan sinds 2/11/2026 | `tools/check-beelden.py site` in `deploy.yml`; `MIN_PAGINAS` verhogen bij elke beeldronde |
 | Films en de pagina "Video's" | bij de eerste film | de gedeelde hook `_appkit/tools/filmgenerator/films_hook.py`, het repo-geheim `ADM_APPKIT_LEZEN`, de filmcontrole, `extra.bunny_library`, de film-CSS |
 
 ## Live zetten (op Dominiques woord)

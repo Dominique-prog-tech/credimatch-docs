@@ -12,7 +12,7 @@ banque réagit à un cas donné.
     Vous ne voyez l'écran d'essai qu'avec le droit **Utiliser l'écran d'essai**. L'administrateur de votre organisation
     l'attribue via un rôle (voir [Rôles & droits](rollen.md)).
 
-<!-- AFBEELDING: l'écran d'essai avec un cas de test chargé et le résultat d'une banque -->
+![L'Écran d'essai avec un cas de test chargé et le résultat chez Elantis](images/proefscherm-fr.png "L'écran d'essai")
 
 ## Ouvrir l'écran
 

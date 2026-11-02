@@ -8,7 +8,7 @@ Sur cet écran, vous choisissez avec quelles compagnies votre organisation trava
 de pré-scoring ni de simulation. Les règles d'acceptation des compagnies sont gérées par ADM : vous choisissez seulement ce
 qui est actif.
 
-<!-- AFBEELDING: l'écran Banques avec Elantis et Record Credits, toutes deux cochées, et la date de vérification des règles -->
+![L'écran Banques avec Elantis et Record Credits cochées, et la colonne Règles vérifiées jusqu'au](images/banken-fr.png "L'écran Banques")
 
 ## Ouvrir l'écran
 

@@ -12,7 +12,7 @@ sur les bureaux que vous pouvez voir.
     Travaillez uniquement avec des données fictives. Les vrais dossiers ne seront possibles qu'une fois les accords sur
     les données personnelles finalisés.
 
-<!-- AFBEELDING: le tableau de bord avec les quatre tuiles, les trois cartes et les trois graphiques, sur un client d'essai avec des dossiers fictifs -->
+![Le Tableau de bord avec les tuiles, les cartes Modifiés récemment, Demande votre attention et Dernières simulations, et les graphiques Dossiers par mois, Résultats par banque et Objet des dossiers](images/dashboard-fr.png "Le tableau de bord")
 
 ## Ouvrir l'écran
 

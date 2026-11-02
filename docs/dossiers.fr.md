@@ -12,7 +12,7 @@ enregistrée comme simulation, avec un montant et une durée propres.
     Travaillez uniquement avec des données fictives. Les vrais dossiers ne seront possibles qu'une fois les accords sur
     les données personnelles finalisés.
 
-<!-- AFBEELDING: la liste Dossiers avec un dossier fictif, avec les colonnes #, Description, Bureau, Simulations et Mis à jour -->
+![La liste Dossiers avec les filtres Afficher et Bureau, et les colonnes Description, Bureau, Simulations et Mis à jour](images/dossiers-lijst-fr.png "La liste Dossiers")
 
 ## Ouvrir l'écran
 
@@ -85,7 +85,7 @@ saisissez chaque donnée. Si un montant n'est pas encore saisi, un tiret appara�
 Vous ajoutez un demandeur, un crédit en cours, un bien ou une tranche avec le bouton sous l'étape (par exemple **Ajouter
 un demandeur** ou **Ajouter une tranche**). Vous en retirez un avec **Supprimer** en haut de sa carte.
 
-<!-- AFBEELDING: la barre des étapes avec des coches et des nombres orange, l'étape Objet avec les cartes, et à droite le dossier en chiffres -->
+![Un dossier avec la barre d'étapes, l'étape Objet avec les cartes de choix, et à droite Le dossier en chiffres](images/dossier-stappen-fr.png "Le dossier par étapes"){ .volle-breedte }
 
 ### Ce que vous ne savez pas, laissez-le vide
 
@@ -161,7 +161,7 @@ dossier lui-même.
 Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'est pas vérifiée. Elle figure en bas sous
 **Désactivées par votre organisation**.
 
-<!-- AFBEELDING: l'étape Pré-scoring avec deux banques côte à côte et deux simulations enregistrées -->
+![L'étape Pré-scoring avec les banques Elantis et Record Credits côte à côte, chacune avec son résultat et ses chiffres clés, et en dessous Simulations enregistrées](images/dossier-prescoring-fr.png "Le pré-scoring par banque"){ .volle-breedte }
 
 Toutes les simulations enregistrées de vos bureaux figurent ensemble sur l'écran [Simulations](simulaties.md).
 

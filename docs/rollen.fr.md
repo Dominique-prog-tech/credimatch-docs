@@ -7,7 +7,7 @@ description: "Rôles et droits dans CrediMatch : attribuer un ensemble de droits
 Un rôle est un ensemble de droits. Vous créez un rôle, choisissez les droits qui en font partie et l'attribuez à des
 utilisateurs. Vous donnez ainsi par exemple au back-office le droit de voir tous les [bureaux](kantoren.md).
 
-<!-- AFBEELDING: l'écran Rôles & droits avec le rôle Backoffice sélectionné, le droit Voir tous les bureaux coché et un utilisateur avec ce rôle -->
+![L'écran Rôles & droits avec le rôle Backoffice choisi, le droit Voir tous les bureaux coché et un utilisateur](images/rollen-fr.png "Rôles & droits")
 
 ## Ouvrir l'écran
 

@@ -7,7 +7,7 @@ description: "La corbeille dans CrediMatch : retrouver et restaurer ce qui a ét
 Ce que vous supprimez dans CrediMatch, par exemple un [bureau](kantoren.md), n'est pas effacé définitivement. Vous le
 retrouvez ici et le remettez en place.
 
-<!-- AFBEELDING: la corbeille avec un bureau supprimé et le bouton Restaurer -->
+![La Corbeille avec un bureau supprimé et le bouton Restaurer](images/prullenbak-fr.png "La corbeille")
 
 ## Ouvrir l'écran
 
