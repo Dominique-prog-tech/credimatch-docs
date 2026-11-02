@@ -29,6 +29,13 @@ Klik in het menu op **Dossiers**. U ziet de dossiers van de kantoren die u mag z
 
 Klik op een rij om het dossier te openen.
 
+Boven de lijst kiest u wat u wil zien:
+
+- **Toon:** *Alle open dossiers*, *Nieuw deze maand*, *Met ontbrekende gegevens* of *Positief bij minstens één bank*. Dit zijn
+  dezelfde dossiers als achter de tegels op het [Dashboard](dashboard.md). Bij *Met ontbrekende gegevens* komt er een kolom
+  **Gegevens nodig** bij, met hoeveel gegevens de banken nog vragen.
+- **Kantoor:** staat er enkel als u meer dan één kantoor ziet.
+
 ## Een dossier aanmaken
 
 1. Klik op **Nieuw dossier**.
@@ -87,6 +94,9 @@ Een leeg veld betekent **niet gekend**. De prescoring zegt dan welk gegeven ontb
 - Een korte lijst, zoals het gezinsstatuut of de doelgroep, kiest u ook met knoppen, met **Niet gekend** erbij.
 - Het **doel** kiest u met een kaart, bijvoorbeeld **Aankoop met werken**. Klikt u nog eens op de gekozen kaart, dan
   staat het doel weer op *niet gekend*.
+- Een veld waarin u meerdere keuzes kunt aanduiden, zoals de **kenmerken van het pand**, heeft twee knoppen eronder: **Geen**
+  als er geen enkele van toepassing is, en **Niet gekend** als u het nog niet weet. *Niet gekend* meldt de prescoring als
+  ontbrekend, *Geen* niet.
 - Een bedrag dat nul is, vult u in als **0**. Zijn er geen werken, vul dan **0** in bij de werken: leeg betekent dat de
   werken niet gekend zijn. Dat staat ook onder het veld.
 
@@ -146,6 +156,8 @@ Een bank die uw organisatie heeft uitgezet (zie [Banken](banken.md)), wordt niet
 
 <!-- AFBEELDING: de stap Prescoring met twee banken naast elkaar en twee bewaarde simulaties -->
 
+Alle bewaarde simulaties van uw kantoren samen staan op het scherm [Simulaties](simulaties.md).
+
 ## Veelgemaakte fouten
 
 !!! warning "Bijna elke regel geeft niet volledig getoetst"
@@ -162,5 +174,7 @@ Een bank die uw organisatie heeft uitgezet (zie [Banken](banken.md)), wordt niet
 
 ## Zie ook
 
+- [Dashboard](dashboard.md)
+- [Simulaties](simulaties.md)
 - [Kantoren](kantoren.md)
 - [Banken](banken.md)

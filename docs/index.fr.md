@@ -29,12 +29,23 @@ dossier de crédit est accepté, à quel taux, et pourquoi.
 
     Vous connecter, vous repérer à l'écran, et ouvrir CrediMatch depuis CreditSoft.
 
--   :material-folder-account-outline: **Dossiers**{ .cm-binnenkort }
+-   :material-view-dashboard-outline: **Tableau de bord**
 
     ---
 
-    Créer un dossier de crédit ou le reprendre de CreditSoft : les demandeurs, leurs revenus et charges, le bien
-    et le crédit demandé.
+    Les chiffres clés de vos bureaux, les dossiers qui demandent votre attention, les dernières simulations et les
+    graphiques.
+
+    [Tableau de bord](dashboard.md)
+
+-   :material-folder-account-outline: **Dossiers**
+
+    ---
+
+    Créer un dossier de crédit : les demandeurs, leurs revenus et charges, le bien et le crédit demandé. Les simulations
+    enregistrées figurent aussi ensemble dans une seule liste.
+
+    [Dossiers](dossiers.md) · [Simulations](simulaties.md)
 
 -   :material-scale-balance: **Pré-scoring et simulations**{ .cm-binnenkort }
 

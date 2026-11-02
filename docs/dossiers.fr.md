@@ -31,6 +31,13 @@ Dans le menu, cliquez sur **Dossiers**. Vous voyez les dossiers des bureaux que 
 
 Cliquez sur une ligne pour ouvrir le dossier.
 
+Au-dessus de la liste, vous choisissez ce que vous voulez voir :
+
+- **Afficher :** *Tous les dossiers ouverts*, *Nouveaux ce mois-ci*, *Avec des données manquantes* ou *Positif auprès d'au moins
+  une banque*. Ce sont les mêmes dossiers que derrière les tuiles du [Tableau de bord](dashboard.md). Avec *Avec des données
+  manquantes*, une colonne **Données nécessaires** s'ajoute, avec le nombre de données que les banques demandent encore.
+- **Bureau :** n'apparaît que si vous voyez plus d'un bureau.
+
 ## Créer un dossier
 
 1. Cliquez sur **Nouveau dossier**.
@@ -90,6 +97,9 @@ Un champ vide signifie **non connu**. Le pré-scoring indique alors la donnée m
   connu** en plus.
 - L'**objet** se choisit avec une carte, par exemple **Achat avec travaux**. Si vous cliquez encore sur la carte choisie,
   l'objet redevient *non connu*.
+- Un champ où vous pouvez indiquer plusieurs choix, comme les **caractéristiques du bien**, a deux boutons en dessous : **Aucun**
+  si aucun choix ne s'applique, et **Non connu** si vous ne le savez pas encore. Le pré-scoring signale *Non connu* comme
+  manquant, pas *Aucun*.
 - Un montant nul se saisit **0**. S'il n'y a pas de travaux, saisissez **0** aux travaux : vide signifie que les
   travaux ne sont pas connus. C'est aussi indiqué sous le champ.
 
@@ -153,6 +163,8 @@ Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'e
 
 <!-- AFBEELDING: l'étape Pré-scoring avec deux banques côte à côte et deux simulations enregistrées -->
 
+Toutes les simulations enregistrées de vos bureaux figurent ensemble sur l'écran [Simulations](simulaties.md).
+
 ## Erreurs fréquentes
 
 !!! warning "Presque chaque règle donne pas entièrement vérifié"
@@ -170,5 +182,7 @@ Une banque que votre organisation a désactivée (voir [Banques](banken.md)) n'e
 
 ## Voir aussi
 
+- [Tableau de bord](dashboard.md)
+- [Simulations](simulaties.md)
 - [Bureaux](kantoren.md)
 - [Banques](banken.md)

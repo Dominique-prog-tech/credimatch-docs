@@ -133,7 +133,9 @@ plugins:
             # Eén regel per nav-item. Neem de Franse term over uit de APP, verzin hem niet: handleiding en scherm
             # horen hetzelfde te zeggen.
             Home: Accueil
+            Dashboard: Tableau de bord
             Dossiers: Dossiers
+            Simulaties: Simulations
             Proefscherm: Écran d'essai
             Organisatie: Organisation
             Kantoren: Bureaux
@@ -150,7 +152,9 @@ extra:
 # app (Organisatie > Kantoren), zodat de handleiding leest als het scherm.
 nav:
   - Home: index.md
+  - Dashboard: dashboard.md
   - Dossiers: dossiers.md
+  - Simulaties: simulaties.md
   - Proefscherm: proefscherm.md
   - Organisatie:
       - Kantoren: kantoren.md

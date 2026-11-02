@@ -29,12 +29,22 @@ kredietdossier aanvaard wordt, tegen welk tarief, en waarom.
 
     Aanmelden, uw weg vinden in het scherm, en CrediMatch openen vanuit CreditSoft.
 
--   :material-folder-account-outline: **Dossiers**{ .cm-binnenkort }
+-   :material-view-dashboard-outline: **Dashboard**
 
     ---
 
-    Een kredietdossier aanmaken of overnemen uit CreditSoft: de aanvragers, hun inkomen en lasten, het pand en
-    het gevraagde krediet.
+    De kerncijfers van uw kantoren, de dossiers die aandacht vragen, de laatste simulaties en de grafieken.
+
+    [Dashboard](dashboard.md)
+
+-   :material-folder-account-outline: **Dossiers**
+
+    ---
+
+    Een kredietdossier aanmaken: de aanvragers, hun inkomen en lasten, het pand en het gevraagde krediet. De bewaarde
+    simulaties staan ook samen in één lijst.
+
+    [Dossiers](dossiers.md) · [Simulaties](simulaties.md)
 
 -   :material-scale-balance: **Prescoring en simulaties**{ .cm-binnenkort }
 
