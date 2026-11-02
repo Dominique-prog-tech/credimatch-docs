@@ -79,6 +79,23 @@ Vous ne voyez que les champs liés à vos choix :
 
 Tant que vous n'avez rien choisi, tous les champs sont affichés. Un champ déjà rempli reste affiché, même si vous modifiez votre choix. Si une banque demande tout de même une donnée masquée, le champ apparaît chez le demandeur ou pour le crédit concerné.
 
+### En cas de construction neuve
+
+Si vous choisissez *Construction neuve* à l'étape 1, trois champs changent de nom, car ils portent alors autre chose :
+
+| Champ | Étape | Ce que vous saisissez |
+|---|---|---|
+| *prix ou valeur du terrain* | 4 | ce que le terrain coûte ou vaut. Pour un achat sur plan : la part du prix pour le terrain |
+| *coût de construction (TVAC, architecte et raccordements)* | 5 | ce que la construction coûte. Pour un achat sur plan : la part du prix pour le bâtiment |
+| *valeur du bien achevé (expertise)* | 5 | la valeur issue de l'expertise, s'il y en a une. Sinon, laissez le champ vide |
+
+À l'étape 4, à *dispense de certificat PEB*, choisissez **construction neuve** pour le bien à construire : il n'y a pas encore de PEB. Un deuxième bien en garantie n'est pas une construction neuve : vous y saisissez l'expertise et le PEB comme d'habitude.
+
+Les autres choix de cette dispense sont *bien sans PEB*, *sortie d'indivision* et *acquis avant l'obligation PEB*. La banque ne demande alors pas de certificat, mais peut encore demander le chiffre du PEB.
+
+!!! note "Toutes les banques ne calculent pas de la même façon"
+    Chez une banque, le terrain et le coût de construction suffisent ; une autre demande en plus une expertise et le PEB. La liste de ce qui manque encore indique ce qu'il faut par banque. Toutes les banques n'acceptent pas la construction en gestion propre.
+
 ### L'estimation des frais d'acquisition
 
 À l'étape 5, CrediMatch estime les frais d'acquisition selon les tarifs des notaires. Vous voyez les droits d'enregistrement, les honoraires du notaire, les frais du crédit, les frais administratifs et la TVA, avec le total en dessous.

@@ -77,6 +77,23 @@ U ziet enkel de velden die bij uw keuzes horen:
 
 Hebt u nog niets gekozen, dan staan alle velden er. Een veld dat u al invulde, blijft staan, ook als u uw keuze wijzigt. Vraagt een bank toch een gegeven dat verborgen is, dan verschijnt het veld bij de aanvrager of het krediet waar het ontbreekt.
 
+### Bij nieuwbouw
+
+Kiest u in stap 1 *Nieuwbouw*, dan heten drie velden anders, want ze dragen dan iets anders:
+
+| Veld | Stap | Wat u invult |
+|---|---|---|
+| *prijs of waarde van de grond* | 4 | wat de grond kost of waard is. Bij een aankoop op plan: het deel van de prijs voor de grond |
+| *bouwkost (incl. btw, architect en aansluitingen)* | 5 | wat het bouwen kost. Bij een aankoop op plan: het deel van de prijs voor het gebouw |
+| *waarde van het afgewerkte pand (expertise)* | 5 | de waarde uit de expertise, als die er is. Is er geen, dan laat u het veld leeg |
+
+Kies in stap 4 bij *vrijstelling van EPC-attest* de waarde **nieuwbouw** voor het pand dat gebouwd wordt: er is dan nog geen EPC. Een tweede pand in waarborg is geen nieuwbouw: daar vult u de schatting en het EPC in zoals anders.
+
+De andere keuzes bij die vrijstelling zijn *pand zonder EPC*, *uitonverdeeldheidtreding* en *verworven vóór de EPC-plicht*. De bank vraagt dan geen attest, maar kan wel nog het EPC-cijfer vragen.
+
+!!! note "Niet elke bank rekent hetzelfde"
+    Bij de ene bank volstaan de grond en de bouwkost; een andere vraagt daarnaast een schatting en het EPC. De lijst met wat nog nodig is, zegt per bank wat ontbreekt. Bouwen in eigen beheer aanvaardt niet elke bank.
+
 ### De raming van de aankoopkosten
 
 In stap 5 raamt CrediMatch de aankoopkosten volgens de tarieven van de notarissen. U ziet de registratierechten, het ereloon van de notaris, de kosten van het krediet, de administratie en de btw, met het totaal eronder.
