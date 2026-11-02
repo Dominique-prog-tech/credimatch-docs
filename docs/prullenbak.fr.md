@@ -4,7 +4,7 @@ description: "La corbeille dans CrediMatch : retrouver et restaurer ce qui a ét
 
 # Corbeille
 
-Ce que vous supprimez dans CrediMatch, par exemple un [bureau](kantoren.md), n'est pas effacé définitivement. Vous le
+Ce que vous supprimez dans CrediMatch, un [bureau](kantoren.md) ou un [dossier](dossiers.md#supprimer-un-dossier), n'est pas effacé définitivement. Vous le
 retrouvez ici et le remettez en place.
 
 ![La Corbeille avec un bureau supprimé et le bouton Restaurer](images/prullenbak-fr.png "La corbeille")
@@ -18,7 +18,7 @@ Dans le menu, sous **Organisation**, cliquez sur **Corbeille**. Il vous faut le 
 
 | Colonne | Ce que c'est |
 |---|---|
-| Type | ce qui a été supprimé, par exemple *Bureaux* |
+| Type | ce qui a été supprimé : *Bureaux* ou *Dossiers* |
 | Nom | le nom de ce qui a été supprimé |
 | Supprimé le | quand cela a été supprimé |
 

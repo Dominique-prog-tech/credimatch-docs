@@ -121,6 +121,12 @@ Lukt het bewaren niet, bijvoorbeeld omdat de omschrijving leeg is, dan gaat u to
 invulde, blijft staan, en de melding blijft bovenaan staan tot het bewaren lukt. Verlaat u het dossier met wijzigingen die
 nog niet bewaard zijn, dan vraagt het scherm eerst of u toch wil weggaan.
 
+### Een dossier verwijderen
+
+Klik rechts in het dossier op **Dossier verwijderen** en bevestig. Het dossier gaat naar de [Prullenbak](prullenbak.md), samen
+met zijn simulaties. Het staat dan niet meer in **Dossiers**, in **Simulaties** of op het dashboard. Met **Herstellen** zet u
+het terug, met zijn simulaties. Een dossier dat uit een ander pakket komt, is hier enkel leesbaar en heeft die knop niet.
+
 ## Prescoring en simulaties
 
 1. Open de stap **7. Prescoring**.

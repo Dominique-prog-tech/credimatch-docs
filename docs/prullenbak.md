@@ -4,7 +4,7 @@ description: "De prullenbak in CrediMatch: wat verwijderd werd terugvinden en he
 
 # Prullenbak
 
-Wat u in CrediMatch verwijdert, bijvoorbeeld een [kantoor](kantoren.md), is niet definitief weg. U vindt het hier terug
+Wat u in CrediMatch verwijdert, een [kantoor](kantoren.md) of een [dossier](dossiers.md#een-dossier-verwijderen), is niet definitief weg. U vindt het hier terug
 en zet het terug.
 
 ![De Prullenbak met één verwijderd kantoor en de knop Herstellen](images/prullenbak.png "De prullenbak")
@@ -18,7 +18,7 @@ Klik in het menu onder **Organisatie** op **Prullenbak**. U hebt daarvoor het re
 
 | Kolom | Wat het is |
 |---|---|
-| Type | wat er verwijderd werd, bijvoorbeeld *Kantoren* |
+| Type | wat er verwijderd werd: *Kantoren* of *Dossiers* |
 | Naam | de naam van wat verwijderd werd |
 | Verwijderd op | wanneer het verwijderd werd |
 

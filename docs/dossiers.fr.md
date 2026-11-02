@@ -115,6 +115,12 @@ montant qui n'est pas encore saisi apparaît comme un tiret : sans tous les mont
 indique quel montant manque. La quotité et le taux d'endettement sont calculés par chaque banque à sa façon : vous les
 voyez au pré-scoring.
 
+### Supprimer un dossier
+
+Cliquez à droite dans le dossier sur **Supprimer le dossier** et confirmez. Le dossier va à la [Corbeille](prullenbak.md), avec ses
+simulations. Il ne figure alors plus dans **Dossiers**, dans **Simulations** ni sur le tableau de bord. Avec **Restaurer**, vous le
+remettez, avec ses simulations. Un dossier provenant d'un autre logiciel est ici en lecture seule et n'a pas ce bouton.
+
 ### Enregistrer
 
 Le dossier est enregistré chaque fois que vous passez à une autre étape : avec **Suivant**, avec **Précédent** ou en

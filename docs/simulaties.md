@@ -44,7 +44,7 @@ de periode *Deze maand*, en **Alle … tonen** op de kaart *Laatste simulaties* 
 
 Klik op een rij om het dossier te openen. Met **Exporteren** neemt u de lijst mee naar bijvoorbeeld Excel.
 
-Een prescoring is een indicatie: de bank beslist.
+De simulaties van een dossier in de prullenbak staan niet in deze lijst. Een prescoring is een indicatie: de bank beslist.
 
 ## Veelgemaakte fouten
 
