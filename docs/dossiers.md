@@ -29,7 +29,7 @@ Klik in het menu op **Dossiers**. U ziet de dossiers van de kantoren die u mag z
 | Omschrijving | bijvoorbeeld de naam van de klant en het doel |
 | Kantoor | het kantoor waar het dossier bij hoort |
 | Simulaties | het aantal bewaarde simulaties |
-| Bijgewerkt | wanneer het dossier het laatst bewaard werd |
+| Bijgewerkt | wanneer de gegevens van het dossier het laatst wijzigden. Een dossier enkel openen of doorklikken telt niet mee, en een bewaarde simulatie ook niet |
 
 Klik op een rij om het dossier te openen.
 

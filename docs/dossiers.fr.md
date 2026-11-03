@@ -31,7 +31,7 @@ Dans le menu, cliquez sur **Dossiers**. Vous voyez les dossiers des bureaux que 
 | Description | par exemple le nom du client et l'objet |
 | Bureau | le bureau auquel appartient le dossier |
 | Simulations | le nombre de simulations enregistrées |
-| Mis à jour | la date du dernier enregistrement du dossier |
+| Mis à jour | la date de la dernière modification des données du dossier. Ouvrir un dossier ou parcourir ses étapes ne compte pas, une simulation enregistrée non plus |
 
 Cliquez sur une ligne pour ouvrir le dossier.
 
