@@ -75,9 +75,13 @@ Vous ne voyez que les champs liés à vos choix :
 | **Type de charge** (étape 3) | pour une ligne de crédit, vous saisissez le montant de la ligne ; pour une autre charge, la mensualité, la date de fin et le solde |
 | **A connu un règlement collectif de dettes** (étape 3) | avec *Non*, la question sur sa fin disparaît |
 | **Type de taux** (étape 5) | avec un taux fixe, le taux maximal disparaît |
-| **Objet** (étape 1) | les questions sur un refinancement à l'étape 6 n'apparaissent que pour l'objet *Refinancement* |
+| **Objet** (étape 1) | les questions sur un refinancement à l'étape 6 n'apparaissent que pour l'objet *Refinancement*. À l'étape 4, les *années depuis l'achat* n'apparaissent que pour *Rénovation*, et les *années depuis l'achat du terrain* que pour *Construction neuve* |
+| **Certificat PEB disponible** (étape 4, par bien) | avec *Oui*, la dispense de certificat PEB disparaît |
+| **Location partielle** (étape 4) | avec *Non*, la question de savoir si l'emprunteur occupe lui-même une entité disparaît |
 
-Tant que vous n'avez rien choisi, tous les champs sont affichés. Un champ déjà rempli reste affiché, même si vous modifiez votre choix. Si une banque demande tout de même une donnée masquée, le champ apparaît chez le demandeur ou pour le crédit concerné.
+Tant que vous n'avez rien choisi, tous les champs sont affichés. Un champ déjà rempli reste affiché, même si vous modifiez votre choix. Si une banque demande tout de même une donnée masquée, le champ apparaît chez le demandeur, pour le crédit ou pour le bien concerné.
+
+La question sur un *autre bien belge en pleine propriété en garantie*, à l'étape 4, n'apparaît que si une banque la pose, par exemple pour un bateau-logement ou une très petite unité d'habitation. Les banques demandent les autres champs de cette étape pour chaque dossier : ils restent donc affichés.
 
 ### En cas de construction neuve
 
@@ -147,7 +151,8 @@ Un champ vide signifie **non connu**. Le pré-scoring indique alors la donnée m
   l'objet redevient *non connu*.
 - Un champ où vous pouvez indiquer plusieurs choix, comme les **caractéristiques du bien**, a deux boutons en dessous : **Aucun**
   si aucun choix ne s'applique, et **Non connu** si vous ne le savez pas encore. Le pré-scoring signale *Non connu* comme
-  manquant, pas *Aucun*.
+  manquant, pas *Aucun*. Cochez tout ce qui s'applique, même si cela se ressemble : chaque banque utilise ses propres termes.
+  Si vous choisissez *Aucun* alors que quelque chose s'applique, le résultat peut être trop favorable.
 - Un montant nul se saisit **0**. S'il n'y a pas de travaux, saisissez **0** aux travaux : vide signifie que les
   travaux ne sont pas connus. C'est aussi indiqué sous le champ.
 

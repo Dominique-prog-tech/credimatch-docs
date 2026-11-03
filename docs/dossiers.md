@@ -73,9 +73,13 @@ U ziet enkel de velden die bij uw keuzes horen:
 | **Soort last** (stap 3) | bij een kredietlijn vult u het bedrag van de lijn in; bij een andere last de maandlast, de einddatum en het saldo |
 | **Collectieve schuldenregeling gehad** (stap 3) | bij *Nee* vervalt de vraag naar het einde ervan |
 | **Rentetype** (stap 5) | bij een vaste rente vervalt de maximale rentevoet |
-| **Doel** (stap 1) | de vragen over een herfinanciering in stap 6 staan er enkel bij het doel *Herfinanciering* |
+| **Doel** (stap 1) | de vragen over een herfinanciering in stap 6 staan er enkel bij het doel *Herfinanciering*. In stap 4 staan de *jaren sinds de aankoop* enkel bij *Verbouwing*, en de *jaren sinds de aankoop van de grond* enkel bij *Nieuwbouw* |
+| **EPC-attest aanwezig** (stap 4, per pand) | bij *Ja* vervalt de vrijstelling van het EPC-attest |
+| **Gedeeltelijke verhuur** (stap 4) | bij *Nee* vervalt de vraag of de kredietnemer zelf een entiteit bewoont |
 
-Hebt u nog niets gekozen, dan staan alle velden er. Een veld dat u al invulde, blijft staan, ook als u uw keuze wijzigt. Vraagt een bank toch een gegeven dat verborgen is, dan verschijnt het veld bij de aanvrager of het krediet waar het ontbreekt.
+Hebt u nog niets gekozen, dan staan alle velden er. Een veld dat u al invulde, blijft staan, ook als u uw keuze wijzigt. Vraagt een bank toch een gegeven dat verborgen is, dan verschijnt het veld bij de aanvrager, het krediet of het pand waar het ontbreekt.
+
+De vraag naar een *ander Belgisch pand in waarborg* in stap 4 staat er enkel als een bank ze stelt, bijvoorbeeld bij een woonboot of een heel kleine woonentiteit. De andere velden van die stap vragen de banken bij elk dossier, dus die blijven staan.
 
 ### Bij nieuwbouw
 
@@ -145,7 +149,8 @@ Een leeg veld betekent **niet gekend**. De prescoring zegt dan welk gegeven ontb
   staat het doel weer op *niet gekend*.
 - Een veld waarin u meerdere keuzes kunt aanduiden, zoals de **kenmerken van het pand**, heeft twee knoppen eronder: **Geen**
   als er geen enkele van toepassing is, en **Niet gekend** als u het nog niet weet. *Niet gekend* meldt de prescoring als
-  ontbrekend, *Geen* niet.
+  ontbrekend, *Geen* niet. Duid alles aan wat past, ook als het op elkaar lijkt: de banken gebruiken elk hun eigen woorden.
+  Kiest u *Geen* terwijl er toch iets van toepassing is, dan kan het oordeel te mild zijn.
 - Een bedrag dat nul is, vult u in als **0**. Zijn er geen werken, vul dan **0** in bij de werken: leeg betekent dat de
   werken niet gekend zijn. Dat staat ook onder het veld.
 
