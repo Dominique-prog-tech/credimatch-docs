@@ -25,6 +25,8 @@ Dans le menu, sous **Organisation**, cliquez sur **Corbeille**. Il vous faut le 
 Vous ne voyez que ce que vous pouviez voir avant la suppression : un bureau auquel vous n'êtes pas rattaché n'apparaît
 pas ici.
 
+Un dossier qui se trouve ici depuis 30 jours apparaît aussi parmi les dossiers [au-delà de la durée de conservation](bewaartermijn.md). Il reste ici jusqu'à ce que vous décidiez : rien ne disparaît automatiquement.
+
 ## Restaurer un élément
 
 Cliquez sur **Restaurer** à côté de la ligne. L'élément reprend aussitôt sa place. Le bouton n'apparaît que si vous

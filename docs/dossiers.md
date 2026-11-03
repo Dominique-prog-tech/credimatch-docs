@@ -35,7 +35,7 @@ Klik op een rij om het dossier te openen.
 
 Boven de lijst kiest u wat u wil zien:
 
-- **Toon:** *Alle open dossiers*, *Nieuw deze maand*, *Met ontbrekende gegevens* of *Positief bij minstens één bank*. Dit zijn
+- **Toon:** *Alle open dossiers*, *Nieuw deze maand*, *Met ontbrekende gegevens*, *Positief bij minstens één bank* of *Voorbij de bewaartermijn*. Dit zijn
   dezelfde dossiers als achter de tegels op het [Dashboard](dashboard.md). Bij *Met ontbrekende gegevens* komt er een kolom
   **Gegevens nodig** bij, met hoeveel gegevens de banken nog vragen.
 - **Kantoor:** staat er enkel als u meer dan één kantoor ziet.
@@ -183,6 +183,12 @@ Elk document wordt versleuteld bewaard, en enkel wie dit kantoor mag zien, kan h
 
 !!! warning "Enkel fictieve documenten"
     In de proefomgeving werkt u enkel met fictieve documenten. Echte documenten kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
+
+### De bewaartermijn van een dossier
+
+Rechts in het dossier ziet u tot wanneer het bewaard blijft, volgens de [bewaartermijn](bewaartermijn.md) van uw organisatie. Is die datum voorbij, dan staat er **voorbij**. CrediMatch wist niets vanzelf.
+
+Moet een dossier langer blijven, bijvoorbeeld omdat het krediet nog loopt? Klik op **Verlengen**, kies een datum in de toekomst en geef de reden op. De reden blijft bij het dossier staan en verschijnt ook in een export. De knop **Verlenging weghalen** zet het dossier terug op de gewone termijn. Een verlenging kan een dossier enkel langer houden, nooit korter, en ze telt niet als een wijziging aan de gegevens. Dat kan ook bij een dossier dat uit een andere toepassing komt.
 
 ### Een dossier exporteren
 

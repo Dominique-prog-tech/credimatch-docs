@@ -24,6 +24,8 @@ Klik in het menu onder **Organisatie** op **Prullenbak**. U hebt daarvoor het re
 
 U ziet enkel wat u ook vóór het verwijderen kon zien: een kantoor waarop u niet staat, verschijnt hier niet.
 
+Een dossier dat hier 30 dagen ligt, verschijnt ook bij de dossiers die [voorbij de bewaartermijn](bewaartermijn.md) zijn. Het blijft hier staan tot u beslist: er verdwijnt niets vanzelf.
+
 ## Iets herstellen
 
 Klik op **Herstellen** naast de rij. Het staat meteen weer op zijn plaats. De knop staat er enkel als u het recht

@@ -30,7 +30,7 @@ même bureau. Si vous ne voyez qu'un seul bureau, il n'y a rien à choisir et ce
 
 ## Les chiffres clés
 
-En haut figurent cinq tuiles. Cliquez sur une tuile pour ouvrir la liste qui affiche le même chiffre. La tuile **taux le plus bas ce mois-ci**
+En haut figurent six tuiles. Cliquez sur une tuile pour ouvrir la liste qui affiche le même chiffre. La tuile **taux le plus bas ce mois-ci**
 ouvre le dossier auquel ce taux appartient.
 
 | Tuile | Ce qu'elle compte | Où mène le clic |
@@ -40,6 +40,7 @@ ouvre le dossier auquel ce taux appartient.
 | **avec des données manquantes** | les dossiers pour lesquels au moins une banque demande encore une donnée | [Dossiers](dossiers.md), avec *Avec des données manquantes* |
 | **positifs auprès d'au moins une banque** | les dossiers dont la dernière simulation enregistrée auprès d'au moins une banque est *positif* ou *positif sous conditions* | [Dossiers](dossiers.md), avec *Positif auprès d'au moins une banque* |
 | **taux le plus bas ce mois-ci** | le taux le plus bas des simulations de ce mois-ci, avec la banque, la formule, la durée et le dossier | le [dossier](dossiers.md#le-taux-par-banque) de cette simulation |
+| **au-delà de la durée de conservation** | les dossiers dont la [durée de conservation](bewaartermijn.md) est dépassée, et ce qui se trouve depuis 30 jours dans la corbeille | [Dossiers](dossiers.md), avec *Durée de conservation dépassée* |
 
 **Avec des données manquantes** est calculé au moment où vous ouvrez le tableau de bord, de la même manière que la barre
 d'étapes dans un dossier : chaque dossier est vérifié tel qu'il est à ce moment, auprès des banques actives. Cette vérification

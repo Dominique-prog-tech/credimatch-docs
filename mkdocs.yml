@@ -140,6 +140,7 @@ plugins:
             Organisatie: Organisation
             Kantoren: Bureaux
             Banken: Banques
+            Bewaartermijn: Durée de conservation
             Rollen & rechten: Rôles & droits
             Prullenbak: Corbeille
             Tweestapsverificatie: Vérification en deux étapes
@@ -160,6 +161,7 @@ nav:
   - Organisatie:
       - Kantoren: kantoren.md
       - Banken: banken.md
+      - Bewaartermijn: bewaartermijn.md
       - Rollen & rechten: rollen.md
       - Prullenbak: prullenbak.md
       - Tweestapsverificatie: tweestapsverificatie.md

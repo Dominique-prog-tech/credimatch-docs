@@ -28,7 +28,7 @@ hetzelfde kantoor. Ziet u één kantoor, dan is er niets te kiezen en staat deze
 
 ## De kerncijfers
 
-Bovenaan staan vijf tegels. Klik op een tegel om de lijst te openen die hetzelfde getal toont. De tegel **laagste rente deze maand**
+Bovenaan staan zes tegels. Klik op een tegel om de lijst te openen die hetzelfde getal toont. De tegel **laagste rente deze maand**
 opent het dossier waar die rente bij hoort.
 
 | Tegel | Wat ze telt | Waar de klik naartoe gaat |
@@ -38,6 +38,7 @@ opent het dossier waar die rente bij hoort.
 | **met ontbrekende gegevens** | de dossiers waarvoor minstens één bank nog een gegeven vraagt | [Dossiers](dossiers.md), met *Met ontbrekende gegevens* |
 | **positief bij minstens één bank** | de dossiers waarvan de laatste bewaarde simulatie bij minstens één bank *positief* of *positief onder voorwaarden* is | [Dossiers](dossiers.md), met *Positief bij minstens één bank* |
 | **laagste rente deze maand** | de laagste rente uit de simulaties van deze maand, met de bank, de formule, de looptijd en het dossier | het [dossier](dossiers.md#de-rente-per-bank) van die simulatie |
+| **voorbij de bewaartermijn** | de dossiers waarvan de [bewaartermijn](bewaartermijn.md) voorbij is, en wat 30 dagen in de prullenbak ligt | [Dossiers](dossiers.md), met *Voorbij de bewaartermijn* |
 
 **Met ontbrekende gegevens** wordt berekend op het moment dat u het dashboard opent, op dezelfde manier als de stappenbalk in
 een dossier: elk dossier wordt getoetst zoals het op dat moment is, bij de banken die aanstaan. Dat toetsen bewaart niets.

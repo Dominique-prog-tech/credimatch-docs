@@ -37,8 +37,8 @@ Cliquez sur une ligne pour ouvrir le dossier.
 
 Au-dessus de la liste, vous choisissez ce que vous voulez voir :
 
-- **Afficher :** *Tous les dossiers ouverts*, *Nouveaux ce mois-ci*, *Avec des données manquantes* ou *Positif auprès d'au moins
-  une banque*. Ce sont les mêmes dossiers que derrière les tuiles du [Tableau de bord](dashboard.md). Avec *Avec des données
+- **Afficher :** *Tous les dossiers ouverts*, *Nouveaux ce mois-ci*, *Avec des données manquantes*, *Positif auprès d'au moins
+  une banque*, ou *Durée de conservation dépassée*. Ce sont les mêmes dossiers que derrière les tuiles du [Tableau de bord](dashboard.md). Avec *Avec des données
   manquantes*, une colonne **Données nécessaires** s'ajoute, avec le nombre de données que les banques demandent encore.
 - **Bureau :** n'apparaît que si vous voyez plus d'un bureau.
 
@@ -176,6 +176,12 @@ Chaque document est enregistré de façon chiffrée, et seuls ceux qui peuvent v
 
 !!! warning "Uniquement des documents fictifs"
     Dans l'environnement d'essai, vous travaillez uniquement avec des documents fictifs. Les documents réels ne seront possibles que lorsque les accords sur les données personnelles seront conclus.
+
+### La durée de conservation d'un dossier
+
+À droite dans le dossier, vous voyez jusqu'à quand il est conservé, selon la [durée de conservation](bewaartermijn.md) de votre organisation. Si cette date est dépassée, **dépassée** s'affiche. CrediMatch ne supprime rien automatiquement.
+
+Un dossier doit rester plus longtemps, par exemple parce que le crédit est toujours en cours ? Cliquez sur **Prolonger**, choisissez une date dans le futur et indiquez la raison. La raison reste sur le dossier et figure aussi dans un export. Le bouton **Retirer la prolongation** remet le dossier sur la durée habituelle. Une prolongation ne peut que conserver un dossier plus longtemps, jamais moins, et elle ne compte pas comme une modification des données. C'est aussi possible pour un dossier provenant d'une autre application.
 
 ### Exporter un dossier
 
