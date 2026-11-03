@@ -76,6 +76,7 @@ Content-Type: application/json
 - **Een gegeven dat u niet kent, laat u weg.** Dat is geen fout: de bank krijgt dan het oordeel *niet volledig getoetst*,
   met de reden.
 - Zonder `toetsdatum` toetst CrediMatch op vandaag. Zonder `banken` toetst het bij alle banken die uw klant aan heeft staan.
+- **Bij Record vraagt een eigen `rentevoet` met een variabel rentetype ook de formule** (`tarief.formule` in de vraag). Zonder formule krijgt die bank *niet volledig getoetst*, met een reden met de code `formule`: de toets van het levensminimum hangt ervan af.
 - **Een `rentevoet` in het dossier wint, bij elke bank.** Laat u ze weg, dan rekent elke bank met de rente uit haar eigen tarief dat op de
   toetsdatum geldt.
 - Per bank kiest u eventueel met `tarief` een `formule`, de `voorwaardenUit` die u uitzet, en een trede `commercieel`. De codes staan in het

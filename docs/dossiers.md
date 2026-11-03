@@ -323,7 +323,7 @@ Wat op de kaart kan staan in plaats van het tarief:
 
 | U ziet | Wat het betekent |
 |---|---|
-| **Eigen rentevoet uit het dossier** | in stap 5 staat een rente. Die wint, bij elke bank. De kaart zegt erbij wat het tarief zou geven. Laat de rente leeg om met het tarief te rekenen |
+| **Eigen rentevoet uit het dossier** | in stap 5 staat een rente. Die wint, bij elke bank. De kaart zegt erbij wat het tarief zou geven. Laat de rente leeg om met het tarief te rekenen Bij Record met een variabele rente kiest u ook de formule: die beslist over de opslag op het levensminimum. Zonder formule krijgt u *niet volledig getoetst*. |
 | een streep en *geen tarief* | de bank heeft op de toetsdatum geen tarief. Vul in stap 5 een rente in, of kies een andere datum |
 | een streep en *De quotiteit is niet gekend* | de rente hangt van de quotiteit af. Vul eerst de gegevens in die eronder ontbreken |
 | een streep bij een formule die u eerder koos | het tarief dat nu geldt, kent die formule niet meer. Kies een andere |

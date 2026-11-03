@@ -78,6 +78,7 @@ Content-Type: application/json
   *niet volledig getoetst* (pas entièrement vérifié), avec la raison.
 - Sans `toetsdatum`, CrediMatch vérifie à la date du jour. Sans `banken`, il vérifie auprès de toutes les banques que votre
   client a activées.
+- **Chez Record, une `rentevoet` propre avec un taux variable demande aussi la formule** (`tarief.formule` dans la demande). Sans formule, cette banque donne *niet volledig getoetst* (pas entièrement vérifié), avec une raison portant le code `formule` : le contrôle du minimum vital en dépend.
 - **Une `rentevoet` dans le dossier l'emporte, pour chaque banque.** Si vous l'omettez, chaque banque calcule avec le taux de son propre tarif
   en vigueur à la date de test.
 - Par banque, vous pouvez choisir avec `tarief` une `formule`, les `voorwaardenUit` que vous désactivez, et un palier `commercieel`. Les codes

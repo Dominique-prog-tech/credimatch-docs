@@ -329,7 +329,7 @@ Ce qui peut figurer sur la carte à la place du tarif :
 
 | Vous voyez | Ce que cela signifie |
 |---|---|
-| **Taux propre du dossier** | un taux figure à l'étape 5. Il l'emporte, pour chaque banque. La carte indique aussi ce que le tarif donnerait. Laissez le taux vide pour calculer avec le tarif |
+| **Taux propre du dossier** | un taux figure à l'étape 5. Il l'emporte, pour chaque banque. La carte indique aussi ce que le tarif donnerait. Laissez le taux vide pour calculer avec le tarif Chez Record, avec un taux variable, choisissez aussi la formule : elle décide de la majoration du minimum vital. Sans formule, vous obtenez *pas entièrement vérifié*. |
 | un trait et *Aucun tarif* | la banque n'a pas de tarif à la date de test. Saisissez un taux à l'étape 5, ou choisissez une autre date |
 | un trait et *La quotité n'est pas connue* | le taux dépend de la quotité. Complétez d'abord les données qui manquent en dessous |
 | un trait pour une formule choisie auparavant | le tarif en vigueur ne connaît plus cette formule. Choisissez-en une autre |
