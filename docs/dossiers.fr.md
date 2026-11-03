@@ -212,6 +212,27 @@ Cliquez à droite dans le dossier sur **Supprimer le dossier** et confirmez. Le 
 simulations. Il ne figure alors plus dans **Dossiers**, dans **Simulations** ni sur le tableau de bord. Avec **Restaurer**, vous le
 remettez, avec ses simulations. Un dossier provenant d'un autre logiciel est ici en lecture seule et n'a pas ce bouton.
 
+
+### Supprimer définitivement un dossier
+
+La suppression définitive est autre chose que la suppression. Un dossier dans la [Corbeille](prullenbak.md) reste conservé et peut revenir. Un dossier supprimé définitivement a réellement disparu. Utilisez cette fonction uniquement à la demande de la personne concernée ou lorsque la [durée de conservation](bewaartermijn.md) est dépassée. Si quelque chose a simplement été mal saisi, utilisez **Supprimer le dossier**.
+
+Vous avez besoin du droit **Supprimer définitivement des dossiers** (voir [Rôles & droits](rollen.md)). Par défaut, seul l'administrateur de votre organisation en dispose.
+
+1. Cliquez à droite dans le dossier sur **Supprimer définitivement**. Vous trouvez aussi ce bouton sous [Dossiers](#la-liste), avec *Durée de conservation dépassée* dans le choix **Afficher**. Vous pouvez ainsi supprimer aussi un dossier de la corbeille.
+2. Choisissez la raison : *Demande de la personne concernée* ou *Durée de conservation dépassée*.
+3. Saisissez le numéro de dossier et cliquez sur **Supprimer définitivement**.
+
+Le dossier, ses demandeurs, simulations et documents disparaissent, y compris les documents que vous aviez déjà supprimés, ainsi que leur historique. C'est aussi possible pour un dossier provenant d'une autre application. Cette application ne peut ensuite plus le renvoyer.
+
+Ce qui reste ne contient aucune donnée sur la personne concernée : le journal indique par exemple *Dossier 12 gewist (verzoek van de betrokkene), 3 documenten, 5 simulaties*. Le numéro n'est pas réutilisé.
+
+!!! warning "Cette action est irréversible"
+    Votre bureau décide si la suppression est autorisée : une obligation légale de conservation peut primer. Vérifiez-le avant de cliquer.
+
+!!! note "Ce que la suppression n'atteint pas"
+    Ce qui se trouve en dehors de CrediMatch, vous devez le supprimer vous-même : un [export](#exporter-un-dossier) ou une impression sur votre ordinateur, et ce qu'une banque ou une autre application a déjà reçu. Dans les sauvegardes de CrediMatch, les données restent jusqu'à l'expiration de ces sauvegardes. Si une sauvegarde est un jour restaurée, CrediMatch supprime à nouveau le dossier.
+
 ### Enregistrer
 
 Le dossier est enregistré chaque fois que vous passez à une autre étape : avec **Suivant**, avec **Précédent** ou en

@@ -219,6 +219,27 @@ Klik rechts in het dossier op **Dossier verwijderen** en bevestig. Het dossier g
 met zijn simulaties. Het staat dan niet meer in **Dossiers**, in **Simulaties** of op het dashboard. Met **Herstellen** zet u
 het terug, met zijn simulaties. Een dossier dat uit een ander pakket komt, is hier enkel leesbaar en heeft die knop niet.
 
+
+### Een dossier definitief wissen
+
+Wissen is iets anders dan verwijderen. Een dossier in de [Prullenbak](prullenbak.md) blijft bewaard en kan terug. Een gewist dossier is echt weg. Gebruik dit enkel op verzoek van de betrokkene of als de [bewaartermijn](bewaartermijn.md) voorbij is. Is iets enkel foutief ingevoerd, gebruik dan **Dossier verwijderen**.
+
+U hebt het recht **Dossiers definitief wissen** nodig (zie [Rollen & rechten](rollen.md)). Standaard heeft enkel de beheerder van uw organisatie dat.
+
+1. Klik rechts in het dossier op **Definitief wissen**. U vindt die knop ook bij [Dossiers](#de-lijst), met *Voorbij de bewaartermijn* in de keuze **Toon**. Zo kunt u ook een dossier uit de prullenbak wissen.
+2. Kies de reden: *Verzoek van de betrokkene* of *Bewaartermijn voorbij*.
+3. Tik het dossiernummer in en klik op **Definitief wissen**.
+
+Het dossier, zijn aanvragers, simulaties en documenten verdwijnen, ook de documenten die u eerder verwijderde, en ook hun historiek. Dat kan ook bij een dossier dat uit een andere toepassing komt. Die toepassing kan het daarna niet opnieuw aanleveren.
+
+Wat blijft staan, bevat geen gegevens over de betrokkene: in het actielogboek staat bijvoorbeeld *Dossier 12 gewist (verzoek van de betrokkene), 3 documenten, 5 simulaties*. Het nummer wordt niet opnieuw gebruikt.
+
+!!! warning "Dit kan niet ongedaan gemaakt worden"
+    Uw kantoor beslist of er gewist mag worden: een wettelijke bewaarplicht kan voorgaan. Kijk dat na voor u klikt.
+
+!!! note "Wat wissen niet bereikt"
+    Wat buiten CrediMatch staat, moet u zelf wissen: een [export](#een-dossier-exporteren) of afdruk op uw computer, en wat een bank of een andere toepassing al kreeg. In de back-ups van CrediMatch blijven gegevens staan tot die back-ups vervallen. Wordt er ooit een back-up teruggezet, dan wist CrediMatch het dossier opnieuw.
+
 ## Prescoring en simulaties
 
 1. Open de stap **7. Prescoring**.

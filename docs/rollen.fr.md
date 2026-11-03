@@ -37,6 +37,7 @@ supprimer ni modifier ses droits. Qui a ce rôle gère votre organisation dans C
 | **Restaurer des enregistrements** | remettre un élément de la corbeille |
 | **Gérer les banques et paramètres** | choisir avec quelles [banques](banken.md) votre organisation travaille |
 | **Utiliser l'écran d'essai** | ouvrir l'[écran d'essai](proefscherm.md) : vérifier un cas fictif auprès des banques |
+| **Supprimer définitivement des dossiers** | [supprimer définitivement](dossiers.md#supprimer-definitivement-un-dossier) un dossier. Cette action est irréversible |
 
 ## Attribuer un rôle à des utilisateurs
 

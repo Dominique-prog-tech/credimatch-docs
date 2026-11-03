@@ -26,6 +26,8 @@ U ziet enkel wat u ook vóór het verwijderen kon zien: een kantoor waarop u nie
 
 Een dossier dat hier 30 dagen ligt, verschijnt ook bij de dossiers die [voorbij de bewaartermijn](bewaartermijn.md) zijn. Het blijft hier staan tot u beslist: er verdwijnt niets vanzelf.
 
+De prullenbak is geen wissen. Wat hier ligt, blijft bewaard. Een dossier echt laten verdwijnen doet u met [Definitief wissen](dossiers.md#een-dossier-definitief-wissen).
+
 ## Iets herstellen
 
 Klik op **Herstellen** naast de rij. Het staat meteen weer op zijn plaats. De knop staat er enkel als u het recht

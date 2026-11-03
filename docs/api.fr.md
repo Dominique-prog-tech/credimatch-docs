@@ -175,4 +175,5 @@ Chaque erreur a un `code` fixe et un `melding` (message) ; pour un `400`, aussi 
 | 404 | `dossier_onbekend` | aucun dossier avec ce `dossierRef` sous ce bureau |
 | 409 | `dossier_ander_kantoor` | le dossier figure sous un autre bureau ; il ne change pas de bureau |
 | 409 | `dossier_gearchiveerd` | le dossier est dans la corbeille de CrediMatch |
+| 410 | `dossier_gewist` | le bureau a supprimé définitivement ce dossier ; il n'est plus accepté |
 | 429 | `te_veel_oproepen` | plus de 60 appels en une minute avec cette clé |

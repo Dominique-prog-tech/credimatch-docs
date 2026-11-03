@@ -41,7 +41,7 @@ U vindt ze op twee plaatsen:
 - de tegel **voorbij de bewaartermijn** op het [dashboard](dashboard.md);
 - bij [Dossiers](dossiers.md), met *Voorbij de bewaartermijn* in de keuze **Toon**.
 
-De laatste dag telt nog mee: pas de dag erna is het dossier voorbij de termijn. Het dossier met de oudste datum staat bovenaan.
+De laatste dag telt nog mee: pas de dag erna is het dossier voorbij de termijn. Het dossier met de oudste datum staat bovenaan. Op die lijst kunt u een dossier ook [definitief wissen](dossiers.md#een-dossier-definitief-wissen).
 
 Ook een dossier dat 30 dagen in de [Prullenbak](prullenbak.md) ligt, komt op die lijst, ook als er geen termijn ingesteld is. Klikt u op die rij, dan opent de prullenbak.
 

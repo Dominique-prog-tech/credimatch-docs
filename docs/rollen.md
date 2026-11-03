@@ -36,6 +36,7 @@ rechten niet wijzigen. Wie deze rol heeft, beheert uw organisatie in CrediMatch.
 | **Verwijderde records herstellen** | iets uit de prullenbak terugzetten |
 | **Banken en instellingen beheren** | kiezen met welke [banken](banken.md) uw organisatie werkt |
 | **Proefscherm gebruiken** | het [proefscherm](proefscherm.md) openen: een fictief geval bij de banken toetsen |
+| **Dossiers definitief wissen** | een dossier [definitief wissen](dossiers.md#een-dossier-definitief-wissen). Dat kan niet ongedaan gemaakt worden |
 
 ## Gebruikers een rol geven
 

@@ -173,4 +173,5 @@ Elke fout heeft een vaste `code` en een `melding`; bij een `400` ook de lijst va
 | 404 | `dossier_onbekend` | er is geen dossier met die `dossierRef` onder dit kantoor |
 | 409 | `dossier_ander_kantoor` | het dossier staat onder een ander kantoor; het verhuist niet |
 | 409 | `dossier_gearchiveerd` | het dossier staat in de prullenbak van CrediMatch |
+| 410 | `dossier_gewist` | het kantoor heeft dit dossier definitief gewist; het wordt niet opnieuw aanvaard |
 | 429 | `te_veel_oproepen` | meer dan 60 oproepen in een minuut met deze sleutel |

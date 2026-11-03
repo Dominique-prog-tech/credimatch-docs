@@ -41,7 +41,7 @@ Vous les trouvez à deux endroits :
 - la tuile **au-delà de la durée de conservation** sur le [tableau de bord](dashboard.md) ;
 - sous [Dossiers](dossiers.md), avec *Durée de conservation dépassée* dans le choix **Afficher**.
 
-Le dernier jour compte encore : le dossier n'a dépassé la durée que le lendemain. Le dossier à la date la plus ancienne figure en haut.
+Le dernier jour compte encore : le dossier n'a dépassé la durée que le lendemain. Le dossier à la date la plus ancienne figure en haut. Sur cette liste, vous pouvez aussi [supprimer définitivement](dossiers.md#supprimer-definitivement-un-dossier) un dossier.
 
 Un dossier qui se trouve depuis 30 jours dans la [Corbeille](prullenbak.md) apparaît aussi sur cette liste, même sans durée définie. Si vous cliquez sur cette ligne, la corbeille s'ouvre.
 

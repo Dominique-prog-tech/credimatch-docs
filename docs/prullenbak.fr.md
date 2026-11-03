@@ -27,6 +27,8 @@ pas ici.
 
 Un dossier qui se trouve ici depuis 30 jours apparaît aussi parmi les dossiers [au-delà de la durée de conservation](bewaartermijn.md). Il reste ici jusqu'à ce que vous décidiez : rien ne disparaît automatiquement.
 
+La corbeille n'est pas une suppression définitive. Ce qui s'y trouve reste conservé. Pour faire réellement disparaître un dossier, utilisez [Supprimer définitivement](dossiers.md#supprimer-definitivement-un-dossier).
+
 ## Restaurer un élément
 
 Cliquez sur **Restaurer** à côté de la ligne. L'élément reprend aussitôt sa place. Le bouton n'apparaît que si vous
