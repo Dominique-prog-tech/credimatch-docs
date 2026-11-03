@@ -219,7 +219,7 @@ La suppression définitive est autre chose que la suppression. Un dossier dans l
 
 Vous avez besoin du droit **Supprimer définitivement des dossiers** (voir [Rôles & droits](rollen.md)). Par défaut, seul l'administrateur de votre organisation en dispose.
 
-1. Cliquez à droite dans le dossier sur **Supprimer définitivement**. Vous trouvez aussi ce bouton sous [Dossiers](#la-liste), avec *Durée de conservation dépassée* dans le choix **Afficher**. Vous pouvez ainsi supprimer aussi un dossier de la corbeille.
+1. Cliquez à droite dans le dossier sur **Supprimer définitivement**. Vous trouvez aussi ce bouton sous [Dossiers](#la-liste), avec *Durée de conservation dépassée* dans le choix **Afficher**. Un dossier qui se trouve depuis 30 jours dans la corbeille y figure aussi. S'il s'y trouve depuis moins longtemps, remettez-le d'abord : dans la corbeille, il n'a pas ce bouton.
 2. Choisissez la raison : *Demande de la personne concernée* ou *Durée de conservation dépassée*.
 3. Saisissez le numéro de dossier et cliquez sur **Supprimer définitivement**.
 

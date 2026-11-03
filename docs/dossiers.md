@@ -226,7 +226,7 @@ Wissen is iets anders dan verwijderen. Een dossier in de [Prullenbak](prullenbak
 
 U hebt het recht **Dossiers definitief wissen** nodig (zie [Rollen & rechten](rollen.md)). Standaard heeft enkel de beheerder van uw organisatie dat.
 
-1. Klik rechts in het dossier op **Definitief wissen**. U vindt die knop ook bij [Dossiers](#de-lijst), met *Voorbij de bewaartermijn* in de keuze **Toon**. Zo kunt u ook een dossier uit de prullenbak wissen.
+1. Klik rechts in het dossier op **Definitief wissen**. U vindt die knop ook bij [Dossiers](#de-lijst), met *Voorbij de bewaartermijn* in de keuze **Toon**. Daar staat ook een dossier dat 30 dagen in de prullenbak ligt. Ligt het er korter, zet het dan eerst terug: in de prullenbak heeft het geen knop.
 2. Kies de reden: *Verzoek van de betrokkene* of *Bewaartermijn voorbij*.
 3. Tik het dossiernummer in en klik op **Definitief wissen**.
 
