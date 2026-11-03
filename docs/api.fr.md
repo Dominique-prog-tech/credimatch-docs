@@ -32,7 +32,7 @@ phrase en néerlandais et en français.
 | `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}` | Inscrit un bureau de votre client, ou le met à jour. Le même appel deux fois donne le même bureau. |
 | `POST /api/v1/prescoring` | Confronte un dossier d'un bureau inscrit à une ou plusieurs banques. |
 | `GET /api/v1/banken` | Les banques avec leurs règles en vigueur, leur date de vérification et leurs variantes. |
-| `GET /api/v1/woordenlijst` | Toutes les données d'un dossier : code, type, niveau et libellé en NL et en FR. |
+| `GET /api/v1/woordenlijst` | Toutes les données d'un dossier : code, type, niveau, libellé en NL et en FR, et valeurs autorisées. |
 | `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Enregistre un dossier dans CrediMatch, ou le met à jour. **S'ouvre client par client** (voir ci-dessous). |
 | `GET` à la même adresse | Le dossier enregistré, avec les simulations faites dans CrediMatch. **S'ouvre client par client.** |
 
@@ -73,6 +73,7 @@ Content-Type: application/json
 ```
 
 - Les codes du dossier sont celles de `GET /api/v1/woordenlijst`.
+- **Une valeur doit être exacte.** Pour une donnée avec `waarden`, l'API n'accepte que ces valeurs. Avec `formaat: landcode`, c'est un code pays en majuscules, comme `BE`. `Bediende` ou `be` donne un `400`, aussi à l'enregistrement d'un dossier. Si aucune valeur ne convient, omettez la donnée.
 - **Une donnée que vous ne connaissez pas, vous l'omettez.** Ce n'est pas une erreur : la banque reçoit alors le résultat
   *niet volledig getoetst* (pas entièrement vérifié), avec la raison.
 - Sans `toetsdatum`, CrediMatch vérifie à la date du jour. Sans `banken`, il vérifie auprès de toutes les banques que votre
@@ -167,7 +168,7 @@ Chaque erreur a un `code` fixe et un `melding` (message) ; pour un `400`, aussi 
 
 | Statut | Code | Quand |
 |---|---|---|
-| 400 | `vraag_ongeldig` | un code inconnu, un mauvais type, une banque ou variante inconnue |
+| 400 | `vraag_ongeldig` | un code inconnu, une valeur non autorisée, un mauvais type, une banque ou variante inconnue |
 | 401 | `sleutel_ongeldig` | pas de clé, une clé inconnue ou révoquée |
 | 403 | `kantoor_niet_aangemeld` | le bureau n'a pas été inscrit par vous |
 | 403 | `dossier_api_dicht` | l'enregistrement de dossiers est encore fermé pour ce client |

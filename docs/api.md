@@ -31,7 +31,7 @@ voor een dossier. U krijgt per bank het oordeel, met per regel de reden als code
 | `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}` | Meldt een kantoor van uw klant aan, of werkt het bij. Twee keer dezelfde oproep geeft hetzelfde kantoor. |
 | `POST /api/v1/prescoring` | Toetst één dossier van een aangemeld kantoor bij één of meer banken. |
 | `GET /api/v1/banken` | De banken met hun geldende regels, de datum tot wanneer die nagekeken zijn, en hun varianten. |
-| `GET /api/v1/woordenlijst` | Alle gegevens van een dossier: code, type, niveau en de benaming in het NL en het FR. |
+| `GET /api/v1/woordenlijst` | Alle gegevens van een dossier: code, type, niveau, de benaming in het NL en het FR, en de toegelaten waarden. |
 | `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Bewaart een dossier in CrediMatch, of werkt het bij. **Gaat per klant open** (zie hieronder). |
 | `GET` op hetzelfde adres | Het bewaarde dossier, met de simulaties die er in CrediMatch op gemaakt werden. **Gaat per klant open.** |
 
@@ -72,6 +72,7 @@ Content-Type: application/json
 ```
 
 - De codes in het dossier zijn die van `GET /api/v1/woordenlijst`.
+- **Een waarde moet exact kloppen.** Bij een gegeven met `waarden` aanvaardt de API enkel die waarden. Bij `formaat: landcode` is het een landcode in hoofdletters, zoals `BE`. `Bediende` of `be` geeft een `400`, ook bij het bewaren van een dossier. Hebt u geen passende waarde, laat het gegeven dan weg.
 - **Een gegeven dat u niet kent, laat u weg.** Dat is geen fout: de bank krijgt dan het oordeel *niet volledig getoetst*,
   met de reden.
 - Zonder `toetsdatum` toetst CrediMatch op vandaag. Zonder `banken` toetst het bij alle banken die uw klant aan heeft staan.
@@ -166,7 +167,7 @@ Elke fout heeft een vaste `code` en een `melding`; bij een `400` ook de lijst va
 
 | Status | Code | Wanneer |
 |---|---|---|
-| 400 | `vraag_ongeldig` | een onbekende code, een verkeerd type, een onbekende bank of variant |
+| 400 | `vraag_ongeldig` | een onbekende code, een waarde die niet toegelaten is, een verkeerd type, een onbekende bank of variant |
 | 401 | `sleutel_ongeldig` | geen sleutel, een onbekende of een ingetrokken sleutel |
 | 403 | `kantoor_niet_aangemeld` | het kantoor is niet door u aangemeld |
 | 403 | `dossier_api_dicht` | dossiers bewaren staat voor deze klant nog dicht |
