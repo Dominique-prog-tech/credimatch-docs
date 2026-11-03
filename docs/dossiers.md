@@ -171,6 +171,19 @@ Lukt het bewaren niet, bijvoorbeeld omdat de omschrijving leeg is, dan gaat u to
 invulde, blijft staan, en de melding blijft bovenaan staan tot het bewaren lukt. Verlaat u het dossier met wijzigingen die
 nog niet bewaard zijn, dan vraagt het scherm eerst of u toch wil weggaan.
 
+### Documenten
+
+Onder elke stap staat het blok **Documenten**. Klik erop om het te openen.
+
+1. Klik op **Bijlage** en kies een of meer bestanden, tot 25 MB per bestand.
+2. Het bestand verschijnt in de lijst. Met de naam downloadt u het. Een pdf of een foto kunt u ook in de browser bekijken.
+3. In het menu **⋯** wijzigt u de omschrijving of verwijdert u het document.
+
+Elk document wordt versleuteld bewaard, en enkel wie dit kantoor mag zien, kan het openen. Bij een dossier dat uit een andere toepassing komt, kunt u de documenten enkel bekijken.
+
+!!! warning "Enkel fictieve documenten"
+    In de proefomgeving werkt u enkel met fictieve documenten. Echte documenten kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
+
 ### Een dossier verwijderen
 
 Klik rechts in het dossier op **Dossier verwijderen** en bevestig. Het dossier gaat naar de [Prullenbak](prullenbak.md), samen

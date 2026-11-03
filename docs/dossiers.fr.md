@@ -164,6 +164,19 @@ montant qui n'est pas encore saisi apparaît comme un tiret : sans tous les mont
 indique quel montant manque. La quotité et le taux d'endettement sont calculés par chaque banque à sa façon : vous les
 voyez au pré-scoring.
 
+### Documents
+
+Sous chaque étape se trouve le bloc **Documents**. Cliquez dessus pour l'ouvrir.
+
+1. Cliquez sur **Pièce jointe** et choisissez un ou plusieurs fichiers, jusqu'à 25 Mo par fichier.
+2. Le fichier apparaît dans la liste. Le nom permet de le télécharger. Un PDF ou une photo peut aussi être consulté dans le navigateur.
+3. Le menu **⋯** permet de modifier la description ou de supprimer le document.
+
+Chaque document est enregistré de façon chiffrée, et seuls ceux qui peuvent voir ce bureau peuvent l'ouvrir. Pour un dossier provenant d'une autre application, vous pouvez uniquement consulter les documents.
+
+!!! warning "Uniquement des documents fictifs"
+    Dans l'environnement d'essai, vous travaillez uniquement avec des documents fictifs. Les documents réels ne seront possibles que lorsque les accords sur les données personnelles seront conclus.
+
 ### Supprimer un dossier
 
 Cliquez à droite dans le dossier sur **Supprimer le dossier** et confirmez. Le dossier va à la [Corbeille](prullenbak.md), avec ses
