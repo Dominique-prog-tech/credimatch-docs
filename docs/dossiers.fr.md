@@ -9,8 +9,9 @@ entretien avec le client, et vous le vérifiez auprès des banques : le pré-sco
 enregistrée comme simulation, avec un montant et une durée propres.
 
 !!! note "Environnement d'essai"
-    Travaillez uniquement avec des données fictives. Les vrais dossiers ne seront possibles qu'une fois les accords sur
-    les données personnelles finalisés.
+    Si le message sur l'environnement d'essai figure en haut de la liste, travaillez uniquement avec des données fictives.
+    Les vrais dossiers ne seront possibles qu'une fois les accords sur les données personnelles finalisés : ce message
+    disparaît alors.
 
 !!! note "Dossiers d'exemple"
     Un dossier dont la description commence par **Fictief voorbeeld** a été préparé par ADM pour que vous puissiez essayer, avec une

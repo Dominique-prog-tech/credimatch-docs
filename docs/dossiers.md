@@ -9,7 +9,8 @@ gesprek met de klant, en toetst het bij de banken: de prescoring. Elke toets kun
 bewaren als simulatie.
 
 !!! note "Proefomgeving"
-    Werk enkel met fictieve gegevens. Echte dossiers kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
+    Staat bovenaan de lijst de melding over de proefomgeving, werk dan enkel met fictieve gegevens. Echte dossiers kunnen
+    pas wanneer de afspraken over persoonsgegevens rond zijn: dan verdwijnt die melding.
 
 !!! note "Voorbeelddossiers"
     Een dossier waarvan de omschrijving begint met **Fictief voorbeeld**, zette ADM klaar om mee te proberen, met een simulatie per

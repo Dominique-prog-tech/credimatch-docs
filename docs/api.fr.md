@@ -33,8 +33,8 @@ phrase en néerlandais et en français.
 | `POST /api/v1/prescoring` | Confronte un dossier d'un bureau inscrit à une ou plusieurs banques. |
 | `GET /api/v1/banken` | Les banques avec leurs règles en vigueur, leur date de vérification et leurs variantes. |
 | `GET /api/v1/woordenlijst` | Toutes les données d'un dossier : code, type, niveau et libellé en NL et en FR. |
-| `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Enregistre un dossier dans CrediMatch, ou le met à jour. **Encore fermé** (voir ci-dessous). |
-| `GET` à la même adresse | Le dossier enregistré, avec les simulations faites dans CrediMatch. **Encore fermé.** |
+| `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Enregistre un dossier dans CrediMatch, ou le met à jour. **S'ouvre client par client** (voir ci-dessous). |
+| `GET` à la même adresse | Le dossier enregistré, avec les simulations faites dans CrediMatch. **S'ouvre client par client.** |
 
 ### Inscrire un bureau
 
@@ -135,10 +135,10 @@ Les chiffres de cet exemple sont inventés. Un taux est une fraction : 0,0352 co
 
 ### Enregistrer un dossier
 
-!!! warning "Encore fermé"
-    CrediMatch n'accepte des dossiers qu'une fois les accords sur les données personnelles finalisés. D'ici là, ces deux
-    appels renvoient `403 dossier_api_dicht`. Le calcul avec `POST /api/v1/prescoring` reste possible : il n'enregistre
-    rien.
+!!! warning "S'ouvre client par client"
+    CrediMatch n'accepte des dossiers pour un client qu'une fois le contrat de sous-traitance enregistré et une durée de
+    conservation définie pour ce client. D'ici là, ces deux appels renvoient pour ce client `403 dossier_api_dicht`. Le
+    calcul avec `POST /api/v1/prescoring` reste possible : il n'enregistre rien.
 
 Avec un dossier enregistré, le courtier peut faire des simulations dans CrediMatch, et vous les relisez.
 
@@ -170,7 +170,7 @@ Chaque erreur a un `code` fixe et un `melding` (message) ; pour un `400`, aussi 
 | 400 | `vraag_ongeldig` | un code inconnu, un mauvais type, une banque ou variante inconnue |
 | 401 | `sleutel_ongeldig` | pas de clé, une clé inconnue ou révoquée |
 | 403 | `kantoor_niet_aangemeld` | le bureau n'a pas été inscrit par vous |
-| 403 | `dossier_api_dicht` | l'enregistrement de dossiers est encore fermé |
+| 403 | `dossier_api_dicht` | l'enregistrement de dossiers est encore fermé pour ce client |
 | 404 | `klant_niet_gekoppeld` | votre `klantRef` n'est pas encore liée à un client chez CrediMatch |
 | 404 | `dossier_onbekend` | aucun dossier avec ce `dossierRef` sous ce bureau |
 | 409 | `dossier_ander_kantoor` | le dossier figure sous un autre bureau ; il ne change pas de bureau |

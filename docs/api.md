@@ -32,8 +32,8 @@ voor een dossier. U krijgt per bank het oordeel, met per regel de reden als code
 | `POST /api/v1/prescoring` | Toetst één dossier van een aangemeld kantoor bij één of meer banken. |
 | `GET /api/v1/banken` | De banken met hun geldende regels, de datum tot wanneer die nagekeken zijn, en hun varianten. |
 | `GET /api/v1/woordenlijst` | Alle gegevens van een dossier: code, type, niveau en de benaming in het NL en het FR. |
-| `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Bewaart een dossier in CrediMatch, of werkt het bij. **Staat nog dicht** (zie hieronder). |
-| `GET` op hetzelfde adres | Het bewaarde dossier, met de simulaties die er in CrediMatch op gemaakt werden. **Staat nog dicht.** |
+| `PUT /api/v1/klanten/{klantRef}/kantoren/{kantoorRef}/dossiers/{dossierRef}` | Bewaart een dossier in CrediMatch, of werkt het bij. **Gaat per klant open** (zie hieronder). |
+| `GET` op hetzelfde adres | Het bewaarde dossier, met de simulaties die er in CrediMatch op gemaakt werden. **Gaat per klant open.** |
 
 ### Een kantoor aanmelden
 
@@ -133,9 +133,10 @@ De getallen in dit voorbeeld zijn verzonnen. Een rente is een fractie: 0,0352 is
 
 ### Een dossier bewaren
 
-!!! warning "Staat nog dicht"
-    CrediMatch neemt pas dossiers aan wanneer de afspraken over persoonsgegevens rond zijn. Tot dan geven deze twee
-    oproepen `403 dossier_api_dicht`. Rekenen met `POST /api/v1/prescoring` kan wel: dat bewaart niets.
+!!! warning "Gaat per klant open"
+    CrediMatch neemt voor een klant pas dossiers aan wanneer de verwerkersovereenkomst geregistreerd is en de klant een
+    bewaartermijn heeft. Tot dan geven deze twee oproepen voor die klant `403 dossier_api_dicht`. Rekenen met
+    `POST /api/v1/prescoring` kan wel: dat bewaart niets.
 
 Met een bewaard dossier kan de makelaar in CrediMatch simulaties maken, en leest u die terug.
 
@@ -168,7 +169,7 @@ Elke fout heeft een vaste `code` en een `melding`; bij een `400` ook de lijst va
 | 400 | `vraag_ongeldig` | een onbekende code, een verkeerd type, een onbekende bank of variant |
 | 401 | `sleutel_ongeldig` | geen sleutel, een onbekende of een ingetrokken sleutel |
 | 403 | `kantoor_niet_aangemeld` | het kantoor is niet door u aangemeld |
-| 403 | `dossier_api_dicht` | dossiers bewaren staat nog dicht |
+| 403 | `dossier_api_dicht` | dossiers bewaren staat voor deze klant nog dicht |
 | 404 | `klant_niet_gekoppeld` | uw `klantRef` is bij CrediMatch nog niet aan een klant gekoppeld |
 | 404 | `dossier_onbekend` | er is geen dossier met die `dossierRef` onder dit kantoor |
 | 409 | `dossier_ander_kantoor` | het dossier staat onder een ander kantoor; het verhuist niet |
