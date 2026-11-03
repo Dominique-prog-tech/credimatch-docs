@@ -184,6 +184,29 @@ Elk document wordt versleuteld bewaard, en enkel wie dit kantoor mag zien, kan h
 !!! warning "Enkel fictieve documenten"
     In de proefomgeving werkt u enkel met fictieve documenten. Echte documenten kunnen pas wanneer de afspraken over persoonsgegevens rond zijn.
 
+### Een dossier exporteren
+
+Klik rechts in het dossier op **Dossier exporteren** en daarna op **Downloaden**. U krijgt een zip-bestand met alles wat CrediMatch over dit dossier bewaart, bijvoorbeeld als een klant vraagt welke gegevens u over hem hebt.
+
+| In de zip | Wat het is |
+|---|---|
+| `overzicht.pdf` | Het dossier om te lezen: de gegevens per stap, de aanvragers, de bewaarde simulaties en de lijst van documenten |
+| `gegevens.json` | Dezelfde gegevens voor een ander programma, met ook alles wat elke simulatie kreeg en gaf |
+| `documenten/` | De opgeladen bestanden |
+| `documenten/verwijderd/` | De documenten die u verwijderde, want ook die worden nog bewaard |
+
+- Wat u net typte, wordt eerst bewaard.
+- De uitkomsten en rentevoeten in de export zijn indicatief: de bank beslist altijd.
+- De historiek van de wijzigingen zit er niet in.
+- CrediMatch noteert wie wanneer exporteerde.
+- Ook een dossier dat uit een andere toepassing komt, kunt u exporteren. Een dossier in de [Prullenbak](prullenbak.md) niet: zet het eerst terug.
+
+!!! warning "Het bestand is niet versleuteld"
+    Op uw computer is de export gewoon leesbaar. Bewaar hem veilig en verwijder hem als u hem niet meer nodig hebt. Bevat het dossier meer dan één aanvrager, dan staan hun gegevens samen in de export: kijk na wat u doorgeeft voor u hem aan één van hen bezorgt.
+
+!!! note "Niet volledig"
+    Staat er bovenaan het overzicht **Let op**, dan kon een document niet gelezen worden en zit het niet in de zip. De rest klopt wel. Meld dit aan ADM-Concept.
+
 ### Een dossier verwijderen
 
 Klik rechts in het dossier op **Dossier verwijderen** en bevestig. Het dossier gaat naar de [Prullenbak](prullenbak.md), samen

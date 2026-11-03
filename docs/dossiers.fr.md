@@ -177,6 +177,29 @@ Chaque document est enregistré de façon chiffrée, et seuls ceux qui peuvent v
 !!! warning "Uniquement des documents fictifs"
     Dans l'environnement d'essai, vous travaillez uniquement avec des documents fictifs. Les documents réels ne seront possibles que lorsque les accords sur les données personnelles seront conclus.
 
+### Exporter un dossier
+
+Cliquez à droite dans le dossier sur **Exporter le dossier**, puis sur **Télécharger**. Vous obtenez un fichier zip avec tout ce que CrediMatch conserve sur ce dossier, par exemple lorsqu'un client demande quelles données vous détenez sur lui.
+
+| Dans le zip | Ce que c'est |
+|---|---|
+| `overzicht.pdf` | Le dossier à lire : les données par étape, les demandeurs, les simulations enregistrées et la liste des documents |
+| `gegevens.json` | Les mêmes données pour un autre logiciel, avec aussi tout ce que chaque simulation a reçu et donné |
+| `documenten/` | Les fichiers chargés |
+| `documenten/verwijderd/` | Les documents que vous avez supprimés, car ils sont encore conservés |
+
+- Ce que vous venez de saisir est d'abord enregistré.
+- Les résultats et les taux de l'export sont indicatifs : la banque décide toujours.
+- L'historique des modifications n'y figure pas.
+- CrediMatch note qui a exporté et quand.
+- Vous pouvez aussi exporter un dossier provenant d'une autre application. Pas un dossier dans la [Corbeille](prullenbak.md) : remettez-le d'abord.
+
+!!! warning "Le fichier n'est pas chiffré"
+    Sur votre ordinateur, l'export est lisible tel quel. Conservez-le en lieu sûr et supprimez-le lorsque vous n'en avez plus besoin. Si le dossier contient plusieurs demandeurs, leurs données figurent ensemble dans l'export : vérifiez ce que vous transmettez avant de le remettre à l'un d'eux.
+
+!!! note "Incomplet"
+    Si **Attention** figure en haut de l'aperçu, un document n'a pas pu être lu et ne se trouve pas dans le zip. Le reste est correct. Signalez-le à ADM-Concept.
+
 ### Supprimer un dossier
 
 Cliquez à droite dans le dossier sur **Supprimer le dossier** et confirmez. Le dossier va à la [Corbeille](prullenbak.md), avec ses
