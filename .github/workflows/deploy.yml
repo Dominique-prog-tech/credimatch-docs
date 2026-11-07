@@ -30,14 +30,30 @@ jobs:
           python-version: '3.12'
       # Vaste versies — zie requirements.txt.
       - run: pip install -r requirements.txt
+      # De gedeelde hook voor zoeken per taal (mkdocs.yml → _appkit/tools/docs-site/zoeken_per_taal.py) woont in
+      # adm-appkit, en die repo is privé: meelezen met het repo-geheim ADM_APPKIT_LEZEN (fine-grained token, enkel
+      # adm-appkit, Contents: Read-only — NOTEER DE VERVALDATUM). Zonder deze stap vindt mkdocs de hook niet en
+      # faalt de bouw; de vorige versie blijft dan online. Zoals nimble-docs en cleanops-docs (07/11/2026).
+      # Komt de eerste film, voeg dan tools/filmgenerator toe aan sparse-checkout (zie CLAUDE.md).
+      - uses: actions/checkout@v4
+        with:
+          repository: ADM-Concept/adm-appkit
+          token: ${{ secrets.ADM_APPKIT_LEZEN }}
+          path: _appkit
+          sparse-checkout: tools/docs-site
       - run: mkdocs build --strict
+      # ⚠️ NA de bouw: zoekt elke taal enkel in haar eigen pagina's? De hook faalt luid bij alles wat hij ziet, maar niet
+      # wanneer hij er niet is — haalt iemand hem uit mkdocs.yml, dan mengt het zoekvak stil weer NL en FR (zo stond het
+      # live tot 07/11/2026). Deze meet de GEBOUWDE site en mag de uitrol TEGENHOUDEN.
+      - name: Zoeken per taal controleren
+        run: python3 _appkit/tools/docs-site/check-zoeken.py site
       # Staat elk beeld uit de bron ook als <img> in de gebouwde site? Bij Nimble en CreditSoft verdwenen op 19/10/2026 alle
       # schermafdrukken bij het bouwen (selectolax 1.0.1, zie requirements.txt) terwijl alle stappen groen bleven. Deze mag de
       # uitrol TEGENHOUDEN.
       - name: Beelden controleren (bron tegen gebouwde site)
         run: python3 tools/check-beelden.py site
-      # Nog niet aan, en waarom (zie CLAUDE.md): de gedeelde filmhook en de filmcontrole uit adm-appkit (met het repo-geheim
-      # ADM_APPKIT_LEZEN) vanaf de eerste film. Zoals cleanops-docs.
+      # Nog niet aan, en waarom (zie CLAUDE.md): de gedeelde filmhook en de filmcontrole uit adm-appkit vanaf de eerste
+      # film. Het meelezen van adm-appkit (geheim ADM_APPKIT_LEZEN) staat er sinds 07/11/2026 al, voor zoeken per taal.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
